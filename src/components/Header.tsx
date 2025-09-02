@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import AnimatedButton from "./AnimatedButton";
+import MenuItem from "./MenuItem";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -71,16 +72,14 @@ export default function Header() {
         </div>
         {/* Desktop Menu */}
         <div className="flex items-center gap-8">
-          <nav className="hidden lg:flex gap-6">
+          <nav className="hidden lg:flex gap-3">
             {navItems.map((item) => (
-              <Link
+              <MenuItem
                 key={item.href}
                 href={item.href}
-                className={`relative text-md menu ${pathname === item.href ? "active-menu" : ""
-                  }`}
-              >
-                {item.label}
-              </Link>
+                label={item.label}
+                active={pathname === item.href}
+              />
             ))}
           </nav>
           <div className="lg:flex gap-4 hidden ">
@@ -101,32 +100,29 @@ export default function Header() {
         </button>
       </div>
       {/* Mobile Dropdown */}
-     
-        <div className={`px-6 py-8 sidebar w-full bg-nav z-40
+
+      <div className={`px-6 py-8 sidebar w-full bg-nav z-40
     ${open ? "navbar-open-div" : ""}
     ${closing ? "navbar-closing" : ""}
   `}>
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-
-              className={`relative block text-lg my-2 menu ${pathname === item.href ? "active-menu" : ""
-                }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <div className="flex gap-4 mt-8">
-            <AnimatedButton
-              href=""
-              label="Log in"
-              className="w-fit white-btn"
-            />
-            <AnimatedButton href="" label="Sign up" className="w-fit" />
-          </div>
+        {navItems.map((item) => (
+          <MenuItem
+            key={item.href}
+            href={item.href}
+            label={item.label}
+            active={pathname === item.href}
+          />
+        ))}
+        <div className="flex gap-4 mt-8">
+          <AnimatedButton
+            href=""
+            label="Log in"
+            className="w-fit white-btn"
+          />
+          <AnimatedButton href="" label="Sign up" className="w-fit" />
         </div>
-     
+      </div>
+
     </header>
   );
 }
