@@ -1,15 +1,22 @@
 'use client'
 
 import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
+import Lenis, { LenisOptions } from '@studio-freight/lenis'
 
-export default function SmoothScrollWrapper({ children }: { children: React.ReactNode }) {
+// Extend LenisOptions to allow smooth and smoothTouch
+interface CustomLenisOptions extends LenisOptions {
+  smooth?: boolean
+  smoothTouch?: boolean
+}
+
+export default function LenisProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.6,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -5 * t)),
-      smoothWheel: true,
-    })
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -6 * t)),
+      smooth: true,
+      smoothTouch: true,
+    } as CustomLenisOptions)
 
     const raf = (time: number) => {
       lenis.raf(time)

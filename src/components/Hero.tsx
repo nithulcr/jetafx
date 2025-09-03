@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
-import Link from "next/link";
 import Image from 'next/image';
 import gsap from "gsap";
 import AnimatedButton from "./AnimatedButton";
@@ -126,11 +125,11 @@ const Hero = () => {
   ));
 
   return (
-    <section ref={sectionRef} className="relative py-20 hero overflow-hidden">
-      <div className="max-w-[1460px] mx-auto px-6 py-10 lg:pb-20 lg:pt-30 text-center hero-container relative z-10 ">
+    <section ref={sectionRef} className="relative py-12 lg:py-20 hero overflow-hidden">
+      <div className="max-w-[1460px] mx-auto px-6 pt-24 pb-10 lg:pb-20 lg:pt-30 text-center hero-container relative z-10 ">
         <h1
           ref={headingRef}
-          className="hero-heading text-3xl lg:text-7xl max-w-[1100px] mx-auto font-bold mb-4 leading-tight"
+          className="hero-heading text-4xl md:text-5xl lg:text-7xl max-w-[1100px] mx-auto font-bold mb-4 leading-tight"
         >
           {splitHeading}
         </h1>
@@ -365,7 +364,7 @@ const Hero = () => {
           <span className="bg-white h-[30px] w-[1px] mx-2"></span>
         </div>
       </div>
-      <div className="max-w-[1460px] hero-second-grid mx-auto px-6 py-6 flex gap-6 bg-transparent">
+      <div className="max-w-[1460px] hero-second-grid mx-auto px-6 pt-6 flex gap-6 bg-transparent">
         {/* Why Choose Us Card */}
         <div className="relative blurry-card blurry-card-left blurry-card3 grid   md:grid-cols-2">
           <div>
@@ -459,7 +458,7 @@ const Hero = () => {
         {/* Fast, Reliable Execution Card */}
         <div className="relative blurry-card blurry-card-left blurry-card4 flex flex-col">
           <h3 className="text-xl mb-3 s-fade-up">Your Efforts Matters</h3>
-          <p className="text-slate-400 text-[15px] leading-normal mb-6 max-w-2xl s-fade-up">
+          <p className="text-slate-400 text-[15px] leading-normal mb-4 max-w-2xl s-fade-up">
             Earn more Profit with targeted strategies and smarter tools.
           </p>
           <div className="flex  gap-2 relative s-fade-up flex-wrap bg-[#0D0E14] p-4 rounded-xl border border-[#1F1F24]">

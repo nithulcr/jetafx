@@ -119,16 +119,17 @@ a {
 /* button style start */
 .button {
   border: 2px none var(--yellow);
-  color: var(--foreground);
+  color:#010208;
   justify-content: center;
   align-items: center;
-  padding: 11px 38px;
+  padding: 11px 22px;
   font-size: 16px;
   text-decoration: none;
   display: flex;
   position: relative;
   cursor: pointer;
   font-weight: 500;
+  min-width: 120px;
 
 }
 .menu span {
@@ -169,7 +170,9 @@ a {
   position: relative;
   text-align: center;
   transition: .3s;
+    font-weight: 500;
 }
+
 .transparent-btn .button-text {
   color: var(--color);
 
@@ -194,6 +197,7 @@ a {
   max-width: 100%;
 }
 
+
 .menu-icon span:nth-child(2) {
   width: 20px;
   margin-left: auto;
@@ -207,7 +211,6 @@ a {
 
   100% {
     width: 100%;
-    background-color: #bbbbbb;
   }
 }
 
@@ -353,7 +356,7 @@ a {
   
   /* background:linear-gradient(20deg, #000000d9, #2025523b, #20255275);
     backdrop-filter: blur(4px); */
-
+box-shadow: 0 4px 8px 13px #11132742;
     overflow: hidden;
     padding: 34px;
     border-radius: 14px;
@@ -393,7 +396,7 @@ max-height: calc(100% - 1px);
        background: url(/bg1.png);
     background-size: 100% 100%;
     background-position: top left;
-     opacity: .6;
+     opacity: .8;
     filter: saturate(1.5);
      animation: shuffleColor 6s infinite ease-in-out;
 
@@ -411,7 +414,7 @@ max-height: calc(100% - 1px);
     background: url(/bg2.png);
     background-size: 100% 100%;
     background-position: top left;
-    opacity: .6;
+    opacity: .8;
     filter: saturate(1.5);
      animation: shuffleColor 6s infinite ease-in-out;
 }
@@ -428,7 +431,7 @@ max-height: calc(100% - 1px);
     background: url(/bg3.png);
     background-size: 100% 100%;
     background-position: top left;
-    opacity: .6;
+    opacity: .8;
     filter: saturate(1.5);
      animation: shuffleColor 6s infinite ease-in-out;
 }
@@ -445,7 +448,7 @@ max-height: calc(100% - 1px);
     background: url(/bg4.png);
     background-size: 100% 100%;
     background-position: top left;
-    opacity: .6;
+    opacity: .8;
     filter: saturate(1.5);
      animation: shuffleColor 6s infinite ease-in-out;
 }
@@ -573,6 +576,143 @@ max-height: calc(100% - 1px);
   width: max-content;
   animation: marquee-left 30s linear infinite;
 }
+
+.features:before {
+    content: '';
+    background: url(/shape1.png);
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    right: 0;
+    top:-20%;
+    background-size: cover;
+    background-position: top right;
+    opacity: .5;
+}
+.features > *{
+  z-index: 1;
+  position: relative;
+}
+
+.heading-badge {
+ background: linear-gradient(90deg, #2934FF , rgba(41, 52, 255, 0), rgba(41, 52, 255, 0));
+  border-radius: 26px;
+  padding: 12px 28px;
+  position: relative;
+  background-size: 200% 200%;
+  background-position: 0% 50%; /* initial state */
+}
+
+
+.heading-badge span{
+   background: linear-gradient(120deg, rgba(138, 165, 255, 1), rgba(133, 77, 255, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 16px;
+  z-index: 1;
+    position: relative;
+    font-weight: 500;
+ 
+}
+.heading-badge::before {
+    content: '';
+    background-color: #000000;
+    top: .2rem;
+    left: .2rem;
+    width: calc(100% - .4rem);
+    position: absolute;
+    height: calc(100% - .4rem);
+    border-radius: 24px;
+}
+
+.plan-card {
+  position: relative;
+  display: inline-block;
+  border-radius: 16px;
+  background:linear-gradient(179deg, rgb(118 151 222), rgb(16 24 52), rgb(2, 4, 8));
+
+}
+.plan-card:before{
+  content:'';
+  background: #000;
+  position: absolute;
+ width: calc(100% - .2rem);
+ height:100%;
+  left: .1rem;
+    top: .1rem;
+    border-radius: 16px;
+      opacity: .9!important;
+}
+.plan-card > *{
+  z-index: 999;
+  position: relative;
+}
+.plans-section .swiper-slide{
+  position: relative;
+  
+}
+.border_shape3{
+  display: block;
+}
+span.border_shape3 {
+    position: absolute;
+     background: url(/shape3.png);
+      width: 80%;
+    height: 4px;
+    position: absolute;
+    left: 10%;
+    top:0%;
+    background-size: cover;
+    background-position: top right;
+}
+
+.plans-section:after {
+    content: '';
+    background: url(/shape2.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top:0%;
+    background-size: cover;
+    background-position: top right;
+    opacity: .5;
+}
+.plans-section .swiper-slide .plan-card:after{
+  content: "";
+  background: radial-gradient(#121426, #1d278059, #151c5b1c, #00000000);
+    width:70%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    background-size: contain;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: 9;
+    opacity: .5;
+  
+}
+.plans-section:before{
+  content: "";
+  background: radial-gradient(#121426, #1d278059, #151c5b1c, #00000000);
+    width:350px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    background-size: contain;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: .8;
+  
+}
+.plans-section > *{
+  position: relative;
+}
 @media screen and (max-width: 1360px) {
   .hero-second-grid{
     flex-direction: column;
@@ -597,7 +737,7 @@ max-height: calc(100% - 1px);
 
 @media screen and (max-width: 990px) {
 
-  .blurry-card2,{
+  .blurry-card2{
     width: 800px;
   }
 }
@@ -632,10 +772,23 @@ max-height: calc(100% - 1px);
 @media screen and (max-width: 500px) {
 
   .blurry-card{
-    padding: 24px;
+    padding: 20px;
   }
   .hero-container:after {
     background-size: 200%;
+}
+.heading-badge span{
+  font-size: 14px;
+ 
+}
+.heading-badge{
+  padding: 10px 20px;
+}
+.plans-section:before{
+    width:350px;
+    height: 350px;
+    bottom: 0;
+  
 }
 }
 
