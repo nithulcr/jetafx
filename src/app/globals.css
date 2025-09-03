@@ -218,9 +218,8 @@ a {
 .sidebar {
   opacity: 0;
   visibility: hidden;
-  min-height: calc(100vh - 70px);
+  height: 100vh;
   overflow: auto;
-  max-height: 100vh;
   top: -200vh;
   position: absolute;
 }
@@ -228,7 +227,7 @@ a {
 .navbar-open .sidebar {
   opacity: 1;
   visibility: visible;
-  top: 80px;
+  top: 0px;
 }
 
 .sidebar:before {
@@ -236,12 +235,12 @@ a {
   top: -100px;
   right: -100px;
   position: absolute;
-  width: 0;
+  width: 100%;
   height: 0;
   transition: .7s;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(6px);
-  background: #0000003b;
+  background: linear-gradient(180deg, var(--background), #010a2f);
   border-radius: 0 0 0 400%;
   opacity: 0;
   visibility: hidden;
@@ -258,7 +257,7 @@ a {
   opacity: 1;
   visibility: visible;
   z-index: -1;
-  background: var(--background);
+  background: linear-gradient(0deg, var(--background), #010a2f);
 
 }
 .sidebar > a, .sidebar > div {
@@ -291,15 +290,13 @@ a {
 
 
 .navbar-closing.sidebar:before {
-    top: -100px;
-  right: -100px;
-  width: 0;
+    top: -100vh;
   height: 0;
   transition: .7s;
   border-radius: 0 0 0 400%;
   opacity: 0;
   visibility: hidden;
-  transition-delay: .6s;
+  transition-delay: .5s;
 }
 
 /* navbar anim end */
@@ -617,16 +614,18 @@ max-height: calc(100% - 1px);
 
 }
 .blurry-card:before{
-  background: #000000d9;
+  background: #000;
   left: .1rem;
     top: .1rem;
     border-radius: 16px;
+      opacity: .7!important;
 }
 .blurry-card {
   position: relative;
   display: inline-block;
   border-radius: 16px;
   background: linear-gradient(40deg, rgb(35 60 114), rgb(33 49 102), rgb(2, 4, 8));
+
 }
 }
 
@@ -635,6 +634,9 @@ max-height: calc(100% - 1px);
   .blurry-card{
     padding: 24px;
   }
+  .hero-container:after {
+    background-size: 200%;
+}
 }
 
 

@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <header className={headerClass}>
-      <div className="max-w-[1460px] h-[70px] lg:h-[90px] mx-auto flex items-center justify-between px-6 py-3 text-white z-10 relative">
+      <div className="max-w-[1460px] z-99 h-[70px] lg:h-[90px] mx-auto flex items-center justify-between px-6 py-3 text-white z-10 relative">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <Link href="/">
@@ -101,7 +101,7 @@ export default function Header() {
       </div>
       {/* Mobile Dropdown */}
 
-      <div className={`px-6 py-8 sidebar w-full bg-nav z-40
+      <div className={`px-6 py-8 sidebar w-full bg-nav z-40 pt-20
     ${open ? "navbar-open-div" : ""}
     ${closing ? "navbar-closing" : ""}
   `}>
