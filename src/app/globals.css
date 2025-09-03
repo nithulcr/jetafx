@@ -333,6 +333,8 @@ a {
     filter: blur(22px);
 
 }
+
+
 .hero:before {
     content: '';
     background: url(/Blur_mask-group.png);
@@ -346,7 +348,10 @@ a {
     z-index: 2;
     opacity: .8;
 }
-
+.hero > *{
+ z-index: 9;
+ position: relative;
+}
 .blurry-card{
   
   /* background:linear-gradient(20deg, #000000d9, #2025523b, #20255275);
@@ -355,7 +360,7 @@ a {
     overflow: hidden;
     padding: 34px;
     border-radius: 14px;
-    z-index: 9;
+   
 
 }
 
@@ -561,6 +566,16 @@ max-height: calc(100% - 1px);
 .choose-btn-card img {
   animation: shuffle 4s infinite ease-in-out;
 }
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 30s linear infinite;
+}
 @media screen and (max-width: 1360px) {
   .hero-second-grid{
     flex-direction: column;
@@ -568,6 +583,9 @@ max-height: calc(100% - 1px);
   }
   .blurry-card2{
     width: 900px;
+  }
+    .blurry-card3{
+    width: 100%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -577,11 +595,12 @@ max-height: calc(100% - 1px);
   .active-menu{
     color: var(--yellow);
   }
+
 }
 
 @media screen and (max-width: 990px) {
 
-  .blurry-card2{
+  .blurry-card2,{
     width: 800px;
   }
 }
@@ -590,13 +609,32 @@ max-height: calc(100% - 1px);
   .blurry-card1, .blurry-card2, .blurry-card3, .blurry-card4{
     width:100%;
   }
+  
   .hero-container:before {
 
     width: 360px;
     height: 360px;
 
 }
+.blurry-card:before{
+  background: #000000d9;
+  left: .1rem;
+    top: .1rem;
+    border-radius: 16px;
+}
+.blurry-card {
+  position: relative;
+  display: inline-block;
+  border-radius: 16px;
+  background: linear-gradient(40deg, rgb(35 60 114), rgb(33 49 102), rgb(2, 4, 8));
+}
+}
 
+@media screen and (max-width: 500px) {
+
+  .blurry-card{
+    padding: 24px;
+  }
 }
 
 
