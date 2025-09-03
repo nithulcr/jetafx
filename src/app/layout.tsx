@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 
 // Set up DM Sans font with variable for CSS
 const dmSans = DM_Sans({
@@ -22,10 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+     <body
         className={` antialiased`}
       >
-        {children}
+         <SmoothScrollWrapper >{children}</SmoothScrollWrapper>
       </body>
     </html>
   );

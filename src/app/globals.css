@@ -31,7 +31,7 @@ a {
 
 }
 .text-white-gradient{
-    background: linear-gradient(360deg, rgba(230, 236, 255, 0.7), rgba(255, 255, 255, 1));
+    background: linear-gradient(360deg, rgba(230, 236, 255, 0.6), rgba(255, 255, 255, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -317,7 +317,7 @@ a {
     top: 0%;
     background-size: contain;
     transform: translateX(-50%);
-    opacity: .5;
+    opacity: .6;
 }
 .hero-container:before {
     content: '';
@@ -343,6 +343,8 @@ a {
     top:0;
     background-size: cover;
     background-position: top;
+    z-index: 2;
+    opacity: .8;
 }
 
 .blurry-card{
@@ -352,15 +354,26 @@ a {
 
     overflow: hidden;
     padding: 34px;
-    border-radius: 20px;
+    border-radius: 14px;
+    z-index: 9;
 
 }
+
 .blurry-card1{
   width: 500px;
       /* background:linear-gradient(140deg, #8AA5FF, #738ce3, #112eae9e, #000000c4); */
       
 }
 .blurry-card2{
+  width:calc(100% - 500px);
+      /* background:linear-gradient(140deg, #8AA5FF, #05145a, #05145a, #000000); */
+}
+.blurry-card4{
+  width: 500px;
+      /* background:linear-gradient(140deg, #8AA5FF, #738ce3, #112eae9e, #000000c4); */
+      
+}
+.blurry-card3{
   width:calc(100% - 500px);
       /* background:linear-gradient(140deg, #8AA5FF, #05145a, #05145a, #000000); */
 }
@@ -378,22 +391,70 @@ max-height: calc(100% - 1px);
        background: url(/bg1.png);
     background-size: 100% 100%;
     background-position: top left;
+     opacity: .6;
+    filter: saturate(1.5);
+     animation: shuffleColor 6s infinite ease-in-out;
+
 }
 .blurry-card2:before {
-     content: '';
+    content: '';
     background: #000000d9;
     position: absolute;
     left: 0rem;
     top: 0rem;
     width: 100%;
     height: 100%;
-        /* border-radius: 20px; */
-max-height: calc(100% - 1px);
+    max-height: calc(100% - 1px);
     backdrop-filter: blur(4px);
-       background: url(/bg2.png);
+    background: url(/bg2.png);
     background-size: 100% 100%;
     background-position: top left;
+    opacity: .6;
+    filter: saturate(1.5);
+     animation: shuffleColor 6s infinite ease-in-out;
 }
+.blurry-card3:before {
+    content: '';
+    background: #000000d9;
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    max-height: calc(100% - 1px);
+    backdrop-filter: blur(4px);
+    background: url(/bg3.png);
+    background-size: 100% 100%;
+    background-position: top left;
+    opacity: .6;
+    filter: saturate(1.5);
+     animation: shuffleColor 6s infinite ease-in-out;
+}
+.blurry-card4:before {
+    content: '';
+    background: #000000d9;
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    max-height: calc(100% - 1px);
+    backdrop-filter: blur(4px);
+    background: url(/bg4.png);
+    background-size: 100% 100%;
+    background-position: top left;
+    opacity: .6;
+    filter: saturate(1.5);
+     animation: shuffleColor 6s infinite ease-in-out;
+}
+@keyframes shuffleColor {
+  0%, 100% { filter: saturate(1); }
+  25% { filter: saturate(.5); }
+  50% { filter: saturate(2); }
+  75% { filter: saturate(.5); }
+}
+
+
 .blurry-card > *{
   z-index: 1;
   position: relative;
@@ -408,6 +469,7 @@ max-height: calc(100% - 1px);
     left: 0%;
     bottom: 0%;
     z-index: 9;
+    
 }
 .absolute-line {
   position: absolute;
@@ -435,7 +497,7 @@ max-height: calc(100% - 1px);
   height: 2px;
 
 }
-.absolute-line-button > span::before{
+.absolute-line-button > span.dot-span::before{
   content: '';
   position: absolute;
   left: -5px;
@@ -445,7 +507,7 @@ max-height: calc(100% - 1px);
   border-radius: 50%;
   background: white;
 }
-.absolute-line-button > span {
+.absolute-line-button > span.dot-span {
   flex: 1; /* take up all available space */
   height: 1px;
   background-color:#fff;
@@ -455,6 +517,18 @@ max-height: calc(100% - 1px);
   position: relative;
   right: 0; /* push it to the end */
 }
+.trade_rate_img_container img {
+  animation: trade_hue 6s linear infinite;
+}
+
+@keyframes trade_hue {
+  0%   { filter: hue-rotate(0deg) saturate(2); }
+  25%  { filter: hue-rotate(90deg) saturate(2); }
+  50%  { filter: hue-rotate(180deg) saturate(2); }
+  75%  { filter: hue-rotate(270deg) saturate(2); }
+  100% { filter: hue-rotate(360deg) saturate(2); }
+}
+
 .trade_rate_span{
   position: absolute;
   left: 0;
@@ -473,6 +547,19 @@ max-height: calc(100% - 1px);
   height: 1px;
  background-color: #109447;
 
+}
+@keyframes shuffle {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-2.2px) rotate(-1.5deg); }
+  50% { transform: translateY(2.2px) rotate(1.5deg); }
+  75% { transform: translateY(-1.2px) rotate(-1.5deg); }
+}
+
+.choose-btn-card,  .shuffle {
+  animation: shuffle 4s infinite ease-in-out;
+}
+.choose-btn-card img {
+  animation: shuffle 4s infinite ease-in-out;
 }
 @media screen and (max-width: 1360px) {
   .hero-second-grid{
@@ -500,7 +587,7 @@ max-height: calc(100% - 1px);
 }
 @media screen and (max-width: 840px) {
 
-  .blurry-card1, .blurry-card2{
+  .blurry-card1, .blurry-card2, .blurry-card3, .blurry-card4{
     width:100%;
   }
   .hero-container:before {
@@ -511,3 +598,12 @@ max-height: calc(100% - 1px);
 }
 
 }
+
+
+
+
+
+
+
+
+

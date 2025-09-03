@@ -86,9 +86,9 @@ export default function Header() {
             <AnimatedButton
               href=""
               label="Log in"
-              className="w-fit white-btn"
+              className="w-fit white-btn shuffle"
             />
-            <AnimatedButton href="" label="Sign up" className="w-fit" />
+            <AnimatedButton href="" label="Sign up" className="w-fit shuffle" />
           </div>
         </div>
         {/* Mobile Menu Button */}
@@ -117,9 +117,9 @@ export default function Header() {
           <AnimatedButton
             href=""
             label="Log in"
-            className="w-fit white-btn"
+            className="w-fit white-btn shuffle"
           />
-          <AnimatedButton href="" label="Sign up" className="w-fit" />
+          <AnimatedButton href="" label="Sign up" className="w-fit shuffle" />
         </div>
       </div>
 
