@@ -1,7 +1,9 @@
 'use client';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,38 +11,44 @@ interface HeadingProps {
   badgeText: string;
   title: string;
   subtitle: string;
+  maxWidthClass?: string; // Tailwind max-width classes as string
 }
 
-export default function Heading({ badgeText, title, subtitle }: HeadingProps) {
+export default function Heading({
+  badgeText,
+  title,
+  subtitle,
+  maxWidthClass = "max-w-[500px]",
+}: HeadingProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const badgeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (!containerRef.current || !badgeRef.current) return;
+
     const ctx = gsap.context(() => {
-      // Fade + move in whole container
-      gsap.from('.gma-heading', {
+      gsap.from(".gma-heading", {
         opacity: 0,
         y: 50,
         duration: 1,
-        ease: 'power2.out',
+        ease: "power2.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 80%',
-          toggleActions: 'play reverse play reverse',
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
         },
       });
 
-      // Animate gradient background of badge on scroll
       gsap.fromTo(
         badgeRef.current,
-        { backgroundPosition: '80% 50%' },
+        { backgroundPosition: "80% 50%" },
         {
-          backgroundPosition: '0% 50%',
-          ease: 'none',
+          backgroundPosition: "0% 50%",
+          ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top 80%',
-            end: 'bottom 50%',
+            start: "top 80%",
+            end: "bottom 50%",
             scrub: true,
           },
         }
@@ -53,18 +61,20 @@ export default function Heading({ badgeText, title, subtitle }: HeadingProps) {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col items-center text-center max-w-[500px] mx-auto"
+      className={`flex flex-col items-center text-center mx-auto ${maxWidthClass}`}
     >
       <div
         ref={badgeRef}
-        className="heading-badge mb-2 md:mb-4 shuffle"
+        className="heading-badge mb-2 md:mb-5 shuffle"
       >
         <span>{badgeText}</span>
       </div>
-      <h2 className="text-3xl md:text-5xl text-white mb-1 md:mb-3 gma-heading">
+      <h2 className="text-2xl md:text-5xl text-white mb-1 md:mb-4 gma-heading">
         {title}
       </h2>
-      <p className="text-md text-gray-300 gma-heading">{subtitle}</p>
+      <p className="text-[15px] text-gray-300 gma-heading max-w-[700px] mx-auto">{subtitle}</p>
     </div>
   );
 }
+
+

@@ -90,7 +90,7 @@ export default function GlobalMarketAccessSection() {
 
     return (
         <section className="relative  features">
-            <div className=' py-10 lg:py-26 max-w-[1460px] mx-auto px-6'>
+            <div className=' py-12 lg:py-26 max-w-[1460px] mx-auto px-6'>
                 <Heading
                     badgeText="WHY PEOPLE CHOOSE US"
                     title="Global Market Access"

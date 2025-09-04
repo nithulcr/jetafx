@@ -7,7 +7,7 @@ import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
-  weight: ["400", "500", "700"],         // Choose weights as needed
+  weight: ["300", "400", "500", "700"],         // Choose weights as needed
   display: "swap",
 });
 

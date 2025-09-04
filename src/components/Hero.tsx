@@ -20,6 +20,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
+    
     if (marqueeRef.current) {
       const el = marqueeRef.current;
       el.innerHTML += el.innerHTML; // duplicate items for smooth infinite scroll
@@ -125,7 +126,7 @@ const Hero = () => {
   ));
 
   return (
-    <section ref={sectionRef} className="relative py-12 lg:py-20 hero overflow-hidden">
+    <section ref={sectionRef} className="relative py-12 lg:pt-20 lg:pb-10 hero overflow-hidden">
       <div className="max-w-[1460px] mx-auto px-6 pt-24 pb-10 lg:pb-20 lg:pt-30 text-center hero-container relative z-10 ">
         <h1
           ref={headingRef}
@@ -137,8 +138,8 @@ const Hero = () => {
           Experience professional-grade trading across forex, commodities, indices, and digital currencies. Advanced analytics, lightning-fast execution, and global market access in one powerful platform.
         </p>
         <div className="flex justify-center gap-4 mt-8">
-          <AnimatedButton href="" label="Log in" className="fade-left w-fit" />
-          <AnimatedButton href="" label="Sign up" className="fade-right w-fit transparent-btn" />
+         <div className='shuffle'> <AnimatedButton href="" label="Log in" className="fade-left w-fit" /></div>
+          <div className='shuffle'><AnimatedButton href="" label="Sign up" className="fade-right w-fit transparent-btn" /></div>
         </div>
       </div>
       <div className="max-w-[1460px] hero-second-grid mx-auto px-6 py-6 flex gap-6 bg-transparent">
