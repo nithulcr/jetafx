@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,11 +65,11 @@ export default function Heading({
     >
       <div
         ref={badgeRef}
-        className="heading-badge mb-2 md:mb-5 shuffle"
+        className="heading-badge mb-3 md:mb-5 shuffle"
       >
         <span>{badgeText}</span>
       </div>
-      <h2 className="text-2xl md:text-5xl text-white mb-1 md:mb-4 gma-heading">
+      <h2 className="text-2xl md:text-5xl text-white mb-2 md:mb-4 gma-heading">
         {title}
       </h2>
       <p className="text-[15px] text-gray-300 gma-heading max-w-[700px] mx-auto">{subtitle}</p>

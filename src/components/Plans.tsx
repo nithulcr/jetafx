@@ -108,10 +108,10 @@ export default function PricingSlider() {
                     speed={1000}
                     spaceBetween={24}
                     //   centeredSlides={true}
-                    // autoplay={{
-                    //     delay: 3000,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
                     breakpoints={{
                         0: { slidesPerView: 1.1 },
                         600: { slidesPerView: 2.3 },

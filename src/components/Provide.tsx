@@ -3,10 +3,10 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import Heading from '@/components/Heading';
 
 gsap.registerPlugin(ScrollTrigger);
+
 
 const provideItems = [
     {
@@ -22,7 +22,7 @@ const provideItems = [
         label: "Commodities",
         description: "Diversify your portfolio with gold, oil, natural gas, and more. Hedge inflation and capture opportunities in global price movements.",
         icon: (
-            <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M26 24.5801H33V33.5801H26V24.5801Z" stroke="#FFD700" strokeLinejoin="round" />
                 <path d="M25 24.5801H34M25 33.5801H34M25 29.0801H26M33 29.0801H34M28.6607 29.0523C29.0185 28.5823 29.2945 27.9326 29.4435 27.5801C29.7045 27.9326 30.271 28.8171 30.45 29.2873C30.6735 29.8748 30.1145 30.5801 29.4435 30.5801C28.7725 30.5801 28.2135 29.6401 28.6607 29.0523Z" stroke="#FFD700" strokeLinecap="round" strokeLinejoin="round" />
                 <path fillRule="evenodd" clipRule="evenodd" d="M20 25.5801C24.4267 25.5801 28 23.8658 28 21.2944V5.00865C28 3.29436 24.4444 1.58008 20 1.58008C15.5556 1.58008 12 3.29436 12 5.00865V11.0086C14.08 11.8486 15.8578 13.2544 17.12 15.0372C17.9911 15.2018 18.9511 15.2927 20 15.2927C22.3289 15.2927 24.2667 14.8452 25.6533 14.1166C25.8502 14.0123 26.0418 13.899 26.2276 13.7772V16.1429C26.2276 16.5458 25.8951 17.1715 24.8018 17.7475C23.7422 18.3046 22.1173 18.7144 20.0018 18.7144C19.5787 18.7144 19.1757 18.6989 18.7929 18.6681C18.9351 19.2315 19.0299 19.8086 19.0773 20.3995C19.3772 20.4155 19.6853 20.4235 20.0018 20.4235C22.3307 20.4235 24.2684 19.9761 25.6551 19.2475C25.852 19.1432 26.0436 19.0299 26.2293 18.9081V21.2738C26.2293 21.6784 25.9644 22.2784 24.8231 22.8715C23.6996 23.4544 22.0142 23.8452 20.0053 23.8452C19.5964 23.8452 19.2006 23.8292 18.8178 23.7972C18.6811 24.367 18.4974 24.9254 18.2684 25.4669C18.8279 25.5275 19.4062 25.5578 20.0036 25.5578L20 25.5801ZM24.8 12.6201C25.8933 12.0441 26.2258 11.4184 26.2258 11.0155V8.64979C26.0421 8.77094 25.8507 8.88408 25.6516 8.98922C24.2684 9.71779 22.3271 10.1652 19.9982 10.1652C17.6693 10.1652 15.7316 9.71779 14.3449 8.98922C14.148 8.88489 13.9564 8.77162 13.7707 8.64979V11.0155C13.7707 11.4184 14.1031 12.0441 15.1964 12.6184C16.256 13.1755 17.8809 13.5852 19.9964 13.5852C22.112 13.5852 23.7298 13.1755 24.7964 12.6184L24.8 12.6201ZM13.7778 5.86579C13.7778 5.37208 14 4.89722 14.4142 4.60751C14.64 4.44979 14.8853 4.29208 15.0791 4.20636C15.5644 3.99036 17.9947 3.29265 20.0036 3.29265C22.0124 3.29265 23.7547 3.68179 24.928 4.20636C25.1484 4.30408 25.392 4.45665 25.6071 4.60751C26.0178 4.89379 26.2293 5.36522 26.2293 5.85379V5.86408C26.2293 6.26694 25.8969 6.89265 24.8036 7.46865C23.744 8.02579 22.1191 8.43551 20.0036 8.43551C17.888 8.43551 16.2702 8.02408 15.2036 7.46865C14.1102 6.89436 13.7778 6.26694 13.7778 5.86579Z" fill="#FFD700" />
@@ -35,12 +35,13 @@ const provideItems = [
         label: "Stocks",
         description: "Access leading global companies like Apple, Tesla, and Amazon through CFDs. Trade with competitive pricing and profit.",
         icon: (
-            <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M26 24.5801H33V33.5801H26V24.5801Z" stroke="#FFD700" strokeLinejoin="round" />
-                <path d="M25 24.5801H34M25 33.5801H34M25 29.0801H26M33 29.0801H34M28.6607 29.0523C29.0185 28.5823 29.2945 27.9326 29.4435 27.5801C29.7045 27.9326 30.271 28.8171 30.45 29.2873C30.6735 29.8748 30.1145 30.5801 29.4435 30.5801C28.7725 30.5801 28.2135 29.6401 28.6607 29.0523Z" stroke="#FFD700" strokeLinecap="round" strokeLinejoin="round" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M20 25.5801C24.4267 25.5801 28 23.8658 28 21.2944V5.00865C28 3.29436 24.4444 1.58008 20 1.58008C15.5556 1.58008 12 3.29436 12 5.00865V11.0086C14.08 11.8486 15.8578 13.2544 17.12 15.0372C17.9911 15.2018 18.9511 15.2927 20 15.2927C22.3289 15.2927 24.2667 14.8452 25.6533 14.1166C25.8502 14.0123 26.0418 13.899 26.2276 13.7772V16.1429C26.2276 16.5458 25.8951 17.1715 24.8018 17.7475C23.7422 18.3046 22.1173 18.7144 20.0018 18.7144C19.5787 18.7144 19.1757 18.6989 18.7929 18.6681C18.9351 19.2315 19.0299 19.8086 19.0773 20.3995C19.3772 20.4155 19.6853 20.4235 20.0018 20.4235C22.3307 20.4235 24.2684 19.9761 25.6551 19.2475C25.852 19.1432 26.0436 19.0299 26.2293 18.9081V21.2738C26.2293 21.6784 25.9644 22.2784 24.8231 22.8715C23.6996 23.4544 22.0142 23.8452 20.0053 23.8452C19.5964 23.8452 19.2006 23.8292 18.8178 23.7972C18.6811 24.367 18.4974 24.9254 18.2684 25.4669C18.8279 25.5275 19.4062 25.5578 20.0036 25.5578L20 25.5801ZM24.8 12.6201C25.8933 12.0441 26.2258 11.4184 26.2258 11.0155V8.64979C26.0421 8.77094 25.8507 8.88408 25.6516 8.98922C24.2684 9.71779 22.3271 10.1652 19.9982 10.1652C17.6693 10.1652 15.7316 9.71779 14.3449 8.98922C14.148 8.88489 13.9564 8.77162 13.7707 8.64979V11.0155C13.7707 11.4184 14.1031 12.0441 15.1964 12.6184C16.256 13.1755 17.8809 13.5852 19.9964 13.5852C22.112 13.5852 23.7298 13.1755 24.7964 12.6184L24.8 12.6201ZM13.7778 5.86579C13.7778 5.37208 14 4.89722 14.4142 4.60751C14.64 4.44979 14.8853 4.29208 15.0791 4.20636C15.5644 3.99036 17.9947 3.29265 20.0036 3.29265C22.0124 3.29265 23.7547 3.68179 24.928 4.20636C25.1484 4.30408 25.392 4.45665 25.6071 4.60751C26.0178 4.89379 26.2293 5.36522 26.2293 5.85379V5.86408C26.2293 6.26694 25.8969 6.89265 24.8036 7.46865C23.744 8.02579 22.1191 8.43551 20.0036 8.43551C17.888 8.43551 16.2702 8.02408 15.2036 7.46865C14.1102 6.89436 13.7778 6.26694 13.7778 5.86579Z" fill="#FFD700" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M16 21.5801C16 26.0067 12.4267 29.5801 8 29.5801C3.57333 29.5801 0 26.0067 0 21.5801C0 17.1534 3.57333 13.5801 8 13.5801C12.4267 13.5801 16 17.1534 16 21.5801ZM14.2222 21.5801C14.2222 25.0112 11.4311 27.8023 8 27.8023C4.56889 27.8023 1.77778 25.0112 1.77778 21.5801C1.77778 18.149 4.56889 15.3579 8 15.3579C11.4311 15.3579 14.2222 18.149 14.2222 21.5801Z" fill="#FFD700" />
+            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.64648 17.4999C3.64648 10.9695 3.64648 7.70284 5.67503 5.67429C7.70357 3.64575 10.9688 3.64575 17.5007 3.64575C24.0311 3.64575 27.2977 3.64575 29.3263 5.67429C31.3548 7.70284 31.3548 10.968 31.3548 17.4999C31.3548 24.0303 31.3548 27.297 29.3263 29.3255C27.2977 31.3541 24.0325 31.3541 17.5007 31.3541C10.9702 31.3541 7.70357 31.3541 5.67503 29.3255C3.64648 27.297 3.64648 24.0318 3.64648 17.4999Z" stroke="#FFD700" strokeWidth="1.5" strokeLinejoin="round" />
+                <path d="M3.64648 21.1458H4.43253C5.12086 21.1458 5.46503 21.1458 5.76544 21.0015C6.0644 20.8585 6.27878 20.5887 6.70898 20.0506L8.75065 17.5L10.9382 21.1458L13.1257 16.0417L16.7715 23.3333L21.8757 13.125L24.7923 18.2292L26.9798 16.0417L29.0871 19.2033C29.4546 19.7546 29.6384 20.0302 29.9067 20.1965C29.9602 20.2295 30.0156 20.2592 30.0729 20.2854C30.3617 20.4167 30.6927 20.4167 31.3548 20.4167" stroke="#FFD700" strokeWidth="1.5" strokeLinejoin="round" />
+                <path d="M21.875 3.64575V8.02075M21.875 31.3541V21.1458" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M21.8763 14.5832C22.6817 14.5832 23.3346 13.9303 23.3346 13.1248C23.3346 12.3194 22.6817 11.6665 21.8763 11.6665C21.0709 11.6665 20.418 12.3194 20.418 13.1248C20.418 13.9303 21.0709 14.5832 21.8763 14.5832Z" stroke="#FFD700" strokeWidth="1.5" strokeLinejoin="round" />
             </svg>
+
 
         ),
     },
@@ -48,7 +49,7 @@ const provideItems = [
         label: "Indices",
         description: "Trade top indices including the S&P 500, NASDAQ, and FTSE 100. Benefit from low spreads, high leverage.",
         icon: (
-            <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd" d="M1.87435 0.692627H6.24935V19.651H1.87435V0.692627ZM9.16601 9.44263H13.541V19.651H9.16601V9.44263ZM23.7493 6.52596H28.1243V19.651H23.7493V6.52596ZM16.4577 3.60929H20.8327V19.651H16.4577V3.60929ZM0.416016 21.1093H29.5827V24.026H0.416016V21.1093Z" fill="#FFD700" />
             </svg>
 
@@ -96,9 +97,66 @@ const provideItems = [
     },
     // Add more items here if needed
 ];
+const marqueeItemsA = [
+    "Instant Savings",
+    "Flexible Payments",
+    "Intelligent Spending",
+    "Customizable Plans",
+    "Smart Insights",
+    "Instant Savings",
+    "Flexible Payments",
+    "Intelligent Spending",
+    "Customizable Plans",
+    "Smart Insights",
+    "Instant Savings",
+    "Flexible Payments",
+    "Intelligent Spending",
+    "Customizable Plans",
+    "Smart Insights",
+];
 
+const marqueeItemsB = [
+    "Real-Time Reports",
+    "Custom Plans",
+    "Dedicated Support",
+    "24/7 Support",
+    "Secure Transactions",
+    "Real-Time Reports",
+    "Custom Plans",
+    "Dedicated Support",
+    "24/7 Support",
+    "Secure Transactions",
+    "Real-Time Reports",
+    "Custom Plans",
+    "Dedicated Support",
+    "24/7 Support",
+    "Secure Transactions",
+];
+const cardClass =
+    "inline-block rounded-full px-6 py-3 mx-2 my-2 marquee-btn text-white/90 text-sm  whitespace-nowrap";
 export default function Provide() {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
+        if (!containerRef.current) return;
 
+        const ctx = gsap.context(() => {
+            gsap.from(".gma-heading", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power2.out",
+                stagger: 0.2, // staggers animation by 0.2 seconds per element
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top 80%",
+                    end: "bottom 10%",
+                    toggleActions: "play reverse play reverse",
+                },
+            });
+        }, containerRef);
+
+        return () => ctx.revert();
+    }, []);
 
     return (
         <section className="provide-section relative lg:py-20 py-14">
@@ -110,9 +168,9 @@ export default function Provide() {
                     maxWidthClass="max-w-[900px]"
                 />
 
-                <div className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 lg:mt-16">
+                <div ref={containerRef} className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 lg:mt-16 ">
                     {provideItems.map((item, idx) => (
-                        <div key={idx} className="provide-col">
+                        <div key={idx} className="provide-col gma-heading">
                             <div className="flex items-center md:items-start md:flex-col gap-4 md:gap-0 mb-3 md:mb-0">
                                 <span className="provide-col-span shuffle inline-block p-2">{item.icon}</span>
                                 <h4 className="text-2xl text-white my-2">{item.label}</h4>
@@ -121,6 +179,60 @@ export default function Provide() {
                         </div>
                     ))}
                 </div>
+
+
+            </div>
+            <div className="marquee-double z-10 relative overflow-hidden w-full mt-20">
+                {/* Top Marquee: left to right */}
+                <div className="w-full flex items-center">
+                    <div className="marquee-ltr flex items-center whitespace-nowrap animate-marquee-ltr">
+                        {marqueeItemsA.concat(marqueeItemsA).map((item, idx) => (
+                            <span key={"ltr-" + idx} className={cardClass}>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+                {/* Bottom Marquee: right to left */}
+                <div className="w-full flex items-center mt-2">
+                    <div className="marquee-track marquee-rtl flex items-center whitespace-nowrap">
+                        {[...marqueeItemsB, ...marqueeItemsB, ...marqueeItemsB].map((item, idx) => (
+                            <span key={"rtl-" + idx} className={cardClass}>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+                {/* Custom CSS */}
+                <style jsx>{`
+          .marquee-track {
+            min-width: 200%; /* Ensures duplicate content covers scroll area */
+            will-change: transform;
+          }
+          .marquee-ltr {
+            animation: marqueeLTR 80s linear infinite;
+          }
+          .marquee-rtl {
+            animation: marqueeRTL 80s linear infinite;
+          }
+          @keyframes marqueeLTR {
+            0% {
+              transform: translateX(-50%);
+            }
+            100% {
+              transform: translateX(0%);
+            }
+          }
+          @keyframes marqueeRTL {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+        `}</style>
             </div>
         </section>
     );

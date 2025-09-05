@@ -107,7 +107,7 @@ export default function GlobalMarketAccessSection() {
                         <p className="text-gray-400  mb-5 max-w-[440px] gma-feature mx-auto md:mx-0 ">
                             Open your account in minutes, access global markets, and trade with confidence.
                         </p>
-                        <AnimatedButton href="" label="Open Account" className="shuffle w-fit mx-auto md:mx-0 gma-feature" />
+                        <AnimatedButton href="" label="Open Account" className="w-fit mx-auto md:mx-0 gma-feature" />
                     </div>
 
                     {/* Features List */}

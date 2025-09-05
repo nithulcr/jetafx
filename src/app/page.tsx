@@ -4,6 +4,7 @@ import Features from '@/components/Features';
 import Plans from '@/components/Plans';
 import FoundersNote from '@/components/FoundersNote';
 import Provide from '@/components/Provide';
+import AccountProcess from '@/components/AccountProcess';
 
 
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Plans />
       <FoundersNote />
       <Provide />
+      <AccountProcess />
 
 
       
