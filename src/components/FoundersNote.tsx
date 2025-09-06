@@ -80,7 +80,7 @@ export default function FoundersNote() {
                 />
                 <div ref={containerRef} className="max-w-4xl text-center mx-auto mb-6">
                     {quote.map((s, idx) => (
-                        <span key={idx} className="text-[1.4rem] md:text-[28px]  leading-snug tracking-wide">
+                        <span key={idx} className="text-[1.5rem] md:text-[28px]  leading-snug tracking-wide">
 
 
                             {renderSentence(s)}

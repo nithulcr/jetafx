@@ -58,7 +58,7 @@ const STEPS = [
 
 const AccountProcess = () => {
   return (
-    <div className="py-14 lg:py-24 account_process relative">
+    <section className="py-14 lg:py-24 account_process relative overflow-hidden">
       <div className="max-w-[1460px] mx-auto px-6">
         <Heading
           badgeText="ACCOUNT PROCESS"
@@ -133,7 +133,7 @@ const AccountProcess = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
