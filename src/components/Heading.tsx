@@ -20,11 +20,11 @@ export default function Heading({
   subtitle,
   maxWidthClass = "max-w-[500px]",
 }: HeadingProps) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLDivElement | null>(null);
   const badgeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (!containerRef.current || !badgeRef.current) return;
+    if (!headingRef.current || !badgeRef.current) return;
 
     const ctx = gsap.context(() => {
       gsap.from(".gma-heading", {
@@ -33,7 +33,7 @@ export default function Heading({
         duration: 1,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: containerRef.current,
+          trigger: headingRef.current,
           start: "top 80%",
           toggleActions: "play reverse play reverse",
         },
@@ -46,21 +46,21 @@ export default function Heading({
           backgroundPosition: "0% 50%",
           ease: "none",
           scrollTrigger: {
-            trigger: containerRef.current,
+            trigger: headingRef.current,
             start: "top 80%",
             end: "bottom 50%",
             scrub: true,
           },
         }
       );
-    }, containerRef);
+    }, headingRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
     <div
-      ref={containerRef}
+      ref={headingRef}
       className={`flex flex-col items-center text-center mx-auto ${maxWidthClass}`}
     >
       <div

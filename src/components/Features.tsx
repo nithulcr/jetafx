@@ -62,7 +62,7 @@ const Features = [
 ];
 
 export default function GlobalMarketAccessSection() {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const featuresRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -75,13 +75,13 @@ export default function GlobalMarketAccessSection() {
                 stagger: 0.15,
                 ease: 'power2.out',
                 scrollTrigger: {
-                    trigger: containerRef.current,
+                    trigger: featuresRef.current,
                     start: 'top 75%',
                     end: 'bottom 0%',
                     toggleActions: 'play reverse play reverse'
                 },
             });
-        }, containerRef);
+        }, featuresRef);
 
         return () => {
             ctx.revert();
@@ -97,7 +97,7 @@ export default function GlobalMarketAccessSection() {
                     subtitle="Trade Anytime, Anywhere"
                 />
                 <div
-                    ref={containerRef}
+                    ref={featuresRef}
                     className="grid md:grid-cols-2 gap-10 lg:gap-16 mt-12"
                 >
 

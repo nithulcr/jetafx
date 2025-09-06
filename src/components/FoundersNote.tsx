@@ -18,10 +18,10 @@ const highlights = [
 ];
 
 export default function FoundersNote() {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const foundersRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const words = containerRef.current?.querySelectorAll(".scrub-word");
+        const words = foundersRef.current?.querySelectorAll(".scrub-word");
         if (!words) return;
 
         gsap.fromTo(
@@ -35,7 +35,7 @@ export default function FoundersNote() {
                 stagger: 0.08,
                 ease: "power2.out",
                 scrollTrigger: {
-                    trigger: containerRef.current,
+                    trigger: foundersRef.current,
                     start: "top 90%",
                     end: "bottom 70%",
                     scrub: 1,
@@ -50,7 +50,7 @@ export default function FoundersNote() {
             stagger: 0.15,
             ease: 'power2.out',
             scrollTrigger: {
-                trigger: containerRef.current,
+                trigger: foundersRef.current,
                 start: 'top 75%',
                 end: 'bottom 0%',
                 toggleActions: 'play reverse play reverse'
@@ -78,7 +78,7 @@ export default function FoundersNote() {
                     title=""
                     subtitle=""
                 />
-                <div ref={containerRef} className="max-w-4xl text-center mx-auto mb-6">
+                <div ref={foundersRef} className="max-w-4xl text-center mx-auto mb-6">
                     {quote.map((s, idx) => (
                         <span key={idx} className="text-[1.5rem] md:text-[30px]  leading-snug tracking-wide">
 

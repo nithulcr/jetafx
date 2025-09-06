@@ -8,10 +8,14 @@ import AccountProcess from '@/components/AccountProcess';
 import Comparison from '@/components/Comparison';
 import TradeJourney from '@/components/TradeJourney';
 import Performance from '@/components/Performance';
+import FAQ from '@/components/FAQ';
+import Payment from '@/components/Payment';
+import Testimonials from '@/components/Testimonials';
+import Footer from '@/components/Footer';
 
 
 
-;
+
 
 
 
@@ -30,6 +34,12 @@ export default function Home() {
       <Comparison />
       <TradeJourney />
       <Performance />
+      <FAQ />
+      <Payment />
+      <Testimonials />
+      <Footer />
+
+
 
 
 

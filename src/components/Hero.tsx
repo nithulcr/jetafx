@@ -68,7 +68,7 @@ const Hero = () => {
     if (sectionRef.current) {
       gsap.fromTo(
         sectionRef.current.querySelectorAll('.fade-up'),
-        { opacity: 0, y: 48 },
+        { opacity: 0, y: 40 },
         { opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: "power3.out", delay: 0.2 }
       );
       gsap.fromTo(

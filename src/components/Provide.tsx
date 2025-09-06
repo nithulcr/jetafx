@@ -137,9 +137,9 @@ const cardClass =
 
     
 export default function Provide() {
-    const containerRef = useRef<HTMLDivElement | null>(null);
+    const provideRef = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
-        if (!containerRef.current) return;
+        if (!provideRef.current) return;
 
         const ctx = gsap.context(() => {
             gsap.from(".gma-heading", {
@@ -149,13 +149,13 @@ export default function Provide() {
                 ease: "power2.out",
                 stagger: 0.2, // staggers animation by 0.2 seconds per element
                 scrollTrigger: {
-                    trigger: containerRef.current,
+                    trigger: provideRef.current,
                     start: "top 80%",
                     end: "bottom 10%",
                     toggleActions: "play reverse play reverse",
                 },
             });
-        }, containerRef);
+        }, provideRef);
 
         return () => ctx.revert();
     }, []);
@@ -170,7 +170,7 @@ export default function Provide() {
                     maxWidthClass="max-w-[900px]"
                 />
 
-                <div ref={containerRef} className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 lg:mt-16 ">
+                <div ref={provideRef} className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 lg:mt-16 ">
                     {provideItems.map((item, idx) => (
                         <div key={idx} className="provide-col gma-heading">
                             <div className="flex items-center md:items-start md:flex-col gap-4 md:gap-0 mb-3 md:mb-0">
