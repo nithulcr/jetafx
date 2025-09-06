@@ -9,8 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-export default function payment() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
+export default function Payment() {
     const paymentContainer = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

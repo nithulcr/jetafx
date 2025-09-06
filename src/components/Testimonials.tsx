@@ -197,7 +197,7 @@ export default function Testimonials() {
                         ))}
                     </Swiper>
                 </div>
-                <div className="flex flex-row items-center justify-center gap-3 mt-6 lg:mt-12">
+                <div className="flex flex-row items-center justify-center gap-3 lg:mt-6 lg:mt-12">
                     <div className="flex items-center">
                         <Image
                             src="/client1.png"

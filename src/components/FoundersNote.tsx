@@ -43,7 +43,7 @@ export default function FoundersNote() {
                 }
             }
         );
-        gsap.from('.fade-up', {
+        gsap.from('.fade-up-main2', {
             opacity: 0,
             y: 40,
             duration: 0.8,
@@ -89,7 +89,7 @@ export default function FoundersNote() {
                         </span>
                     ))}
                 </div>
-                <div className="flex flex-row items-center justify-center gap-3 mt-4 fade-up">
+                <div className="flex flex-row items-center justify-center gap-3 mt-4 fade-up-main2">
                     <Image
                         src="/ceo.png"
                         alt="Founder"
