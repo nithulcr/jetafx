@@ -4,8 +4,12 @@ import Features from '@/components/Features';
 import Plans from '@/components/Plans';
 import FoundersNote from '@/components/FoundersNote';
 import Provide from '@/components/Provide';
-import AccountProcess from '@/components/AccountProcess'
-import Comparison from '@/components/Comparison'
+import AccountProcess from '@/components/AccountProcess';
+import Comparison from '@/components/Comparison';
+import TradeJourney from '@/components/TradeJourney';
+import Performance from '@/components/Performance';
+
+
 
 ;
 
@@ -24,6 +28,10 @@ export default function Home() {
       <Provide />
       <AccountProcess />
       <Comparison />
+      <TradeJourney />
+      <Performance />
+
+
 
 
 

@@ -30,35 +30,37 @@ const NEGATIVE_FEATURES = [
 
 export default function Comparison() {
 
-    const comparisonRef = useRef<HTMLDivElement | null>(null);
+     const comparisonRef = useRef<HTMLDivElement | null>(null);
 useEffect(() => {
-  if (!comparisonRef.current) return;
+        if (!comparisonRef.current) return;
 
-  const ctx = gsap.context(() => {
-    gsap.from(comparisonRef.current.querySelectorAll('.fade-up'), {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power2.out",
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: comparisonRef.current,
-        start: "top 90%",
-        end: "bottom 20%",
-        toggleActions: "play none none none",
-      },
-    });
-  }, comparisonRef);
+        const ctx = gsap.context(() => {
+            gsap.from(".gma-heading", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power2.out",
+                stagger: 0.2, // staggers animation by 0.2 seconds per element
+                scrollTrigger: {
+                    trigger: comparisonRef.current,
+                    start: "top 80%",
+                    end: "bottom 10%",
+                    toggleActions: "play reverse play reverse",
+                },
+            });
+        }, comparisonRef);
 
-  return () => ctx.revert();
-}, []);
+        return () => ctx.revert();
+    }, []);
+
+
+
 
 
 
 
     return (
-        <section  className="py-14 lg:pt-24 lg:pb-10 comparison-section relative">
+        <section className="py-14 lg:py-24  comparison-section relative">
             <span className="border_shape3"></span>
             <div className='max-w-[1460px] mx-auto px-6'>
                 <Heading
@@ -70,7 +72,7 @@ useEffect(() => {
                 <div ref={comparisonRef} className="flex flex-col md:flex-row gap-8 w-full max-w-4xl mt-10 lg:mt-20 mx-auto ">
 
                     {/* Jetafx */}
-                    <div className="flex-1 fade-up">
+                    <div className="flex-1 gma-heading">
                         <div className="flex items-center gap-2 mb-8 h-4 mx-auto w-fit">
                             <Image
                                 src="/logo.png"
@@ -95,7 +97,7 @@ useEffect(() => {
                         </ul>
                     </div>
                     {/* Others */}
-                    <div className=" flex-1 fade-up">
+                    <div className=" flex-1 gma-heading">
                         <div className="flex items-center gap-2 mb-8 h-4 mx-auto w-fit">
                             <span className="text-2xl tracking-tight flex items-center gap-2">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

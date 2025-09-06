@@ -134,6 +134,8 @@ const marqueeItemsB = [
 ];
 const cardClass =
     "inline-block rounded-full px-6 py-3 mx-2 my-2 marquee-btn text-white/90 text-sm  whitespace-nowrap";
+
+    
 export default function Provide() {
     const containerRef = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
@@ -173,7 +175,7 @@ export default function Provide() {
                         <div key={idx} className="provide-col gma-heading">
                             <div className="flex items-center md:items-start md:flex-col gap-4 md:gap-0 mb-3 md:mb-0">
                                 <span className="provide-col-span shuffle inline-block p-2">{item.icon}</span>
-                                <h4 className="text-2xl text-white my-2">{item.label}</h4>
+                                <h4 className="text-xl lg:text-2xl text-white my-2">{item.label}</h4>
                             </div>
                             <p className="text-[#E6ECFF] opacity-70">{item.description}</p>
                         </div>
