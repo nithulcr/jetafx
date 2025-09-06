@@ -62,7 +62,7 @@ export default function Performance() {
                 y: 50,
                 duration: 1,
                 ease: "power2.out",
-                stagger: 0.2, // staggers animation by 0.2 seconds per element
+              
                 scrollTrigger: {
                     trigger: perfomanceRef.current,
                     start: "top 80%",

@@ -176,7 +176,7 @@ const Hero = () => {
             </div>
             <div className='absolute-line-button'>
               <span className='dot-span'></span>
-              <span ref={setCountRef} data-target="1917.44" className="count-number shuffle absolute-line-mark w-fit bg-white text-black font-semibold px-3 py-1 rounded-full shadow text-xs">0</span>
+              <span ref={setCountRef} data-target="1917.44" className="count-number absolute-line-mark w-fit bg-white text-black font-semibold px-3 py-1 rounded-full shadow text-xs">0</span>
             </div>
             <div className='grid grid-cols-3'>
               <div className='relative'>
@@ -184,7 +184,7 @@ const Hero = () => {
               </div>
               <div className='trade_rate_img_container relative'>
                 <Image src="/trade_rate.png" alt="trade rate" className="trade_rate_img" width={300} height={300} />
-                <div className="shuffle count-number absolute left-[58%] top-[70%] bg-white px-3 py-1.5 rounded-full text-black font-bold text-xs flex items-center gap-1"
+                <div className=" count-number absolute left-[58%] top-[70%] bg-white px-3 py-1.5 rounded-full text-black font-bold text-xs flex items-center gap-1"
                   style={{ transform: "translate(-50%, -50%)" }}>
                   $<span ref={setCountRef} data-target="10" className="count-number">0</span>.00
                   <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -195,13 +195,13 @@ const Hero = () => {
               </div>
               <div className="relative flex flex-end">
                 <div className="flex gap-2 min-w-[110px] ml-auto items-end relative">
-                  <div className="bg-white text-black py-1 px-6 rounded-lg flex flex-col items-center min-w-[85px] shuffle">
+                  <div className="bg-white text-black py-1 px-6 rounded-lg flex flex-col items-center min-w-[85px]">
                     <span className="text-[12px] text-gray-800">Amount</span>
                     <span className="font-semibold text-sm">
                       $<span ref={setCountRef} data-target="10" className="count-number">0</span>
                     </span>
                   </div>
-                  <div className="bg-[#232325] text-white/80 py-1 px-6 rounded-lg flex flex-col items-center min-w-[85px] shuffle">
+                  <div className="bg-[#232325] text-white/80 py-1 px-6 rounded-lg flex flex-col items-center min-w-[85px]">
                     <span className="text-[12px] text-gray-300">Duration</span>
                     <span className="font-semibold text-sm">
                       <span ref={setCountRef} data-target="1" className="count-number">0</span> min
@@ -464,7 +464,7 @@ const Hero = () => {
           </p>
           <div className="flex  gap-2 relative s-fade-up flex-wrap bg-[#0D0E14] p-4 rounded-xl border border-[#1F1F24]">
             <div className="choose-btn-card w-full flex items-center gap-2 px-3 py-3 rounded-lg bg-[#11131A] w-fit min-w-[100px]">
-              <svg className="shuffle" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 5.89062C7.50555 5.89062 7.0222 6.03725 6.61107 6.31195C6.19995 6.58665 5.87952 6.9771 5.6903 7.43392C5.50108 7.89073 5.45157 8.3934 5.54804 8.87835C5.6445 9.3633 5.8826 9.80876 6.23223 10.1584C6.58186 10.508 7.02732 10.7461 7.51227 10.8426C7.99723 10.9391 8.49989 10.8895 8.95671 10.7003C9.41352 10.5111 9.80397 10.1907 10.0787 9.77955C10.3534 9.36843 10.5 8.88508 10.5 8.39062C10.5 7.72758 10.2366 7.0917 9.76777 6.62286C9.29893 6.15402 8.66304 5.89062 8 5.89062ZM8 9.89062C7.70333 9.89062 7.41332 9.80265 7.16664 9.63783C6.91997 9.47301 6.72771 9.23874 6.61418 8.96465C6.50065 8.69056 6.47094 8.38896 6.52882 8.09799C6.5867 7.80702 6.72956 7.53974 6.93934 7.32996C7.14912 7.12019 7.41639 6.97732 7.70736 6.91945C7.99834 6.86157 8.29994 6.89127 8.57403 7.00481C8.84811 7.11834 9.08238 7.3106 9.2472 7.55727C9.41203 7.80394 9.5 8.09395 9.5 8.39062C9.5 8.78845 9.34196 9.16998 9.06066 9.45129C8.77936 9.73259 8.39782 9.89062 8 9.89062ZM15 3.89062H1C0.867392 3.89062 0.740215 3.9433 0.646447 4.03707C0.552678 4.13084 0.5 4.25802 0.5 4.39062V12.3906C0.5 12.5232 0.552678 12.6504 0.646447 12.7442C0.740215 12.8379 0.867392 12.8906 1 12.8906H15C15.1326 12.8906 15.2598 12.8379 15.3536 12.7442C15.4473 12.6504 15.5 12.5232 15.5 12.3906V4.39062C15.5 4.25802 15.4473 4.13084 15.3536 4.03707C15.2598 3.9433 15.1326 3.89062 15 3.89062ZM12.1031 11.8906H3.89687C3.729 11.3229 3.42175 10.8062 3.00311 10.3875C2.58447 9.96887 2.06775 9.66162 1.5 9.49375V7.2875C2.06775 7.11963 2.58447 6.81238 3.00311 6.39374C3.42175 5.9751 3.729 5.45837 3.89687 4.89062H12.1031C12.271 5.45837 12.5782 5.9751 12.9969 6.39374C13.4155 6.81238 13.9323 7.11963 14.5 7.2875V9.49375C13.9323 9.66162 13.4155 9.96887 12.9969 10.3875C12.5782 10.8062 12.271 11.3229 12.1031 11.8906ZM14.5 6.22625C13.9003 5.96837 13.4223 5.49035 13.1644 4.89062H14.5V6.22625ZM2.83562 4.89062C2.57774 5.49035 2.09973 5.96837 1.5 6.22625V4.89062H2.83562ZM1.5 10.555C2.09973 10.8129 2.57774 11.2909 2.83562 11.8906H1.5V10.555ZM13.1644 11.8906C13.4223 11.2909 13.9003 10.8129 14.5 10.555V11.8906H13.1644Z" fill="#A1B8FE" />
               </svg>
 
@@ -472,7 +472,7 @@ const Hero = () => {
               <span className="font-medium text-sm">Funds held in segregated accounts</span>
             </div>
             <div className="choose-btn-card w-full flex items-center gap-2 px-3 py-3 rounded-lg bg-[#11131A] w-fit min-w-[100px] ">
-              <svg className="shuffle" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 12.8906H13.5V2.89062C13.5 2.75802 13.4473 2.63084 13.3536 2.53707C13.2598 2.4433 13.1326 2.39062 13 2.39062H9.5C9.36739 2.39062 9.24021 2.4433 9.14645 2.53707C9.05268 2.63084 9 2.75802 9 2.89062V5.39062H6C5.86739 5.39062 5.74021 5.4433 5.64645 5.53707C5.55268 5.63084 5.5 5.75802 5.5 5.89062V8.39062H3C2.86739 8.39062 2.74021 8.4433 2.64645 8.53707C2.55268 8.63084 2.5 8.75802 2.5 8.89062V12.8906H2C1.86739 12.8906 1.74021 12.9433 1.64645 13.0371C1.55268 13.1308 1.5 13.258 1.5 13.3906C1.5 13.5232 1.55268 13.6504 1.64645 13.7442C1.74021 13.8379 1.86739 13.8906 2 13.8906H14C14.1326 13.8906 14.2598 13.8379 14.3536 13.7442C14.4473 13.6504 14.5 13.5232 14.5 13.3906C14.5 13.258 14.4473 13.1308 14.3536 13.0371C14.2598 12.9433 14.1326 12.8906 14 12.8906ZM10 3.39062H12.5V12.8906H10V3.39062ZM6.5 6.39062H9V12.8906H6.5V6.39062ZM3.5 9.39062H5.5V12.8906H3.5V9.39062Z" fill="#A1B8FE" />
               </svg>
 
@@ -481,7 +481,7 @@ const Hero = () => {
               <span className="font-medium text-sm">Strong data encryption</span>
             </div>
             <div className="choose-btn-card w-full flex items-center gap-2 px-3 py-3 rounded-lg bg-[#11131A] w-fit min-w-[100px] ">
-              <svg className="shuffle" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 1.89062C6.71442 1.89063 5.45772 2.27184 4.3888 2.98607C3.31988 3.7003 2.48676 4.71546 1.99479 5.90318C1.50282 7.0909 1.37409 8.39784 1.6249 9.65871C1.8757 10.9196 2.49477 12.0778 3.40381 12.9868C4.31285 13.8959 5.47104 14.5149 6.73192 14.7657C7.99279 15.0165 9.29973 14.8878 10.4874 14.3958C11.6752 13.9039 12.6903 13.0708 13.4046 12.0018C14.1188 10.9329 14.5 9.6762 14.5 8.39062C14.4982 6.66728 13.8128 5.01503 12.5942 3.79644C11.3756 2.57785 9.72335 1.89244 8 1.89062ZM8 13.8906C6.91221 13.8906 5.84884 13.5681 4.94437 12.9637C4.0399 12.3594 3.33495 11.5004 2.91867 10.4954C2.50238 9.49039 2.39347 8.38452 2.60568 7.31763C2.8179 6.25073 3.34173 5.27073 4.11092 4.50154C4.8801 3.73235 5.86011 3.20852 6.92701 2.99631C7.9939 2.78409 9.09977 2.89301 10.1048 3.30929C11.1098 3.72557 11.9687 4.43052 12.5731 5.33499C13.1774 6.23946 13.5 7.30283 13.5 8.39062C13.4983 9.84881 12.9184 11.2468 11.8873 12.2779C10.8562 13.309 9.45819 13.889 8 13.8906ZM12 8.39062C12 8.52323 11.9473 8.65041 11.8536 8.74418C11.7598 8.83795 11.6326 8.89062 11.5 8.89062H8C7.86739 8.89062 7.74022 8.83795 7.64645 8.74418C7.55268 8.65041 7.5 8.52323 7.5 8.39062V4.89062C7.5 4.75802 7.55268 4.63084 7.64645 4.53707C7.74022 4.4433 7.86739 4.39062 8 4.39062C8.13261 4.39062 8.25979 4.4433 8.35356 4.53707C8.44732 4.63084 8.5 4.75802 8.5 4.89062V7.89062H11.5C11.6326 7.89062 11.7598 7.9433 11.8536 8.03707C11.9473 8.13084 12 8.25802 12 8.39062Z" fill="#A1B8FE" />
               </svg>
 

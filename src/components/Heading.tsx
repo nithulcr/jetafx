@@ -65,7 +65,7 @@ export default function Heading({
     >
       <div
         ref={badgeRef}
-        className="heading-badge mb-3 md:mb-5 shuffle"
+        className="heading-badge mb-3 md:mb-5 gma-heading"
       >
         <span>{badgeText}</span>
       </div>

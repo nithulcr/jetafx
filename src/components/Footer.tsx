@@ -5,7 +5,7 @@ import AnimatedButton from "./AnimatedButton";
 export default function Footer() {
   return (
     <footer className="bg-[#010101]  lg:pt-10 pb-7 lg:pb-10 mt-20">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1460px] mx-auto px-6">
         {/* Top section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-9 border-b border-[#24222c]">
           <div className="max-w-[700px]">
@@ -48,20 +48,20 @@ export default function Footer() {
         </div>
 
         {/* Disclaimer and legal */}
-        <div className="text-xs opacity-50 leading-relaxed mb-5 space-y-2">
+        <div className="text-sm text-[#bcbcbc] leading-relaxed mb-5 mt-4 space-y-2">
           <p>
-            <strong>Disclaimer:</strong> Jeta FX LTD is a company registered in Saint Lucia with registered address Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia
+            <strong className="text-white">Disclaimer:</strong> Jeta FX LTD is a company registered in Saint Lucia with registered address Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia
           </p>
           <p>
-            <strong>Risk Warning:</strong>  An Investment In Derivatives May Mean Investors May Lose An Amount Even Greater Than Their Original Investment. Anyone Wishing To Invest In Any Of The Products Mentioned In www.jetafx.com .Com Should Seek Their Own Financial Or Professional Advice. Trading Of Securities, Forex, Stock Market, Commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money. Trading in the financial markets has large potential rewards but also large potential risks. You Must Be Aware Of The Risks And Be Willing To Accept Them In Order To Invest In The Markets. Dont Invest And Trade With Money Which You Cant Afford To Lose. Forex trading is not allowed in some countries. Before Investing Your Money, make sure whether your country is allowing this or not. You Are Strongly Advised To Obtain Independent Financial, Legal And Tax Advice Before Proceeding With Any Currency Or Spot Metals Trade. Nothing In This Site Should Be Read Or Construed As Constituting Advice On The Part Of Jeta FX LTD Or Any Of Its Affiliates, Directors, Officers Or Employees.
+            <strong className="text-white">Risk Warning:</strong>  An Investment In Derivatives May Mean Investors May Lose An Amount Even Greater Than Their Original Investment. Anyone Wishing To Invest In Any Of The Products Mentioned In www.jetafx.com .Com Should Seek Their Own Financial Or Professional Advice. Trading Of Securities, Forex, Stock Market, Commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money. Trading in the financial markets has large potential rewards but also large potential risks. You Must Be Aware Of The Risks And Be Willing To Accept Them In Order To Invest In The Markets. Dont Invest And Trade With Money Which You Cant Afford To Lose. Forex trading is not allowed in some countries. Before Investing Your Money, make sure whether your country is allowing this or not. You Are Strongly Advised To Obtain Independent Financial, Legal And Tax Advice Before Proceeding With Any Currency Or Spot Metals Trade. Nothing In This Site Should Be Read Or Construed As Constituting Advice On The Part Of Jeta FX LTD Or Any Of Its Affiliates, Directors, Officers Or Employees.
           </p>
           <p>
-            <strong>Restricted Regions:</strong>  Jeta FX LTD Does Not Provide Services For Citizens/Residents Of The United States, Cuba, Iraq, Myanmar, North Korea, Sudan, Russia and Iran. The Services Of Jeta FX LTDAre Not Intended For Distribution To, Or Use By, Any Person In Any Country Or Jurisdiction Where Such Distribution Or Use Would Be Contrary To Local Law Or Regulation.
+            <strong className="text-white">Restricted Regions:</strong>  Jeta FX LTD Does Not Provide Services For Citizens/Residents Of The United States, Cuba, Iraq, Myanmar, North Korea, Sudan, Russia and Iran. The Services Of Jeta FX LTDAre Not Intended For Distribution To, Or Use By, Any Person In Any Country Or Jurisdiction Where Such Distribution Or Use Would Be Contrary To Local Law Or Regulation.
           </p>
         </div>
 
         {/* Copyright */}
-        <div className="text-xs text-center opacity-60 pt-8 ">
+        <div className="text-md text-center opacity-60 pt-8 ">
           Copyright © 2025 Jetafx. All rights reserved.
         </div>
       </div>
