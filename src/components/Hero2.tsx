@@ -30,13 +30,13 @@ const Hero2 = () => {
   return (
     <section ref={hero2Ref} className="relative  lg:pb-2 lg:pt-16 lg:pb-6 hero overflow-hidden ">
       <span className='hero-section-span'></span>
-      <div className="max-w-[1460px] mx-auto px-6 pt-24 pb-10 lg:pb-20 lg:pt-30 text-center hero-container hero-container2 relative z-10 ">
+      <div className="max-w-[1460px] mx-auto px-6 pt-30 pb-10 lg:pb-20  text-center hero-container hero-container2 relative z-10 ">
         <h1
           className="fade-up hero-heading text-4xl md:text-5xl lg:text-7xl max-w-[1000px] mx-auto font-bold mb-4 leading-tight"
         >
           Secure & Transparent Trading with Jeta FX
         </h1>
-        <p className="fade-up lg:text-lg text-md text-slate-300 mb-8 max-w-[800px] mx-auto">
+        <p className="fade-up lg:text-lg text-md text-slate-300 lg:mb-8 max-w-[800px] mx-auto">
           At Jeta FX, we believe trading should be clear, fair, and accessible for everyone.
         </p>
         <div className="fade-up pt-6">

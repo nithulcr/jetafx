@@ -78,7 +78,8 @@ export default function FoundersNote() {
                     title=""
                     subtitle=""
                 />
-                <div ref={foundersRef} className="max-w-4xl text-center mx-auto mb-6">
+                <div ref={foundersRef}>
+                <div className="max-w-4xl text-center mx-auto mb-6">
                     {quote.map((s, idx) => (
                         <span key={idx} className="text-[1.5rem] md:text-[30px]  leading-snug tracking-wide">
 
@@ -98,6 +99,7 @@ export default function FoundersNote() {
                         className="rounded-full"
                     />
                     <span className="text-[#E6ECFF] text-md opacity-70">Founder &amp; CEO of Jetafx</span>
+                </div>
                 </div>
             </div>
         </section>

@@ -82,9 +82,9 @@ useEffect(() => {
                                 className=""
                             />
                         </div>
-                        <ul className="space-y-6 comparison-card w-full">
+                        <ul className="space-y-6 site-card2 w-full">
                             {POSITIVE_FEATURES.map((item, idx) => (
-                                <li key={idx} className="flex items-center gap-3 text-[#bac3f0] text-[17px] font-normal">
+                                <li key={idx} className="flex items-center gap-3 text-[#bac3f0] text-[17px] font-[200]">
                                     <span className="inline-block w-[18px] h-[18px]">
                                         <svg width="25" height="24" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M4.75097 9.32325L3.16797 10.9062L7.91797 15.6562L15.834 7.73925L14.251 6.15625L7.91797 12.4893L4.75097 9.32325Z" fill="#8AA5FF" />
@@ -107,9 +107,9 @@ useEffect(() => {
                                 Others
                             </span>
                         </div>
-                        <ul className="space-y-6 comparison-card w-full ">
+                        <ul className="space-y-6 site-card2 w-full ">
                             {NEGATIVE_FEATURES.map((item, idx) => (
-                                <li key={idx} className="flex items-center gap-3 text-[#bac3f0] text-[17px] font-normal">
+                                <li key={idx} className="flex items-center gap-3 text-[#bac3f0] text-[17px] font-[200]">
                                     <span className="inline-block w-[18px] h-[18px]">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.49994 0.09375L5.99994 4.59375L10.4999 0.09375L11.9139 1.50775L7.41394 6.00775L11.9139 10.5077L10.4999 11.9218L5.99994 7.42175L1.49994 11.9218L0.0859375 10.5077L4.58594 6.00775L0.0859375 1.50775L1.49994 0.09375Z" fill="#8AA5FF" />

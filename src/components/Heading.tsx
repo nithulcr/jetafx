@@ -34,8 +34,9 @@ export default function Heading({
         ease: "power2.out",
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 80%",
-          toggleActions: "play reverse play reverse",
+          start: "top 90%",
+          end: "bottom 10%",
+          toggleActions: "play none none play",
         },
       });
 
@@ -47,8 +48,8 @@ export default function Heading({
           ease: "none",
           scrollTrigger: {
             trigger: headingRef.current,
-            start: "top 80%",
-            end: "bottom 50%",
+            start: "top 90%",
+            end: "bottom 55%",
             scrub: true,
           },
         }

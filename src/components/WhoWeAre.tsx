@@ -110,7 +110,7 @@ export default function WhoWeAre() {
                 </div>
 
             </div>
-            <div className="marquee2 w-full overflow-hidden text-white mt-6 md:mt-16 s-fade-up">
+            <div className="marquee2 w-full overflow-hidden relative text-white mt-6 md:mt-16 s-fade-up">
                 <div
                     ref={marqueeRef}
                     className="flex whitespace-nowrap animate-marquee font-semibold text-4xl md:text-5xl lg:text-7xl"
