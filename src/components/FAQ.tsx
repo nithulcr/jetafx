@@ -64,7 +64,8 @@ export default function FAQ() {
     }, []);
 
     return (
-        <section className="faq-section relative overflow-hidden py-14 lg:py-24">
+        <section className="faq-section relative overflow-hidden py-14 lg:py-22">
+             <span className='border_shape3'></span>
             <div className="max-w-[1460px] px-6 mx-auto">
                 <Heading
                     badgeText="FAQ'S SECTION"

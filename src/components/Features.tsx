@@ -90,7 +90,7 @@ export default function GlobalMarketAccessSection() {
 
     return (
         <section className="relative  features">
-            <div className=' py-12 lg:py-26 max-w-[1460px] mx-auto px-6'>
+            <div className=' py-12 lg:pt-14 lg:pb-24 max-w-[1460px] mx-auto px-6'>
                 <Heading
                     badgeText="WHY PEOPLE CHOOSE US"
                     title="Global Market Access"
@@ -117,7 +117,7 @@ export default function GlobalMarketAccessSection() {
                                 key={i}
                                 className="gma-feature flex items-start gap-4 lg:gap-8"
                             >
-                                <span className="shuffle w-10 h-10 md:w-13 md:h-13 flex items-center justify-center shadow-[inset_0px_2px_4px_rgba(138,165,255,0.5)] p-2 rounded-lg">{feat.icon}</span>
+                                <span className="shuffle w-10 h-10 md:w-13 md:h-13 flex items-center justify-center shadow-[inset_0px_2px_4px_rgba(138,165,255,0.5)] p-2 rounded-lg"><span className='shuffle'>{feat.icon}</span></span>
                                 <div className=''>
                                     <h4 className="text-lg lg:text-xl  text-white mb-2">{feat.title}</h4>
                                     <p className="text-gray-400 text-sm max-w-[420px]">{feat.desc}</p>

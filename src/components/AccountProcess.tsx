@@ -69,13 +69,13 @@ const AccountProcess = () => {
         <div className=" mt-14 md:mt-24">
           <div className="relative w-fit mx-auto flex justify-center items-center">
             {/* Center Logo */}
-            <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-16 h-16  bg-[#070824] flex items-center justify-center rounded-lg">
-              <Image src="/logo-icon.png" alt="logo icon" className='p-[2px] shuffle ' width={50} height={50} />
+            <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-18 h-18  bg-[#070824] flex items-center justify-center rounded-lg">
+              <Image src="/logo-icon.png" alt="logo icon" className='p-[2px] shuffle ' width={64} height={64} />
             </div>
             {/* Grid for steps */}
-            <div className="grid grid-cols-2 grid-rows-2 gap-x-12 md:gap-x-16 gap-y-12 w-full max-w-2xl z-10">
+            <div className="grid grid-cols-2 grid-rows-2 gap-x-12 md:gap-x-16 gap-y-12 w-full max-w-3xl z-10">
               {STEPS.map((step, idx) => (
-                <div key={idx} className="flex flex-col items-center text-center lg:p-2">
+                <div key={idx} className="flex flex-col items-center text-center lg:p-4">
                   <span className="w-10 h-10 md:w-13 md:h-13 flex items-center justify-center shadow-[inset_0px_2px_4px_rgba(138,165,255,0.5)] p-2 rounded-lg">
                     {step.icon}
                   </span>

@@ -86,14 +86,37 @@ export default function PricingSlider() {
     // Keep track of current slide's index
     const [activeIdx, setActiveIdx] = useState(0);
     const swiperRef = useRef<SwiperType | null>(null);
-    const sectionRef = useRef<HTMLDivElement>(null);
+     const PlansRef = useRef<HTMLDivElement>(null);
 
 
+ useEffect(() => {
+        const ctx = gsap.context(() => {
+
+            // Animation for features list staggered
+            gsap.from('.plans-fade-up', {
+                opacity: 0,
+                y: 40,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: PlansRef.current,
+                    start: 'top 85%',
+                    end: 'bottom 0%',
+                    toggleActions: 'play reverse play reverse'
+                },
+            });
+        }, PlansRef);
+
+        return () => {
+            ctx.revert();
+        };
+    }, []);
 
 
 
     return (
-        <section  className="plans-section py-12 md:pt-26  md:pb-16 relative overflow-hidden">
+        <section  className="plans-section py-12 md:pt-24  md:pb-12 relative overflow-hidden">
 
             <span className='border_shape3'></span>
             <Heading
@@ -101,7 +124,7 @@ export default function PricingSlider() {
                 title="Flexible Pricing Plans"
                 subtitle="We offer tailored account types to suit every trading style"
             />
-            <div className='mt-12'>
+            <div  ref={PlansRef} className='mt-12'>
                 <Swiper
                     modules={[Autoplay]}
                     loop={true}
@@ -148,7 +171,7 @@ export default function PricingSlider() {
 
                         return (
                             <SwiperSlide key={i}>
-                                <div className={` plan-card w-full p-7 flex flex-col items-center mx-auto min-h-[440px] ${style}`}>
+                                <div className={`plans-fade-up plan-card w-full p-7 flex flex-col items-center mx-auto min-h-[440px] ${style}`}>
                                     {/* ...Content... */}
                                     <div className=''>
                                         <div className=" text-lg text-gray-200 mb-3 flex gap-2 items-center">

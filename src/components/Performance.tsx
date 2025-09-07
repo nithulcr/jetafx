@@ -57,7 +57,7 @@ export default function Performance() {
         if (!perfomanceRef.current) return;
 
         const ctx = gsap.context(() => {
-            gsap.from(".fade-top", {
+            gsap.from(".fade-performance", {
                 opacity: 0,
                 y: 50,
                 duration: 1,
@@ -67,7 +67,8 @@ export default function Performance() {
                     trigger: perfomanceRef.current,
                     start: "top 80%",
                     end: "bottom 10%",
-                    toggleActions: "play none none reverse",
+                    toggleActions: "play none none none",
+
                 },
             });
         }, perfomanceRef);
@@ -84,15 +85,15 @@ export default function Performance() {
                         badgeText="MARKET-DRIVEN PERFORMANCE"
                         title="Never Miss a Trade"
                         subtitle="Stay ahead of market moves, track opportunities, and execute with precision."
-                        maxWidthClass=""
+                        maxWidthClass="max-w-[900px]"
                     />
                 </div>
 
                 <div ref={perfomanceRef} className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 lg:mt-12 ">
                     {PerformanceItems.map((item, idx) => (
-                        <div key={idx} className="Performance-col fade-top">
+                        <div key={idx} className="site-card fade-performance">
                             <div className="flex items-center md:items-start md:flex-col gap-4 md:gap-0 mb-3 md:mb-0">
-                                <span className="Performance-col-span shuffle inline-block p-2">{item.icon}</span>
+                                <span className="site-card-span shuffle inline-block p-2">{item.icon}</span>
                                 <h4 className="text-lg lg:text-2xl text-white my-2 lg:pt-2">{item.label}</h4>
                             </div>
                             <p className="text-[#E6ECFF] opacity-70">{item.description}</p>

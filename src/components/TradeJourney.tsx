@@ -62,6 +62,7 @@ export default function TradeJourney() {
 
   return (
     <section className="trade-journey-section relative overflow-hidden">
+      
       <Image
         src="/journey-bg.png"
         alt="journey-bg"

@@ -162,6 +162,7 @@ export default function Provide() {
 
     return (
         <section className="provide-section relative lg:py-20 py-14">
+             <span className='border_shape3'></span>
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center">
                 <Heading
                     badgeText="We Provide"

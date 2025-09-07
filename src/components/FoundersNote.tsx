@@ -71,7 +71,7 @@ export default function FoundersNote() {
     }
 
     return (
-        <section className="founder-section relative lg:py-20 py-14">
+        <section className="founder-section relative lg:py-22 py-12">
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center">
                 <Heading
                     badgeText="FOUNDERS NOTE"

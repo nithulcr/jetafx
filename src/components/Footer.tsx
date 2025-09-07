@@ -4,7 +4,8 @@ import AnimatedButton from "./AnimatedButton";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#010101]  lg:pt-10 pb-7 lg:pb-10 mt-20">
+    <footer className="bg-[#010101] relative lg:pt-26 pb-7 lg:pb-10">
+       <span className='border_shape3'></span>
       <div className="max-w-[1460px] mx-auto px-6">
         {/* Top section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-9 border-b border-[#24222c]">
