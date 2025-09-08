@@ -1,9 +1,10 @@
 'use client';
-
+import React from 'react';
 import { useRef, useEffect } from "react";
+import Heading from '@/components/Heading';
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Heading from '@/components/Heading';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,7 +25,7 @@ const PerformanceItems = [
         label: "Secure & Reliable",
         description: "Trade with confidence knowing your funds and transactions are protected by bank-grade security.",
         icon: (
-            <svg width="28" height="34" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 0.939453L0.875 6.77279V15.5228C0.875 23.6165 6.475 31.1853 14 33.0228C21.525 31.1853 27.125 23.6165 27.125 15.5228V6.77279L14 0.939453ZM14 16.9665H24.2083C23.4354 22.9749 19.425 28.327 14 30.004V16.9811H3.79167V8.66862L14 4.1332V16.9665Z" fill="#FFD700" />
             </svg>
 
@@ -77,7 +78,7 @@ export default function Performance() {
     }, []);
 
     return (
-        <section className="performance-section relative lg:pt-26 lg:pb-20 py-14">
+        <section className="Performance-section relative lg:pt-26 lg:pb-20 py-14">
             <span className="border_shape3"></span>
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center Performance-container">
                 <div className="performance-heading relative">
@@ -85,7 +86,7 @@ export default function Performance() {
                         badgeText="MARKET-DRIVEN PERFORMANCE"
                         title="Never Miss a Trade"
                         subtitle="Stay ahead of market moves, track opportunities, and execute with precision."
-                        maxWidthClass="max-w-[900px]"
+                        maxWidthClass=""
                     />
                 </div>
 

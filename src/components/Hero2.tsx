@@ -11,20 +11,34 @@ const Hero2 = () => {
 
   const hero2Ref = useRef<HTMLElement>(null);
 
-  useEffect(() => {
+useEffect(() => {
+  if (!hero2Ref.current) return;
 
-   
-
-    if (hero2Ref.current) {
+  const ctx = gsap.context(() => {
+    const fadeElements = hero2Ref.current?.querySelectorAll('.fade-up');
+    if (fadeElements) {
       gsap.fromTo(
-        hero2Ref.current.querySelectorAll('.fade-up'),
+        fadeElements,
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 }
       );
-     
-     
     }
-  }, []);
+  }, hero2Ref);
+
+  // Refresh ScrollTrigger on all images inside hero2Ref, safely
+  const images = hero2Ref.current?.querySelectorAll('img');
+  images?.forEach((img) => {
+    if (!img.complete) {
+      img.addEventListener('load', () => {
+        ScrollTrigger.refresh();
+      });
+    }
+  });
+
+  return () => ctx.revert();
+}, []);
+
+
 
   
   return (

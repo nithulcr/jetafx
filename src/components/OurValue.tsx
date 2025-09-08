@@ -83,8 +83,8 @@ export default function OurValue() {
     }, []);
 
     return (
-        <section className="OurValue-section relative lg:pt-22 lg:pt-6  py-14">
-            {/* <span className="border_shape3"></span> */}
+        <section className="OurValue-section relative lg:py-22   py-14">
+            <span className="border_shape3"></span>
             {/* <span className="OurValue-section-span"></span> */}
 
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center OurValue-container">

@@ -7,6 +7,8 @@ import Features2 from '@/components/Features2';
 import OurValue from '@/components/OurValue';
 
 import Commitments from '@/components/Commitments';
+import ContactForm from '@/components/ContactForm';
+
 import Testimonials from '@/components/Testimonials';
 
 
@@ -26,6 +28,7 @@ export default function AboutUs() {
 
 
       <Commitments />
+      <ContactForm />
       <Testimonials />
 
 

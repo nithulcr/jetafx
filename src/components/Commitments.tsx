@@ -62,7 +62,7 @@ export default function TradeJourney() {
 
   return (
     <section className="Commitments-section relative overflow-hidden max-h-[80vh]">
-      
+      <span className="border_shape3"></span>
       <Image
         src="/commitments.png"
         alt="commitments-bg"
