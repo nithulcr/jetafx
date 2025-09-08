@@ -39,7 +39,7 @@ export default function Payment() {
     }, []);
 
     return (
-        <section className="payment-section relative overflow-hidden py-14 lg:py-24">
+        <section className="payment-section relative overflow-hidden py-14 lg:py-22">
             <div className="max-w-[1460px] px-6 mx-auto">
                 <Heading
                     badgeText="Quick and wasy way deposits and withdrawls"

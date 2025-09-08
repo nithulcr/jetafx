@@ -77,7 +77,7 @@ export default function Performance() {
     }, []);
 
     return (
-        <section className="Performance-section relative lg:pt-26 lg:pb-20 py-14">
+        <section className="performance-section relative lg:pt-26 lg:pb-20 py-14">
             <span className="border_shape3"></span>
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center Performance-container">
                 <div className="performance-heading relative">

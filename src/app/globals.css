@@ -1295,6 +1295,13 @@ span.border_shape3 {
     position: absolute;
     z-index: 9;
 }
+.boldhead h2{
+  font-weight: bold;
+  max-width: 600px;
+}
+.boldhead p{
+  max-width: 750px;
+}
 @media screen and (max-width: 1360px) {
   .hero-second-grid {
     flex-direction: column;

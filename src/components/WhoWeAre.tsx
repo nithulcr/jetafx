@@ -88,15 +88,14 @@ export default function WhoWeAre() {
             <span className="whoweare-section-span"></span>
 
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center WhoWeAre-container">
-                <div className="WhoWeAre-heading relative">
+                
                     <Heading
                         badgeText="About us"
                         title="Who We Are"
                         subtitle="At Jeta FX, we connect traders worldwide with advanced tools, real-time access to global markets, and platforms built for performance. Whether you’re just starting or an experienced trader, we’re here to help you trade smarter and faster."
                         maxWidthClass="mx-w-[1000px]"
                     />
-                </div>
-
+               
                 <div ref={perfomanceRef} className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 lg:mt-12 ">
                     {WhoWeAreItems.map((item, idx) => (
                         <div key={idx} className="site-card fade-WhoWeAre">

@@ -76,7 +76,7 @@ export default function FAQ() {
 
                 <div
                     ref={faqContainer}
-                    className="faq-container flex flex-col gap-4  rounded-lg max-w-6xl mx-auto mt-10  lg:mt-16"
+                    className="faq-container flex flex-col gap-4  rounded-lg max-w-6xl mx-auto mt-8  lg:mt-12"
                 >
 
                     {faqs.map((faq, idx) => (
