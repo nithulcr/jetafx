@@ -30,8 +30,8 @@ const NEGATIVE_FEATURES = [
 
 export default function Comparison() {
 
-     const comparisonRef = useRef<HTMLDivElement | null>(null);
-useEffect(() => {
+    const comparisonRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
         if (!comparisonRef.current) return;
 
         const ctx = gsap.context(() => {

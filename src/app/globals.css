@@ -31,7 +31,7 @@ a {
 
 }
 
-p {
+p, .fw-200 {
   font-weight: 200;
 }
 
@@ -680,11 +680,11 @@ p {
 .heading-badge::before {
   content: '';
   background-color: #000000;
-  top: .2rem;
-  left: .2rem;
-  width: calc(100% - .4rem);
+  top: .1rem;
+  left: .1rem;
+  width: calc(100% - .2rem);
   position: absolute;
-  height: calc(100% - .4rem);
+  height: calc(100% - .2rem);
   border-radius: 24px;
 }
 
@@ -1363,6 +1363,65 @@ span.border_shape3 {
   position: relative;
   z-index: 1;
 }
+.markets-section:after {
+   content: '';
+    background: url(/Blur_mask-group.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: top;
+    opacity: 1;
+}
+.markets-container:before {
+    content: '';
+    background: radial-gradient(#1d2780d9, #1d278075, #1d278075, #000000b3);
+    width: 360px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%);
+    /* border-radius: 50%; */
+    filter: blur(40px);
+    opacity: .8;
+}
+.markets-container > *{
+  z-index: 9;
+  position: relative;
+}
+.market-tab{
+  background: linear-gradient(50deg , #121426, #000000);
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+.market-tab:hover{
+  margin-top: -5px;
+}
+.market-tab > *{
+  z-index: 9;
+  position: relative;
+}
+.active-market-tab:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#0e133f, #0e133b69);
+    opacity: .5;
+}
+.active-market-tab{
+  background: linear-gradient(50deg, #9e8604, #3d371b, #121426, #121426, #000000);
+  min-width: 150px;
+}
+.market-card{
+  background: linear-gradient(216deg, #101010, #0c0e2d, #000455);
+}
 @media screen and (max-width: 1360px) {
   .hero-second-grid {
     flex-direction: column;
@@ -1417,7 +1476,6 @@ span.border_shape3 {
     left: .1rem;
     top: .1rem;
     border-radius: 16px;
-    opacity: .7 !important;
   }
 
   .blurry-card {

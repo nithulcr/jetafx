@@ -49,11 +49,13 @@ const WhoWeAreItems = [
 
 ];
 
-const cardClass =
-    "inline-block rounded-full px-6 py-3 mx-2 my-2 marquee-btn text-white/90 text-sm  whitespace-nowrap";
 
+
+
+import { usePathname } from 'next/navigation';
 
 export default function WhoWeAre() {
+    const pathname = usePathname();
     const perfomanceRef = useRef<HTMLDivElement | null>(null);
     const marqueeRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -80,11 +82,11 @@ export default function WhoWeAre() {
         }, perfomanceRef);
 
         return () => ctx.revert();
-    }, []);
+    }, [pathname]);
 
     return (
-        <section className="WhoWeAre-section relative lg:pt-26 lg:pb-20 py-14">
-            <span className="border_shape3"></span>
+        <section className="WhoWeAre-section relative lg:py-22  py-14">
+            {/* <span className="border_shape3"></span> */}
             <span className="whoweare-section-span"></span>
 
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center WhoWeAre-container">

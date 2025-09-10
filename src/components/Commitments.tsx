@@ -4,7 +4,6 @@ import Heading from '@/components/Heading';
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import AnimatedButton from "./AnimatedButton";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TradeJourney() {
@@ -62,7 +61,7 @@ export default function TradeJourney() {
 
   return (
     <section className="Commitments-section relative overflow-hidden max-h-[80vh]">
-      <span className="border_shape3"></span>
+      {/* <span className="border_shape3"></span> */}
       <Image
         src="/commitments.png"
         alt="commitments-bg"

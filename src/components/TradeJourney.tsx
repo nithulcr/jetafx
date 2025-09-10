@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import Heading from '@/components/Heading';
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedButton from "./AnimatedButton";

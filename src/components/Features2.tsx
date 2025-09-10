@@ -70,8 +70,11 @@ interface FeatureCardProps {
             ),
         },
     ];
+import { usePathname } from 'next/navigation';
+
 export default function GlobeFeatureMatrix() {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -97,11 +100,11 @@ export default function GlobeFeatureMatrix() {
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [pathname]);
 
   return (
-    <section className="lg:py-22 py-14 overflow-hidden relative">
-      <span className="border_shape3"></span>
+    <section className="lg:pb-22 pb-14 lg:pb-10 pb-6 overflow-hidden relative">
+      {/* <span className="border_shape3"></span> */}
       <div className="max-w-[1460px] mx-auto px-6">
         <Heading
           badgeText="choosing the best"

@@ -56,8 +56,11 @@ const cardClass =
     "inline-block rounded-full px-6 py-3 mx-2 my-2 marquee-btn text-white/90 text-sm  whitespace-nowrap";
 
 
+import { usePathname } from 'next/navigation';
+
 export default function OurValue() {
     const valueRef = useRef<HTMLDivElement | null>(null);
+    const pathname = usePathname();
 
     useEffect(() => {
         if (!valueRef.current) return;
@@ -80,11 +83,11 @@ export default function OurValue() {
         }, valueRef);
 
         return () => ctx.revert();
-    }, []);
+    }, [pathname]);
 
     return (
-        <section className="OurValue-section relative lg:py-22   py-14">
-            <span className="border_shape3"></span>
+        <section className="OurValue-section relative lg:pb-22   pb-14 lg:pt-10   pt-6">
+            {/* <span className="border_shape3"></span> */}
             {/* <span className="OurValue-section-span"></span> */}
 
             <div className="max-w-[1460px] mx-auto px-6 flex flex-col items-center justify-center OurValue-container">

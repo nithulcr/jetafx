@@ -2,7 +2,6 @@
 import React from 'react';
 import { useRef, useEffect } from "react";
 import Heading from '@/components/Heading';
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +27,11 @@ const NEGATIVE_FEATURES = [
 
 
 
+import { usePathname } from 'next/navigation';
+
 export default function WhyUs() {
+
+    const pathname = usePathname();
 
      const WhyUsRef = useRef<HTMLDivElement | null>(null);
 useEffect(() => {
@@ -51,7 +54,7 @@ useEffect(() => {
         }, WhyUsRef);
 
         return () => ctx.revert();
-    }, []);
+    }, [pathname]);
 
 
 
@@ -60,7 +63,7 @@ useEffect(() => {
 
 
     return (
-        <section className="py-14 lg:py-24  whyus-section relative">
+        <section className="py-14 lg:py-22  whyus-section relative">
             <span className="border_shape3"></span>
             <div className='max-w-[1460px] mx-auto px-6'>
                 <Heading

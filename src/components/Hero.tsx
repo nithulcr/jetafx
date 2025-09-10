@@ -197,9 +197,9 @@ const Hero = () => {
               </div>
               <div className='trade_rate_img_container relative'>
                 <Image src="/trade_rate.png" alt="trade rate" className="trade_rate_img" width={300} height={300} />
-                <div className=" count-number absolute left-[58%] top-[70%] bg-white px-3 py-1.5 rounded-full text-black font-bold text-xs flex items-center gap-1"
+                <div className=" count-number absolute left-[58%] top-[70%] bg-white pl-4 pr-1 py-1.5 rounded-full text-black font-bold text-xs flex items-center gap-1"
                   style={{ transform: "translate(-50%, -50%)" }}>
-                  <span>$<span ref={setCountRef} data-target="10" className="count-number">0</span>.00  </span>
+                  <span className='pr-1'>$<span ref={setCountRef} data-target="10" className="count-number">0</span>.00 </span>
                   <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.4375 13.2629C0.4375 5.99387 6.32981 0.101562 13.5988 0.101562C20.8678 0.101562 26.7601 5.99387 26.7601 13.2629C26.7601 20.5318 20.8678 26.4241 13.5988 26.4241C6.32981 26.4241 0.4375 20.5318 0.4375 13.2629Z" fill="#01321F" />
                     <path d="M9.40458 10.3983C8.63201 10.3983 8.00619 9.77252 8.00619 8.99995C8.00619 8.22738 8.63201 7.60156 9.40458 7.60156H17.7949C18.5675 7.60156 19.1933 8.22738 19.1933 8.99995V17.3903C19.1933 18.1628 18.5675 18.7887 17.7949 18.7887C17.0223 18.7887 16.3965 18.1628 16.3965 17.3903V12.3758L10.393 18.3793C9.8468 18.9255 8.9617 18.9255 8.4155 18.3793C7.86931 17.8331 7.86931 16.9481 8.4155 16.4019L14.419 10.3983H9.40458Z" fill="white" />

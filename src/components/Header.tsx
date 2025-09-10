@@ -9,7 +9,7 @@ import MenuItem from "./MenuItem";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/AboutUs", label: "About Us" },
-  { href: "/Forex", label: "Forex" },
+  { href: "/Markets", label: "Markets" },
   { href: "/Platform", label: "Platform" },
   { href: "/Tools", label: "Tools" },
   { href: "/Partnership", label: "Partnership" },
