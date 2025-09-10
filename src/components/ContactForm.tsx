@@ -39,7 +39,7 @@ export default function ContactForm() {
 
   return (
     <section className="lg:py-22 py-14 relative contact-section">
-      <div className="max-w-[1460px] mx-auto px-6">
+      <div className="max-w-[1460px] mx-auto px-6 contact-section-top">
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get in Touch with Jeta FX

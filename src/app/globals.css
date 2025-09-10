@@ -363,6 +363,9 @@ p, .fw-200 {
 
 
 }
+.hero-container3:after {
+display: none;
+}
 .hero-section-span {
     background: radial-gradient(#121426, #1d278059, #151c5b1c, #00000000);
     width: 360px;
@@ -1507,6 +1510,46 @@ span.border_shape3 {
 select.form-input option{
   color: #121426;
 }
+
+.grow-section:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(359deg, black, black, transparent);
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+}
+.partnership-page .contact-section .contact-section-top{
+  margin-top: -230px;
+}
+.earn-more:before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 5%;
+  background: url(/earn-more-bg.png);
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.grow-section:after {
+    content: '';
+    background: url(/shape1.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+    opacity: .8;
+        transform: scaleX(-1);
+}
 @media screen and (max-width: 1360px) {
   .hero-second-grid {
     flex-direction: column;
@@ -1520,6 +1563,9 @@ select.form-input option{
   .blurry-card3 {
     width: 100%;
   }
+  .partnership-page .contact-section .contact-section-top{
+  margin-top: -80px;
+}
 }
 
 @media screen and (max-width: 1024px) {
@@ -1530,7 +1576,9 @@ select.form-input option{
   .active-menu {
     color: var(--yellow);
   }
-
+.partnership-page .contact-section .contact-section-top{
+  margin-top: 0px;
+}
 }
 
 @media screen and (max-width: 990px) {
@@ -1594,6 +1642,10 @@ select.form-input option{
   .feature-right:before, .feature-left:before{
     display: none;
   }
+  .grow-section:before {
+    height: 200px;
+
+}
 }
 @media screen and (max-width: 500px) {
   

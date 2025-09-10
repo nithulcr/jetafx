@@ -103,7 +103,7 @@ export default function GlobeFeatureMatrix() {
   }, [pathname]);
 
   return (
-    <section className="lg:pb-22 pb-14 lg:pb-10 pb-6 overflow-hidden relative">
+    <section className="lg:pt-22 pt-14 lg:pb-10 pb-6 overflow-hidden relative">
       {/* <span className="border_shape3"></span> */}
       <div className="max-w-[1460px] mx-auto px-6">
         <Heading
@@ -132,7 +132,7 @@ export default function GlobeFeatureMatrix() {
         <div className="md:block hidden absolute top-0 bottom-0 left-1/2 w-[3px] bg-gradient-to-b from-gray-200 via-gray-500 via-[80%] to-black to-[100%] z-10 opacity-40" />
 
         {/* Cards */}
-        <div className="relative w-full h-full grid lg:lg:hiddengrid-cols-2 gap-8 md:gap-0 max-w-[900px] mx-auto">
+        <div className="relative w-full h-full grid  gap-8 md:gap-0 max-w-[900px] mx-auto">
           {/* Top left */}
           <div className="flex items-start justify-center md:justify-start feature-left relative">
             <FeatureCard {...FEATURES[0]} />
