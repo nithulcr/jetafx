@@ -1,18 +1,18 @@
-import Header from '@/Marquee.tsx/Header';
-import Hero2 from '@/Marquee.tsx/Hero2';
-import WhoWeAre from '@/Marquee.tsx/WhoWeAre';
-import WhyUs from '@/Marquee.tsx/WhyUs';
-import Features2 from '@/Marquee.tsx/Features2';
+import Header from '@/Components/Header';
+import Hero2 from '@/Components/Hero2';
+import WhoWeAre from '@/Components/WhoWeAre';
+import WhyUs from '@/Components/WhyUs';
+import Features2 from '@/Components/Features2';
 
-import OurValue from '@/Marquee.tsx/OurValue';
+import OurValue from '@/Components/OurValue';
 
-import Commitments from '@/Marquee.tsx/Commitments';
-import ContactForm from '@/Marquee.tsx/ContactForm';
+import Commitments from '@/Components/Commitments';
+import ContactForm from '@/Components/ContactForm';
 
-import Testimonials from '@/Marquee.tsx/Testimonials';
+import Testimonials from '@/Components/Testimonials';
 
 
-import Footer from '@/Marquee.tsx/Footer';
+import Footer from '@/Components/Footer';
 
 
 

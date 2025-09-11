@@ -5,10 +5,10 @@ import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from "gsap";
 import { blogPosts } from './data';
-import Header from '@/Marquee.tsx/Header';
-import Footer from '@/Marquee.tsx/Footer';
+import Header from '@/Components/Header';
+import Footer from '@/Components/Footer';
 import Image from "next/image";
-import AnimatedButton from "@/Marquee.tsx/AnimatedButton";
+import AnimatedButton from "@/Components/AnimatedButton";
 
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";

@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import Heading from '@/Marquee.tsx/Heading';
+import Heading from '@/Components/Heading';
 import Image from 'next/image';
 
 // Step data as array of objects

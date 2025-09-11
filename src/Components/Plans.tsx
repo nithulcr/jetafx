@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import Heading from '@/Marquee.tsx/Heading';
+import Heading from '@/Components/Heading';
 import type { Swiper as SwiperType } from 'swiper';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

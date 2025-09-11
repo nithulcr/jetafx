@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SmoothScrollWrapper from "@/Marquee.tsx/SmoothScrollWrapper";
-
+import LenisProvider from "@/Components/LenisProvider";
 
 
 
@@ -20,7 +19,11 @@ export default function RootLayout({
      <body
         className={` antialiased`}
       >
-         <SmoothScrollWrapper >{children}</SmoothScrollWrapper>
+        
+          <LenisProvider>
+            {children}
+          </LenisProvider>
+        
       </body>
     </html>
   );

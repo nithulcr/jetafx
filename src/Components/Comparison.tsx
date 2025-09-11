@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useRef, useEffect } from "react";
-import Heading from '@/Marquee.tsx/Heading';
+import Heading from '@/Components/Heading';
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

@@ -1,9 +1,9 @@
-import Header from '@/Marquee.tsx/Header';
-import Hero4 from '@/Marquee.tsx/Hero4';
-import EarnMore from '@/Marquee.tsx/EarnMore';
-import GrowWithUs from '@/Marquee.tsx/GrowWithUs';
-import ContactForm from '@/Marquee.tsx/ContactForm';
-import Footer from '@/Marquee.tsx/Footer';
+import Header from '@/Components/Header';
+import Hero4 from '@/Components/Hero4';
+import EarnMore from '@/Components/EarnMore';
+import GrowWithUs from '@/Components/GrowWithUs';
+import ContactForm from '@/Components/ContactForm';
+import Footer from '@/Components/Footer';
 
 
 
