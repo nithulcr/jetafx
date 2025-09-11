@@ -1,9 +1,8 @@
 'use client';
 
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +17,7 @@ export default function Heading({
   badgeText,
   title,
   subtitle,
-  maxWidthClass = "max-w-[500px]",
+  maxWidthClass = 'max-w-[500px]',
 }: HeadingProps) {
   const headingRef = useRef<HTMLDivElement | null>(null);
   const badgeRef = useRef<HTMLDivElement | null>(null);
@@ -27,33 +26,31 @@ export default function Heading({
     if (!headingRef.current || !badgeRef.current) return;
 
     const ctx = gsap.context(() => {
-      gsap.from(".gma-heading", {
+      gsap.from('.gma-heading', {
         opacity: 0,
         y: 50,
         duration: 1,
-        ease: "power2.out",
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 90%",
-          end: "bottom 10%",
-          toggleActions: "play none none play",
+          start: 'top 90%',
+          end: 'bottom 10%',
+          toggleActions: 'play none none play',
         },
       });
 
-      gsap.fromTo(
-        badgeRef.current,
-        { backgroundPosition: "80% 50%" },
-        {
-          backgroundPosition: "0% 50%",
-          ease: "none",
-          scrollTrigger: {
-            trigger: headingRef.current,
-            start: "top 90%",
-            end: "bottom 55%",
-            scrub: true,
-          },
-        }
-      );
+      gsap.to(badgeRef.current, {
+        css: {
+          '--angle': '270deg',
+        },
+        ease: 'none',
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: 'top 90%',
+          end: 'bottom 55%',
+          scrub: true,
+        },
+      });
     }, headingRef);
 
     return () => ctx.revert();
@@ -67,15 +64,16 @@ export default function Heading({
       <div
         ref={badgeRef}
         className="heading-badge mb-3 md:mb-5 gma-heading"
+        style={{ '--angle': '90deg' } as React.CSSProperties} // initial angle
       >
         <span>{badgeText}</span>
       </div>
       <h2 className="text-2xl md:text-5xl text-white mb-2 md:mb-3 gma-heading">
         {title}
       </h2>
-      <p className="text-[15px] text-gray-300 gma-heading max-w-[740px] mx-auto">{subtitle}</p>
+      <p className="text-[15px] text-gray-300 gma-heading max-w-[740px] mx-auto">
+        {subtitle}
+      </p>
     </div>
   );
 }
-
-

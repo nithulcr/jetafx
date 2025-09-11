@@ -1,17 +1,17 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import Plans from '@/components/Plans';
-import FoundersNote from '@/components/FoundersNote';
-import Provide from '@/components/Provide';
-import AccountProcess from '@/components/AccountProcess';
-import Comparison from '@/components/Comparison';
-import TradeJourney from '@/components/TradeJourney';
-import Performance from '@/components/Performance';
-import FAQ from '@/components/FAQ';
-import Payment from '@/components/Payment';
-import Testimonials from '@/components/Testimonials';
-import Footer from '@/components/Footer';
+import Header from '@/Marquee.tsx/Header';
+import Hero from '@/Marquee.tsx/Hero';
+import Features from '@/Marquee.tsx/Features';
+import Plans from '@/Marquee.tsx/Plans';
+import FoundersNote from '@/Marquee.tsx/FoundersNote';
+import Provide from '@/Marquee.tsx/Provide';
+import AccountProcess from '@/Marquee.tsx/AccountProcess';
+import Comparison from '@/Marquee.tsx/Comparison';
+import TradeJourney from '@/Marquee.tsx/TradeJourney';
+import Performance from '@/Marquee.tsx/Performance';
+import FAQ from '@/Marquee.tsx/FAQ';
+import Payment from '@/Marquee.tsx/Payment';
+import Testimonials from '@/Marquee.tsx/Testimonials';
+import Footer from '@/Marquee.tsx/Footer';
 
 
 

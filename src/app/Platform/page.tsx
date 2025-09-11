@@ -1,16 +1,16 @@
-import Header from '@/components/Header';
-import Hero3 from '@/components/Hero3';
-import TraderTips from '@/components/TraderTips';
-import AccountProcess from '@/components/AccountProcess';
+import Header from '@/Marquee.tsx/Header';
+import Hero3 from '@/Marquee.tsx/Hero3';
+import TraderTips from '@/Marquee.tsx/TraderTips';
+import AccountProcess from '@/Marquee.tsx/AccountProcess';
 
-import FAQ from '@/components/FAQ';
+import FAQ from '@/Marquee.tsx/FAQ';
 
-import OurValue from '@/components/OurValue';
-
-
+import OurValue from '@/Marquee.tsx/OurValue';
 
 
-import Footer from '@/components/Footer';
+
+
+import Footer from '@/Marquee.tsx/Footer';
 
 
 

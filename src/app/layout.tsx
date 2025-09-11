@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
+import SmoothScrollWrapper from "@/Marquee.tsx/SmoothScrollWrapper";
 
 
 

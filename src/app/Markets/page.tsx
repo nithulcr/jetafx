@@ -3,11 +3,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import gsap from "gsap";
 
-import Header from '@/components/Header';
-import AccountProcess from '@/components/AccountProcess';
+import Header from '@/Marquee.tsx/Header';
+import AccountProcess from '@/Marquee.tsx/AccountProcess';
 
-import FAQ from '@/components/FAQ';
-import Footer from '@/components/Footer';
+import FAQ from '@/Marquee.tsx/FAQ';
+import Footer from '@/Marquee.tsx/Footer';
 import Image from 'next/image';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

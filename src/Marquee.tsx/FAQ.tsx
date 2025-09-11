@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Heading from '@/components/Heading';
+import Heading from '@/Marquee.tsx/Heading';
 gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [

@@ -612,20 +612,11 @@ display: none;
   animation: shuffle 4s infinite ease-in-out;
 }
 
-@keyframes marquee-left {
-  0% {
-    transform: translateX(0);
-  }
 
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee-left 30s linear infinite;
 }
 @keyframes marquee-left {
   0% {
@@ -661,13 +652,30 @@ display: none;
   position: relative;
 }
 
-.heading-badge {
+/* .heading-badge {
   background: linear-gradient(90deg, #2934FF, rgba(41, 52, 255, 0), rgba(41, 52, 255, 0));
   border-radius: 26px;
   padding: 11px 32px;
   position: relative;
   background-size: 200% 200%;
   background-position: 0% 50%;
+} */
+.heading-badge {
+  border-radius: 26px;
+  padding: 11px 32px;
+  position: relative;
+
+  /* Use CSS var for angle */
+  --angle: 90deg;
+  background: linear-gradient(
+    var(--angle),
+    #2934FF,
+    rgba(41, 52, 255, 0),
+    rgba(41, 52, 255, 0)
+  );
+  background-size: 200% 200%;
+  background-position: 50% 50%;
+  transition: background-position 0.3s ease;
 }
 
 

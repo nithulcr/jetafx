@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import Heading from '@/components/Heading';
+import Heading from '@/Marquee.tsx/Heading';
 
 // Register plugin
 gsap.registerPlugin(ScrollTrigger);

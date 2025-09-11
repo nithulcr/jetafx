@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Heading from '@/components/Heading';
+import Heading from '@/Marquee.tsx/Heading';
 import AnimatedButton from "./AnimatedButton";
 
 

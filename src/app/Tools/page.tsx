@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect,  useRef } from 'react';
 import gsap from "gsap";
-import Heading from '@/components/Heading';
-import AnimatedButton from "@/components/AnimatedButton";
+import Heading from '@/Marquee.tsx/Heading';
+import AnimatedButton from "@/Marquee.tsx/AnimatedButton";
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/Marquee.tsx/Header';
+import Footer from '@/Marquee.tsx/Footer';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);

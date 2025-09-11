@@ -2,9 +2,9 @@
 "use client";
 import { blogPosts } from '../data';
 import Image from 'next/image';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import AnimatedButton from "@/components/AnimatedButton";
+import Header from '@/Marquee.tsx/Header';
+import Footer from '@/Marquee.tsx/Footer';
+import AnimatedButton from "@/Marquee.tsx/AnimatedButton";
 import Link from 'next/link';
 import React, { useState, use } from 'react';
 

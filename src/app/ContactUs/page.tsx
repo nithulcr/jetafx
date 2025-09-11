@@ -1,6 +1,6 @@
-import Header from '@/components/Header';
-import ContactForm from '@/components/ContactForm';
-import Footer from '@/components/Footer';
+import Header from '@/Marquee.tsx/Header';
+import ContactForm from '@/Marquee.tsx/ContactForm';
+import Footer from '@/Marquee.tsx/Footer';
 
 
 
