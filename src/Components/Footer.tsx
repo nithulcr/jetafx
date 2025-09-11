@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AnimatedButton from "./AnimatedButton";
+import Link from "next/link";
 
 
 export default function Footer() {
@@ -32,11 +33,13 @@ export default function Footer() {
           <div>
             <div className="text-base mb-4">Markets</div>
             <ul className="space-y-2 text-sm opacity-50">
-              <li>Forex</li>
-              <li>Indices</li>
-              <li>Stocks</li>
-              <li>Commodities</li>
-              <li>Exchange Futures</li>
+              <li><Link href="/Markets?tab=forex">Forex</Link></li>
+              <li><Link href="/Markets?tab=commodities">Commodities</Link></li>
+              <li><Link href="/Markets?tab=equities">Eqities</Link></li>
+
+              <li><Link href="/Markets?tab=indices">Indices</Link></li>
+              <li><Link href="/Markets?tab=stocks">Stocks</Link></li>
+              <li><Link href="/Markets?tab=crypto">Crypto</Link></li>
             </ul>
           </div>
           {/* Company Information */}

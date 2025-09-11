@@ -70,7 +70,7 @@ export default function TradingPlatformSection() {
 
                     {/* Platform Details */}
                     <div className="fade-up flex-1 flex flex-col items-start justify-center">
-                        <div className="fade-up bg-black/30 rounded-2xl p-7 mb-8 shadow-lg w-full max-w-lg">
+                        <div className="fade-up bg-black/30 rounded-2xl mb-8 shadow-lg w-full max-w-lg">
                             <h2 className="font-deefault text-xl mb-4 text-white">
                                 MetaTrader 5 (MT5) with Jeta FX
                             </h2>

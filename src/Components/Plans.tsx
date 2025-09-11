@@ -69,17 +69,7 @@ const plans = [
             'Commission: No',
         ],
     },
-    {
-        label: 'Starter',
-        price: '$100',
-        features: [
-            'Minimum Deposit: $50',
-            'Spreads Start From: 2.0 pips',
-            'Swap: Yes (Swap Free Available)',
-            'Maximum Leverage: 1:500',
-            'Commission: No',
-        ],
-    },
+    
 ];
 
 export default function PricingSlider() {
@@ -164,7 +154,7 @@ export default function PricingSlider() {
                         const nextIdx = (activeIdx + 1) % total;
                         const nextNextIdx = (activeIdx + 2) % total;
 
-                        let style = "opacity-50"; // Default: faded
+                        let style = "opacity-80"; // Default: faded
                         if (i === activeIdx) style = " opacity-100 z-20";
                         else if (i === nextIdx) style = "opacity-100 z-10"; // Next to active, highlight less
                         else if (i === prevIdx || i === nextNextIdx) style = ""; // Farther faded

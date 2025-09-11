@@ -76,15 +76,15 @@ export default function EarnMoreSection() {
                             </h2>
                             
                             <ul className="list-none space-y-3 text-[#E6ECFF] opacity-70 fw-200 mb-3">
-                                <li className="flex items-center gap-2">
+                                <li className="flex  gap-2">
                                     <CheckSVG />
                                   Competitive Revenue Share – Earn commissions on your referred clients’ trading activity.
                                 </li>
-                                <li className="flex items-center gap-2">
+                                <li className="flex  gap-2">
                                     <CheckSVG />
                                    Fast Payouts & Clear Reporting – Access your earnings in real time through a dedicated partner dashboard.
                                 </li>
-                                <li className="flex items-center gap-2">
+                                <li className="flex  gap-2">
                                     <CheckSVG />
                                    Marketing & Support Tools – Gain access to ready-to-use promotional materials and personalized assistance to help you succeed.
                                 </li>
@@ -103,7 +103,7 @@ export default function EarnMoreSection() {
 // -- Re-usable Check SVG icon (no JSX namespace needed) --
 function CheckSVG() {
     return (
-        <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="flex-none" width="24" height="24" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4.74999 9.3448L3.16699 10.9278L7.91699 15.6778L15.833 7.7608L14.25 6.1778L7.91699 12.5108L4.74999 9.3448Z" fill="#8AA5FF" />
         </svg>
     );
