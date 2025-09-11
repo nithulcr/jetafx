@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import AnimatedButton from "./AnimatedButton";
 import MenuItem from "./MenuItem";
+import Image from "next/image";
+
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -13,8 +15,9 @@ const navItems = [
   { href: "/Platform", label: "Platform" },
   { href: "/Tools", label: "Tools" },
   { href: "/Partnership", label: "Partnership" },
-  { href: "/Blog", label: "Blog" },
-  { href: "/ContactUs", label: "Contact Us" },
+  { href: "/blogs", label: "Blog" },
+  { href: "/ContactUs", label: "Contact us" },
+
 ];
 
 export default function Header() {
@@ -61,13 +64,13 @@ export default function Header() {
         {/* Logo */}
         <div className="text-2xl font-bold">
           <Link href="/">
-            <img
-              src="/logo.png"
-              alt="Logo"
-              width={140}
-              height={50}
-              className="w-[100px] lg:w-[140px]"
-            />
+            <Image
+                      src="/logo.png"
+                      alt="logo"
+                      width={140}
+                      height={50}
+                      className="w-[100px] lg:w-[140px]"
+                    />
           </Link>
         </div>
         {/* Desktop Menu */}

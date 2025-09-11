@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, ReactNode } from "react";
+import React, { useRef, useEffect} from "react";
 import Image from "next/image";
 import Heading from '@/components/Heading';
 import AnimatedButton from "./AnimatedButton";

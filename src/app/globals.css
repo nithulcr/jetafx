@@ -1059,7 +1059,10 @@ span.border_shape3 {
   background-size: 100% 100%;
   padding: 25px;
 }
-
+.site-card.blog-card {
+  padding: 1px;
+  background: linear-gradient(179deg, rgb(118 151 222), rgb(16 24 52), rgb(2, 4, 8));
+}
 .site-card>* {
   position: relative;
   z-index: 9;
@@ -1438,7 +1441,7 @@ span.border_shape3 {
     top: -10%;
     transform: translateX(-50%);
     filter: blur(40px);
-    opacity: .4;
+    opacity: .7;
     max-height: 600px;
     border-radius: 50%;
 }
@@ -1550,6 +1553,42 @@ select.form-input option{
     opacity: .8;
         transform: scaleX(-1);
 }
+.p-0-card{
+  padding: 2px;
+}
+.contact-page .contact-section:before {
+    content: '';
+    background: radial-gradient(#1d2780d9, #1d278075, #1d278075, #000000b3);
+    width: 360px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%);
+    filter: blur(40px);
+    opacity: .7;
+    max-height: 600px;
+    border-radius: 50%;
+}
+.contact-page .contact-section:after {
+    content: '';
+    background: url(/Blur_mask-group.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    z-index: 2;
+    opacity: .8;
+    transform: scaleX(1);
+}
+.contact-page .contact-section > *{
+  position: relative;
+  z-index: 9;
+}
 @media screen and (max-width: 1360px) {
   .hero-second-grid {
     flex-direction: column;
@@ -1645,6 +1684,11 @@ select.form-input option{
   .grow-section:before {
     height: 200px;
 
+}
+.other-section:before {
+
+    top: 0%;
+  
 }
 }
 @media screen and (max-width: 500px) {

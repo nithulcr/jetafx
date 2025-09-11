@@ -123,7 +123,8 @@ export default function Testimonials() {
                                 ))}
                             </div>
                             <div className="flex items-center mt-5">
-                                <img
+                                
+                                <Image
                                     src={item.avatar}
                                     alt={item.name}
                                     width={40}
@@ -139,7 +140,7 @@ export default function Testimonials() {
                         </div>
                     ))}
                 </div>
-                <div  className="w-full mt-8 lg:mt-16 md:hidden">
+                <div className="w-full mt-8 lg:mt-16 md:hidden">
                     <Swiper
                         modules={[Autoplay]}
                         spaceBetween={16}
@@ -213,7 +214,7 @@ export default function Testimonials() {
                             height={28}
                             className="rounded-full"
                         />
-                        
+
                         <Image
                             src="/client1.png"
                             alt="Founder"

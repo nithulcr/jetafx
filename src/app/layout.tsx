@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
 
-// Set up DM Sans font with variable for CSS
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  weight: ["200", "300", "400", "500", "600", "700"],         // Choose weights as needed
-  display: "swap",
-});
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",

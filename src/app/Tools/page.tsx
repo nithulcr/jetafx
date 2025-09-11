@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect,  useRef } from 'react';
 import gsap from "gsap";
 import Heading from '@/components/Heading';
 import AnimatedButton from "@/components/AnimatedButton";
@@ -144,9 +144,8 @@ export default function ProfitCalculatorSection() {
 type FormInputProps = {
   label: string;
   placeholder: string;
-  className?: string;
 };
-function FormInput({ label, placeholder, className }: FormInputProps) {
+function FormInput({ label, placeholder }: FormInputProps) {
   return (
     <div>
       <label className="block text-md text-white mb-1">{label}</label>
@@ -161,9 +160,8 @@ function FormInput({ label, placeholder, className }: FormInputProps) {
 type FormSelectProps = {
   label: string;
   options: string[];
-  className?: string; // optional className!
 };
-function FormSelect({ label, options, className }: FormSelectProps) {
+function FormSelect({ label, options }: FormSelectProps) {
   return (
     <div>
       <label className="block text-md text-white mb-1">{label}</label>
