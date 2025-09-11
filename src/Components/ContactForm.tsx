@@ -59,7 +59,7 @@ export default function ContactForm() {
           <p className="text-slate-200 max-w-3xl mx-auto text-[#E6ECFF] opacity-70">
             Our team is here to support you at every step of your trading
             journey. Whether you have questions about accounts, platforms, or
-            partnerships, we're just a message away.
+            partnerships, we are just a message away.
           </p>
         </div>
         <form
