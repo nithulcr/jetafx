@@ -41,7 +41,7 @@ export default function Heading({
 
       gsap.to(badgeRef.current, {
         css: {
-          '--angle': '270deg',
+          '--angle': '200deg',
         },
         ease: 'none',
         scrollTrigger: {

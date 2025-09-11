@@ -403,7 +403,7 @@ display: none;
 
   /* background:linear-gradient(20deg, #000000d9, #2025523b, #20255275);
     backdrop-filter: blur(4px); */
-  box-shadow: 0 4px 8px 13px #11132742;
+  /* box-shadow: 0 4px 8px 13px #11132742; */
   overflow: hidden;
   padding: 34px;
   border-radius: 14px;
@@ -420,9 +420,15 @@ display: none;
   background: url(/bg1.png);
   background-size: 100% 100%;
   border-radius: 16px;
+  background: linear-gradient(327deg, #000000, #20263a, #4c5c8e);
 
 }
 
+.blurry-card1:hover {
+
+  background: linear-gradient(90deg, #000000, #20263a, #4c5c8e);
+
+}
 .blurry-card2 {
   width: calc(100% - 500px);
   background: url(/bg2.png);
