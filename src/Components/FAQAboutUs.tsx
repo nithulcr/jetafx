@@ -5,35 +5,60 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from '@/Components/Heading';
 gsap.registerPlugin(ScrollTrigger);
 
-const defaultFaqs = [
+const faqsAboutUs = [
     {
-        question: "What markets can I trade on this platform?",
+        question: "What is Jetafx?",
         answer:
-            "You can access global markets including Forex, Commodities, Indices, and Cryptocurrencies, all from a single account. Not necessarily. The platform is designed for both beginners and experienced traders, with intuitive tools and educational resources to guide you.",
+            "Jetafx is a global forex and CFD broker offering access to over 40,000 instruments across six asset classes, including forex, indices, commodities, stocks, ETFs, and cryptocurrencies.",
     },
     {
-        question: "Is my money safe while trading here?",
+        question: "Where is Jetafx headquartered?",
         answer:
-            "Your funds are protected with industry-leading security protocols and segregated accounts to ensure safety.",
+            "Jetafx is headquartered in Rodney Bay, Gros-Islet, Saint Lucia, and serves clients worldwide.",
     },
     {
-        question: "How fast are trade executions?",
+        question: "How long has Jetafx been in the market?",
         answer:
-            "Trade executions are instant with advanced infrastructure, allowing you to capitalize on market movements quickly.",
+            "Jetafx has established itself as a trusted trading partner by focusing on transparency, competitive pricing, and cutting-edge technology.",
     },
     {
-        question: "Do I need prior trading experience?",
+        question: "What makes Jetafx a trusted broker?",
         answer:
-            "No prior experience is required. The platform offers guides and support for beginners and advanced features for experienced traders.",
+            "We operate under strict compliance, keep client funds in segregated accounts, and provide transparent trading conditions with no hidden fees.",
     },
     {
-        question: "Are there any hidden fees?",
+        question: "How many clients does Jetafx serve globally?",
         answer:
-            "There are no hidden fees. All charges are transparently displayed before you make a trade.",
+            "Jetafx proudly serves over 15,000 clients across 80+ countries, offering multilingual support and personalized service.",
+    },
+    {
+        question: "What is Jetafx’s mission?",
+        answer:
+            "Our mission is to make global trading accessible, secure, and transparent, empowering traders at every level to succeed in financial markets.",
+    },
+    {
+        question: "What values guide Jetafx’s business?",
+        answer:
+            "Jetafx is built on the values of trust, transparency, innovation, and client-first service.",
+    },
+    {
+        question: "Does Jetafx support beginner traders?",
+        answer:
+            "Yes. Jetafx provides free educational resources, webinars, and demo accounts to help beginners learn before moving to live markets.",
+    },
+    {
+        question: "How does Jetafx ensure fair trading conditions?",
+        answer:
+            "We provide ultra-tight spreads, fast execution, no dealing desk intervention, and full pricing transparency across all instruments.",
+    },
+    {
+        question: "Why should traders choose Jetafx over competitors?",
+        answer:
+            "Traders choose Jetafx because we combine competitive pricing, powerful MT5 platforms, global market access, insured funds, and unmatched client support under one roof.",
     },
 ];
 
-export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string; answer: string }[] }) {
+export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
     const faqContainer = useRef<HTMLDivElement>(null);
 
@@ -67,7 +92,7 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
 
     return (
         <section className="faq-section relative overflow-hidden py-14 lg:py-22">
-             <span className='border_shape3'></span>
+            <span className='border_shape3'></span>
             <div className="max-w-[1460px] px-6 mx-auto">
                 <Heading
                     badgeText="FAQ'S SECTION"
@@ -81,14 +106,14 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                     className="faq-container flex flex-col gap-4  rounded-lg max-w-6xl mx-auto mt-8  lg:mt-12"
                 >
 
-                    {faqs.map((faq, idx) => (
+                    {faqsAboutUs.map((faq, idx) => (
                         <div
                             key={idx}
                             className="faq-item  faq-fadeup relative w-full"
                             style={{ opacity: 0, transform: 'translateY(48px)' }} // ensures initial state for GSAP
                         >
                             <button
-                                className="w-full text-left  focus:outline-none flex  items-start justify-between cursor-pointer"
+                                className="w-full text-left  focus:outline-none flex items-start justify-between cursor-pointer"
                                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                             >
                                 <span className="text-[#f6f6fa] text-lg">
@@ -114,7 +139,7 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                                     transition: "all 0.4s cubic-bezier(.25,.8,.25,1)",
                                     // Direct padding for non-Tailwind projects:
                                     paddingTop: openIndex === idx ? "20px" : "0px",
-                                    
+
                                 }}
                             >
                                 <div className="opacity-80 text-base mt-1">

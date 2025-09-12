@@ -1,5 +1,7 @@
 import Header from '@/Components/Header';
 import ContactForm from '@/Components/ContactForm';
+import FAQContact  from '@/Components/FAQContact';
+
 import Footer from '@/Components/Footer';
 
 
@@ -11,6 +13,8 @@ export default function AboutUs() {
       <div className='contact-page-form pt-14 lg:pt-22'>
         <ContactForm />
       </div>
+        <FAQContact />
+
       <Footer />
 
 

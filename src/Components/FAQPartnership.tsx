@@ -5,35 +5,84 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from '@/Components/Heading';
 gsap.registerPlugin(ScrollTrigger);
 
-const defaultFaqs = [
-    {
-        question: "What markets can I trade on this platform?",
-        answer:
-            "You can access global markets including Forex, Commodities, Indices, and Cryptocurrencies, all from a single account. Not necessarily. The platform is designed for both beginners and experienced traders, with intuitive tools and educational resources to guide you.",
-    },
-    {
-        question: "Is my money safe while trading here?",
-        answer:
-            "Your funds are protected with industry-leading security protocols and segregated accounts to ensure safety.",
-    },
-    {
-        question: "How fast are trade executions?",
-        answer:
-            "Trade executions are instant with advanced infrastructure, allowing you to capitalize on market movements quickly.",
-    },
-    {
-        question: "Do I need prior trading experience?",
-        answer:
-            "No prior experience is required. The platform offers guides and support for beginners and advanced features for experienced traders.",
-    },
-    {
-        question: "Are there any hidden fees?",
-        answer:
-            "There are no hidden fees. All charges are transparently displayed before you make a trade.",
-    },
+const faqsPartnership = [
+     {
+    question: "What partnership opportunities does Jetafx offer?",
+    answer:
+      "Jetafx provides Introducing Broker (IB) programs, affiliate partnerships, and white-label solutions designed for individuals and businesses to earn by referring clients.",
+  },
+  {
+    question: "What is an Introducing Broker (IB)?",
+    answer:
+      "An IB is a partner who refers traders to Jetafx. In return, they earn commissions based on the trading activity of their referred clients.",
+  },
+  {
+    question: "How does the affiliate program work?",
+    answer:
+      "Affiliates promote Jetafx through websites, social media, and digital marketing. They earn a commission for every client who registers and trades through their referral link.",
+  },
+  {
+    question: "Who can join the Jetafx partnership program?",
+    answer:
+      "Anyone—whether you are an individual, trading educator, financial consultant, or company—can join the Jetafx partnership program.",
+  },
+  {
+    question: "How are partner commissions calculated?",
+    answer:
+      "Commissions are based on the trading volume of referred clients. The more active traders you refer, the higher your earnings.",
+  },
+  {
+    question: "When are commissions paid to partners?",
+    answer:
+      "Commissions are paid on a regular basis (weekly or monthly) and can be withdrawn instantly via the Jetafx partner dashboard.",
+  },
+  {
+    question: "What tools does Jetafx provide to partners?",
+    answer:
+      "Partners receive marketing banners, tracking links, reporting dashboards, and multilingual support to grow their client base effectively.",
+  },
+  {
+    question: "Can I monitor my clients’ activity as a partner?",
+    answer:
+      "Yes. The Jetafx partner portal provides detailed reports on referred clients, their trades, and your earned commissions.",
+  },
+  {
+    question: "Is there a cost to join the Jetafx partner program?",
+    answer: "No. Joining Jetafx as a partner is completely free.",
+  },
+  {
+    question: "What are the benefits of becoming a Jetafx partner?",
+    answer:
+      "Benefits include high commission rates, fast payouts, transparent tracking, dedicated support, and access to global markets.",
+  },
+  {
+    question: "Can I become both a trader and a partner?",
+    answer:
+      "Yes. Many Jetafx traders also participate in the partnership program to earn additional income.",
+  },
+  {
+    question: "Does Jetafx offer multi-tier partnership programs?",
+    answer:
+      "Yes. Jetafx supports multi-tier partnerships, allowing you to earn not only from your direct referrals but also from sub-partners you introduce.",
+  },
+  {
+    question: "What payout methods are available for partners?",
+    answer:
+      "Partners can withdraw commissions via bank transfer, e-wallets, or Jetafx debit card for instant access to earnings.",
+  },
+  {
+    question: "Do partners receive training or support?",
+    answer:
+      "Yes. Jetafx provides dedicated account managers, training materials, and 24/5 multilingual support to ensure partner success.",
+  },
+  {
+    question: "How do I sign up for the Jetafx partnership program?",
+    answer:
+      "You can apply directly through the Jetafx website by filling out the partner registration form. Once approved, you’ll gain access to your personal partner dashboard.",
+  },
 ];
 
-export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string; answer: string }[] }) {
+export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
     const faqContainer = useRef<HTMLDivElement>(null);
 
@@ -67,7 +116,7 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
 
     return (
         <section className="faq-section relative overflow-hidden py-14 lg:py-22">
-             <span className='border_shape3'></span>
+            <span className='border_shape3'></span>
             <div className="max-w-[1460px] px-6 mx-auto">
                 <Heading
                     badgeText="FAQ'S SECTION"
@@ -81,14 +130,14 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                     className="faq-container flex flex-col gap-4  rounded-lg max-w-6xl mx-auto mt-8  lg:mt-12"
                 >
 
-                    {faqs.map((faq, idx) => (
+                    {faqsPartnership.map((faq, idx) => (
                         <div
                             key={idx}
                             className="faq-item  faq-fadeup relative w-full"
                             style={{ opacity: 0, transform: 'translateY(48px)' }} // ensures initial state for GSAP
                         >
                             <button
-                                className="w-full text-left  focus:outline-none flex  items-start justify-between cursor-pointer"
+                                className="w-full text-left  focus:outline-none flex items-start justify-between cursor-pointer"
                                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                             >
                                 <span className="text-[#f6f6fa] text-lg">
@@ -114,7 +163,7 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                                     transition: "all 0.4s cubic-bezier(.25,.8,.25,1)",
                                     // Direct padding for non-Tailwind projects:
                                     paddingTop: openIndex === idx ? "20px" : "0px",
-                                    
+
                                 }}
                             >
                                 <div className="opacity-80 text-base mt-1">

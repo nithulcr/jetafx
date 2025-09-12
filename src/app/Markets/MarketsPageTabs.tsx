@@ -98,7 +98,7 @@ const MARKET_CARDS: Record<string, Array<{
       percent: "+0.92%",
       percentColor: "#FFD700",
     },
-    
+
   ],
   crypto: [
     {
@@ -115,7 +115,7 @@ const MARKET_CARDS: Record<string, Array<{
       percent: "+0.92%",
       percentColor: "#FFD700",
     },
-    
+
   ]
 };
 
@@ -132,7 +132,34 @@ const TABS = [
 
 The forex market is one of the world’s largest financial markets, operating five days a week. Just like other trading platforms, investors aim to profit by capitalizing on currency price movements. Participants in this market range from independent retail traders to major financial organizations. To engage in forex trading, you must open an account with a licensed broker, granting you access to global currency markets from your home country whether you’re in the Philippines, Thailand, or anywhere else.
 
-Access Jetafx Limited’s wide range of forex pairs through CFDs and explore countless trading opportunities. With a trusted forex broker like Jetafx Limited, you can trade major, minor, and exotic currency pairs, including popular choices such as EUR/USD, GBP/USD, and USD/JPY. Maximize your forex trading potential by using leverage, enabling you to control larger positions with a smaller capital investment.`
+Access Jetafx Limited’s wide range of forex pairs through CFDs and explore countless trading opportunities. With a trusted forex broker like Jetafx Limited, you can trade major, minor, and exotic currency pairs, including popular choices such as EUR/USD, GBP/USD, and USD/JPY. Maximize your forex trading potential by using leverage, enabling you to control larger positions with a smaller capital investment.`,
+    faq: [
+      {
+        question: "What is forex trading?",
+        answer:
+          "Forex trading is the buying and selling of currencies in pairs, such as EUR/USD or GBP/JPY, aiming to profit from changes in exchange rates.",
+      },
+      {
+        question: "How many forex pairs are available on Jetafx?",
+        answer:
+          "Jetafx offers access to 180+ currency pairs, including majors, minors, and exotic pairs.",
+      },
+      {
+        question: "What leverage can I use for forex trading?",
+        answer:
+          "Leverage options vary by account type and jurisdiction, enabling you to control larger positions with smaller capital.",
+      },
+      {
+        question: "What are the trading hours for forex?",
+        answer:
+          "The forex market is open 24 hours a day, five days a week, covering all major global sessions.",
+      },
+      {
+        question: "What are Jetafx’s spreads on forex pairs?",
+        answer:
+          "Spreads start as low as 0.2 pips, ensuring low-cost access to the global forex market.",
+      },
+    ],
   },
   {
     key: "commodities",
@@ -143,9 +170,36 @@ Access Jetafx Limited’s wide range of forex pairs through CFDs and explore cou
     bodyText:
       `Commodities are essential raw materials that are bought and sold in global markets. They are categorized into two main types: hard and soft commodities. Hard commodities include natural resources like gold, silver, oil, or natural gas, which are extracted or mined. Soft commodities, however, consist of agricultural goods or livestock such as coffee, soybeans, cotton, and sugar.
 
-      With a Bullsouq live trading account, traders from regions like the Philippines, Thailand, and other parts of the world can start trading commodities through Contracts for Differences (CFDs). `
+      With a Bullsouq live trading account, traders from regions like the Philippines, Thailand, and other parts of the world can start trading commodities through Contracts for Differences (CFDs). `,
+    faq: [
+      {
+        question: "What commodities can I trade with Jetafx?",
+        answer:
+          "You can trade gold, silver, crude oil, natural gas, and agricultural products through Jetafx.",
+      },
+      {
+        question: "Why trade commodities in forex markets?",
+        answer:
+          "Commodities provide portfolio diversification and can act as a hedge against inflation and market volatility.",
+      },
+      {
+        question: "Are commodity trades leveraged on Jetafx?",
+        answer:
+          "Yes, commodity CFDs are available with leverage, depending on your account type and region.",
+      },
+      {
+        question: "What are the spreads for commodities?",
+        answer:
+          "Spreads start as low as 1.25 pips per lot for popular commodities like gold and oil.",
+      },
+      {
+        question: "Can I trade commodities on mobile?",
+        answer:
+          "Yes. Jetafx’s mobile app allows you to trade commodities with advanced charting and real-time execution.",
+      },
+    ],
   },
-    {
+  {
     key: "equities",
     label: "Equities",
     heroTitle: "Equities",
@@ -156,7 +210,17 @@ Access Jetafx Limited’s wide range of forex pairs through CFDs and explore cou
       
       The process of buying and selling these shares is called stock trading. By participating in stock trading, individuals can invest in some of the world’s largest companies, including Tesla, Apple, Alphabet, Meta, and more.
       
-      With Vantage, you can trade equities of major U.S. companies commission-free, no matter where you are—from Thailand, the Philippines, or beyond.`
+      With Vantage, you can trade equities of major U.S. companies commission-free, no matter where you are—from Thailand, the Philippines, or beyond.`,
+    faq: [
+      {
+        question: "What are equities?",
+        answer: "Equities are shares of ownership in a company.",
+      },
+      {
+        question: "How do I invest in equities?",
+        answer: "You can invest in equities by buying shares of a company through a stockbroker.",
+      },
+    ],
   },
   {
     key: "indices",
@@ -165,13 +229,40 @@ Access Jetafx Limited’s wide range of forex pairs through CFDs and explore cou
     heroDesc: "Trade global indices like S&P 500, NASDAQ, and FTSE. Capture market trends, diversify exposure, and benefit from high liquidity.",
     sectionTitle: "WHAT ARE INDICES IN TRADING?",
     bodyText:
-    `An index measures the performance of a group of securities or assets. These indices can be categorized based on factors such as asset class, industry, market capitalization, geographical location, and more.
+      `An index measures the performance of a group of securities or assets. These indices can be categorized based on factors such as asset class, industry, market capitalization, geographical location, and more.
     
     By trading indices through Contracts for Difference (CFDs), traders can take advantage of the price movements—whether up or down—of a diverse range of assets. Whether you’re in India, the Philippines, or elsewhere, trading indices gives you the opportunity to tap into global market dynamics.
     
     Trading stock market indices CFDs offers more diversification compared to individual stock trading, as indices represent a specific segment of the stock market, providing a snapshot of that sector’s performance.
     
-    Indices also serve as benchmarks for comparing individual securities or portfolios, enabling investors to monitor market trends and make more informed trading decisions.`
+    Indices also serve as benchmarks for comparing individual securities or portfolios, enabling investors to monitor market trends and make more informed trading decisions.`,
+    faq: [
+      {
+        question: "What are indices in trading?",
+        answer:
+          "Indices represent the performance of a group of stocks, such as the S&P 500 or FTSE 100.",
+      },
+      {
+        question: "Which indices can I trade on Jetafx?",
+        answer:
+          "You can trade major global indices including US30, NASDAQ 100, DAX30, FTSE 100, and more.",
+      },
+      {
+        question: "How are indices traded on Jetafx?",
+        answer:
+          "Indices are traded as CFDs, allowing you to profit from both rising and falling markets.",
+      },
+      {
+        question: "What are the spreads on indices?",
+        answer:
+          "Spreads are competitive and vary by index; Jetafx offers ultra-tight spreads for major global indices.",
+      },
+      {
+        question: "Can I trade indices outside my time zone?",
+        answer:
+          "Yes. Jetafx provides access to global indices with trading hours that match international markets.",
+      },
+    ],
   },
 
   {
@@ -181,11 +272,38 @@ Access Jetafx Limited’s wide range of forex pairs through CFDs and explore cou
     heroDesc: "Trade leading global stocks like Apple, Tesla, and Amazon. Access growth opportunities, diversify portfolios, and react quickly to market trends.",
     sectionTitle: "What is Stock Trading?",
     bodyText:
-    `Stock trading involves buying and selling shares of publicly listed companies to profit from price movements. When you purchase a stock, you own a fraction of that company, entitling you to a portion of its assets and earnings.
+      `Stock trading involves buying and selling shares of publicly listed companies to profit from price movements. When you purchase a stock, you own a fraction of that company, entitling you to a portion of its assets and earnings.
     
     The stock market operates during specific hours, typically aligning with the business hours of the country where the exchange is located. Participants range from individual retail investors to large institutional traders. To engage in stock trading, you need to open an account with a licensed broker, granting you access to global stock markets from your home country—whether you’re in the Philippines, Thailand, or elsewhere.
     
-    Access Bullsouq’s wide range of stocks through our platform and explore numerous trading opportunities. With a trusted broker like Bullsouq, you can trade major stocks, including popular choices such as AAPL (Apple), TSLA (Tesla), and AMZN (Amazon). Maximize your stock trading potential by using leverage, enabling you to control larger positions with a smaller capital investment.`
+    Access Bullsouq’s wide range of stocks through our platform and explore numerous trading opportunities. With a trusted broker like Bullsouq, you can trade major stocks, including popular choices such as AAPL (Apple), TSLA (Tesla), and AMZN (Amazon). Maximize your stock trading potential by using leverage, enabling you to control larger positions with a smaller capital investment.`,
+    faq: [
+      {
+        question: "Can I trade global stocks with Jetafx?",
+        answer:
+          "Yes. Jetafx gives you access to over 19,000 stocks across 36 exchanges worldwide.",
+      },
+      {
+        question: "Are ETFs available on Jetafx?",
+        answer:
+          "Yes. ETFs can be traded alongside individual stocks to diversify your portfolio.",
+      },
+      {
+        question: "What are the commissions on stock trading?",
+        answer:
+          "Commissions start at just $3 per trade, with no hidden charges.",
+      },
+      {
+        question: "Can I trade stocks with leverage?",
+        answer:
+          "Yes. Jetafx offers leverage on stock CFDs, though at lower levels than forex to manage risk.",
+      },
+      {
+        question: "Can I trade stocks on both desktop and mobile?",
+        answer:
+          "Yes. Jetafx’s MT5 desktop and mobile apps allow you to trade stocks anytime, anywhere.",
+      },
+    ],
   },
 
   {
@@ -195,13 +313,24 @@ Access Jetafx Limited’s wide range of forex pairs through CFDs and explore cou
     heroDesc: "Cryptocurrency is a digital currency secured by cryptography, enabling secure, decentralized, and borderless transactions.",
     sectionTitle: "What is Cryptocurrency Trading?",
     bodyText:
-    `What is Cryptocurrency Trading? Cryptocurrency trading involves speculating on the price movements of digital currencies like Bitcoin (BTC), Ethereum (ETH), and others. Traders buy one cryptocurrency while simultaneously selling another, aiming to profit from fluctuations in their exchange rates. For example, in a BTC/USD trade, buying BTC means selling USD.
+      `What is Cryptocurrency Trading? Cryptocurrency trading involves speculating on the price movements of digital currencies like Bitcoin (BTC), Ethereum (ETH), and others. Traders buy one cryptocurrency while simultaneously selling another, aiming to profit from fluctuations in their exchange rates. For example, in a BTC/USD trade, buying BTC means selling USD.
     
     The cryptocurrency market operates 24/7, providing continuous trading opportunities. Participants range from individual retail traders to large financial institutions. To engage in cryptocurrency trading, you need to open an account with a licensed broker, granting you access to global crypto markets from your home country—whether you’re in the Philippines, Thailand, or elsewhere.
     
-    Access Bullsouqs wide range of cryptocurrency pairs through CFDs and explore numerous trading opportunities. With a trusted broker like Bullsouq, you can trade major cryptocurrencies, including popular choices such as BTC/USD, ETH/USD, and LTC/USD. Maximize your crypto trading potential by using leverage, enabling you to control larger positions with a smaller capital investment.`
+    Access Bullsouqs wide range of cryptocurrency pairs through CFDs and explore numerous trading opportunities. With a trusted broker like Bullsouq, you can trade major cryptocurrencies, including popular choices such as BTC/USD, ETH/USD, and LTC/USD. Maximize your crypto trading potential by using leverage, enabling you to control larger positions with a smaller capital investment.`,
+    faq: [
+      {
+        question: "What is cryptocurrency?",
+        answer: "Cryptocurrency is a digital or virtual token that uses cryptography for security.",
+      },
+      {
+        question: "How can I trade cryptocurrency?",
+        answer: "You can trade cryptocurrency on a cryptocurrency exchange or through a broker.",
+      },
+    ],
   },
 ];
+
 
 export default function MarketsPageTabs() {
   const [activeTab, setActiveTab] = useState("forex");
@@ -294,7 +423,7 @@ export default function MarketsPageTabs() {
                   {MARKET_CARDS[activeTab]?.map((card, idx) => (
                     <div
                       key={idx}
-                       className={`market-card rounded-2xl md:rounded-4xl flex flex-col items-center gap-2 justify-between border border-gray-700 max-w-[370px] ${idx === 1 ? 'lg:mt-24 border-0' : ''}`}
+                      className={`market-card rounded-2xl md:rounded-4xl flex flex-col items-center gap-2 justify-between border border-gray-700 max-w-[370px] ${idx === 1 ? 'lg:mt-24 border-0' : ''}`}
                     >
                       <div className="pt-6 pb-3 px-3 md:p-6">
                         <span
@@ -321,7 +450,7 @@ export default function MarketsPageTabs() {
       </section>
       <AccountProcess />
 
-      <FAQ />
+      <FAQ faqs={activeTabConfig?.faq} />
       <Footer />
     </div>
   );

@@ -5,35 +5,85 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from '@/Components/Heading';
 gsap.registerPlugin(ScrollTrigger);
 
-const defaultFaqs = [
-    {
-        question: "What markets can I trade on this platform?",
-        answer:
-            "You can access global markets including Forex, Commodities, Indices, and Cryptocurrencies, all from a single account. Not necessarily. The platform is designed for both beginners and experienced traders, with intuitive tools and educational resources to guide you.",
-    },
-    {
-        question: "Is my money safe while trading here?",
-        answer:
-            "Your funds are protected with industry-leading security protocols and segregated accounts to ensure safety.",
-    },
-    {
-        question: "How fast are trade executions?",
-        answer:
-            "Trade executions are instant with advanced infrastructure, allowing you to capitalize on market movements quickly.",
-    },
-    {
-        question: "Do I need prior trading experience?",
-        answer:
-            "No prior experience is required. The platform offers guides and support for beginners and advanced features for experienced traders.",
-    },
-    {
-        question: "Are there any hidden fees?",
-        answer:
-            "There are no hidden fees. All charges are transparently displayed before you make a trade.",
-    },
+const faqsPlatform = [
+{
+    question: "What trading platform does Jetafx use?",
+    answer:
+      "Jetafx provides access to the MetaTrader 5 (MT5) platform, one of the most advanced and trusted trading platforms in the industry.",
+  },
+  {
+    question: "What markets can I trade on MT5 with Jetafx?",
+    answer:
+      "On MT5, you can trade forex, commodities, indices, stocks, ETFs, futures, and cryptocurrencies all from a single account.",
+  },
+  {
+    question: "Is MT5 available on mobile?",
+    answer:
+      "Yes. Jetafx offers a powerful mobile trading app for both iOS and Android, giving you access to your account anywhere.",
+  },
+  {
+    question: "How do I download MT5?",
+    answer:
+      "You can download MT5 directly from the Jetafx website for desktop or from the App Store / Google Play for mobile devices.",
+  },
+  {
+    question: "Can I trade directly from charts on MT5?",
+    answer:
+      "Yes. MT5 allows one-click trading directly from charts, making execution faster and more efficient.",
+  },
+  {
+    question: "What analytical tools are available in MT5?",
+    answer:
+      "MT5 comes with 80+ technical indicators, charting tools, timeframes, and advanced order types for in-depth analysis.",
+  },
+  {
+    question: "Can I use automated trading (Expert Advisors) on MT5?",
+    answer:
+      "Yes. MT5 supports Expert Advisors (EAs), allowing you to automate your strategies using trading algorithms.",
+  },
+  {
+    question: "Does Jetafx MT5 have an economic calendar?",
+    answer:
+      "Yes. The MT5 platform integrates a real-time economic calendar to keep traders informed of key global events.",
+  },
+  {
+    question: "Can I customize my trading workspace on MT5?",
+    answer:
+      "Yes. You can personalize charts, indicators, and layouts to match your preferred trading style.",
+  },
+  {
+    question: "Does MT5 support multi-device syncing?",
+    answer:
+      "Yes. Your trading account and data are accessible across desktop, web, and mobile devices with seamless synchronization.",
+  },
+  {
+    question: "How secure is MT5 trading with Jetafx?",
+    answer:
+      "MT5 uses encrypted data transmission and advanced security protocols, ensuring safe trading at all times.",
+  },
+  {
+    question: "What order types are available on MT5?",
+    answer:
+      "MT5 supports market orders, pending orders, stop orders, trailing stops, and take-profit/stop-loss features.",
+  },
+  {
+    question: "Can I set price alerts and notifications on mobile?",
+    answer:
+      "Yes. The Jetafx mobile app allows you to set custom price alerts, push notifications, and trade confirmations in real time.",
+  },
+  {
+    question: "Do I need a powerful computer to run MT5?",
+    answer:
+      "No. MT5 is lightweight and works smoothly on most devices, though better performance is achieved with stable internet and modern systems.",
+  },
+  {
+    question: "Can beginners easily use MT5?",
+    answer:
+      "Yes. While MT5 is a professional-grade platform, it is also user-friendly for beginners, with tutorials, guides, and demo accounts available on Jetafx.",
+  },
 ];
 
-export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string; answer: string }[] }) {
+export default function FAQ({ faqs = faqsPlatform }: { faqs?: { question: string; answer: string }[] }) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
     const faqContainer = useRef<HTMLDivElement>(null);
 

@@ -10,6 +10,8 @@ import Commitments from '@/Components/Commitments';
 import ContactForm from '@/Components/ContactForm';
 
 import Testimonials from '@/Components/Testimonials';
+import FAQAboutUs from '@/Components/FAQAboutUs';
+
 
 
 import Footer from '@/Components/Footer';
@@ -30,6 +32,8 @@ export default function AboutUs() {
       <Commitments />
       <ContactForm />
       <Testimonials />
+      <FAQAboutUs />
+
 
 
       <Footer />

@@ -47,7 +47,7 @@ useEffect(() => {
   return (
     <section ref={Hero3Ref} className="relative  lg:pb-2 lg:pt-16 lg:pb-6 hero overflow-hidden ">
       <span className='hero-section-span'></span>
-      <div className="max-w-[1460px] mx-auto px-6 pt-30 pb-10 lg:pb-20  text-center hero-container hero-container2 relative z-10 ">
+      <div className="max-w-[1460px] mx-auto px-6 pt-30   text-center hero-container hero-container2 relative z-10 ">
         <h1
           className="fade-up hero-heading text-4xl md:text-5xl lg:text-7xl max-w-[1000px] mx-auto font-bold mb-4 leading-tight"
         >
@@ -59,9 +59,10 @@ useEffect(() => {
        
 
       </div>
-       <div className="fade-up pt-6">
-          <Image src="/platform-bg.png" alt="logo icon" className='w-full mx-auto' width={1000} height={1000} />
-        </div>
+      <div className="fade-up mt-[-50px] opacity-60">
+          <Image src="/platform-bg.png" alt="logo icon" className='w-full max-w-[800px] mx-auto' width={1000} height={1000} />
+      </div>
+       
 
     </section>
   );

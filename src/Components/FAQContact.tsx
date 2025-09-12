@@ -5,35 +5,84 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from '@/Components/Heading';
 gsap.registerPlugin(ScrollTrigger);
 
-const defaultFaqs = [
-    {
-        question: "What markets can I trade on this platform?",
-        answer:
-            "You can access global markets including Forex, Commodities, Indices, and Cryptocurrencies, all from a single account. Not necessarily. The platform is designed for both beginners and experienced traders, with intuitive tools and educational resources to guide you.",
-    },
-    {
-        question: "Is my money safe while trading here?",
-        answer:
-            "Your funds are protected with industry-leading security protocols and segregated accounts to ensure safety.",
-    },
-    {
-        question: "How fast are trade executions?",
-        answer:
-            "Trade executions are instant with advanced infrastructure, allowing you to capitalize on market movements quickly.",
-    },
-    {
-        question: "Do I need prior trading experience?",
-        answer:
-            "No prior experience is required. The platform offers guides and support for beginners and advanced features for experienced traders.",
-    },
-    {
-        question: "Are there any hidden fees?",
-        answer:
-            "There are no hidden fees. All charges are transparently displayed before you make a trade.",
-    },
+const faqsPartnership = [
+{
+    question: "How can I contact Jetafx support?",
+    answer:
+      "You can reach Jetafx support via live chat, email, or phone. Our team is available directly from the website or through the client portal.",
+  },
+  {
+    question: "What are Jetafx’s support hours?",
+    answer:
+      "Support is available 24 hours a day, 5 days a week, aligned with global forex trading hours.",
+  },
+  {
+    question: "Does Jetafx provide multilingual support?",
+    answer:
+      "Yes. Jetafx offers multilingual support to assist traders worldwide in their preferred language.",
+  },
+  {
+    question: "Where is Jetafx’s office located?",
+    answer:
+      "Jetafx is registered in Saint Lucia, with an office at Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia.",
+  },
+  {
+    question: "Can I speak directly to a Jetafx representative?",
+    answer: "Yes. Our live chat and phone support connect you instantly with a customer care agent.",
+  },
+  {
+    question: "How do I verify my identity (KYC)?",
+    answer:
+      "To complete KYC, upload a valid ID (passport, driver’s license, or national ID) and a proof of address (utility bill or bank statement) through the secure client portal.",
+  },
+  {
+    question: "How long does KYC verification take?",
+    answer:
+      "Most verifications are completed within 24–48 hours, depending on document accuracy.",
+  },
+  {
+    question: "What should I do if I forget my account password?",
+    answer:
+      "Click “Forgot Password” on the login page, and follow the instructions to reset your password securely.",
+  },
+  {
+    question: "How do I report a problem with deposits or withdrawals?",
+    answer:
+      "You can contact our finance support team via email or live chat, and provide transaction details. Issues are usually resolved promptly.",
+  },
+  {
+    question: "How do I make a complaint about a service?",
+    answer:
+      "Clients can file a complaint through the support portal. Jetafx handles all complaints under a transparent dispute resolution policy.",
+  },
+  {
+    question: "Can Jetafx help me with technical platform issues?",
+    answer:
+      "Yes. Our support team assists with MT5 setup, mobile app usage, chart settings, and technical troubleshooting.",
+  },
+  {
+    question: "How can I check the status of my support ticket?",
+    answer:
+      "Log into your Jetafx client portal to view the status of open support requests.",
+  },
+  {
+    question: "Is there a dedicated line for partners or affiliates?",
+    answer:
+      "Yes. Jetafx provides dedicated support for IBs and affiliates, including commission tracking and payout queries.",
+  },
+  {
+    question: "Can I request a call back from Jetafx support?",
+    answer:
+      "Yes. You can submit a callback request via the client portal, and a representative will contact you within business hours.",
+  },
+  {
+    question: "How quickly does Jetafx respond to support queries?",
+    answer:
+      "Most queries are answered within minutes via live chat and within 24 hours by email.",
+  },
 ];
 
-export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string; answer: string }[] }) {
+export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
     const faqContainer = useRef<HTMLDivElement>(null);
 
@@ -67,7 +116,7 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
 
     return (
         <section className="faq-section relative overflow-hidden py-14 lg:py-22">
-             <span className='border_shape3'></span>
+            <span className='border_shape3'></span>
             <div className="max-w-[1460px] px-6 mx-auto">
                 <Heading
                     badgeText="FAQ'S SECTION"
@@ -81,14 +130,14 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                     className="faq-container flex flex-col gap-4  rounded-lg max-w-6xl mx-auto mt-8  lg:mt-12"
                 >
 
-                    {faqs.map((faq, idx) => (
+                    {faqsPartnership.map((faq, idx) => (
                         <div
                             key={idx}
                             className="faq-item  faq-fadeup relative w-full"
                             style={{ opacity: 0, transform: 'translateY(48px)' }} // ensures initial state for GSAP
                         >
                             <button
-                                className="w-full text-left  focus:outline-none flex  items-start justify-between cursor-pointer"
+                                className="w-full text-left  focus:outline-none flex items-start justify-between cursor-pointer"
                                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                             >
                                 <span className="text-[#f6f6fa] text-lg">
@@ -114,7 +163,7 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                                     transition: "all 0.4s cubic-bezier(.25,.8,.25,1)",
                                     // Direct padding for non-Tailwind projects:
                                     paddingTop: openIndex === idx ? "20px" : "0px",
-                                    
+
                                 }}
                             >
                                 <div className="opacity-80 text-base mt-1">

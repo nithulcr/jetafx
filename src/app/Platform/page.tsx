@@ -3,7 +3,7 @@ import Hero3 from '@/Components/Hero3';
 import TraderTips from '@/Components/TraderTips';
 import AccountProcess from '@/Components/AccountProcess';
 
-import FAQ from '@/Components/FAQ';
+import FAQPlatform from '@/Components/FAQPlatform';
 
 import OurValue from '@/Components/OurValue';
 
@@ -27,7 +27,7 @@ export default function Platform() {
 
 <AccountProcess />
 
-      <FAQ />
+      <FAQPlatform />
       <Footer />
 
 

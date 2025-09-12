@@ -57,7 +57,19 @@ useEffect(() => {
          At Jeta FX, we believe in building relationships that create value for everyone.
         </p>
         <div className="fade-up pt-6">
-          <Image src="/partnership-bg.png" alt="logo icon" className='w-full max-w-[1000px] mx-auto' width={1000} height={1000} />
+      <Image
+      src="/hand-shake.jpg"
+      alt="logo icon"
+      width={1000}
+      height={1000}
+      className="w-full max-w-[1000px] mx-auto"
+      style={{
+        width: "100%",
+        height: "auto",
+        maskImage: "radial-gradient(circle at center, black 60%, transparent 100%, transparent 100%, transparent 100%)",
+        WebkitMaskImage: "radial-gradient(circle at center, black 60%, transparent 100%, transparent 100%, transparent 100%)",
+      }}
+    />
         </div>
 
       </div>
