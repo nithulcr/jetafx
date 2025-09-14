@@ -25,6 +25,7 @@ const Hero = () => {
   }, []);
 
   useLayoutEffect(() => {
+
     if (!sectionRef.current) return;
     const section = sectionRef.current;
 
@@ -33,6 +34,8 @@ const Hero = () => {
 
     const ctx = gsap.context(() => {
       // Reset initial styles for animated elements
+      gsap.set(".blurry-card", { clearProps: "all" });
+      gsap.set(".blurry-card", { opacity: 0, x: 60, y: 20 });
       gsap.set(".s-fade-up", { opacity: 0, y: 20 });
       gsap.set(".fade-up", { opacity: 0, y: 40 });
       gsap.set(".fade-left", { opacity: 0, x: -56 });
@@ -87,18 +90,32 @@ const Hero = () => {
       );
       tl.fromTo(
         section.querySelectorAll(".fade-left"),
-        { opacity: 0, x: -50 },
+        { opacity: 0, x: -56 },
         { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
         "<"
       );
       tl.fromTo(
         section.querySelectorAll(".fade-right"),
-        { opacity: 0, x: 50 },
+        { opacity: 0, x: 56 },
         { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
         "<"
       );
 
-      
+      gsap.to(".blurry-card", {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: section.querySelector(".hero-second-grid"),
+          start: "top 85%",
+          end: "top 20%",
+          toggleActions: "play none none reverse",
+           markers: true,
+        },
+      });
 
       gsap.to(".s-fade-up", {
         opacity: 1,
@@ -109,7 +126,7 @@ const Hero = () => {
         stagger: 0.2,
         scrollTrigger: {
           trigger: section.querySelector(".hero-second-grid"),
-          start: "top 90%",
+          start: "top 85%",
           toggleActions: "play none none reverse",
         },
       });
@@ -166,9 +183,9 @@ const Hero = () => {
           <div className='shuffle'><AnimatedButton href="https://my.jetafx.com/en/auth/sign-up" label="Sign up" className="fade-right w-fit transparent-btn" /></div>
         </div>
       </div>
-      <div className="max-w-[1460px] hero-second-grid mx-auto px-6 py-6 flex gap-6 bg-transparent ">
+      <div className="max-w-[1460px] hero-second-grid mx-auto px-6 py-6 flex gap-6 bg-transparent">
         {/* Why Choose Us Card */}
-        <div className="relative blurry-card blurry-card1 fade-up">
+        <div className="relative blurry-card blurry-card1 ">
           <span></span>
           <h3 className="text-xl mb-3 s-fade-up">Why Choose Us</h3>
           <p className="text-slate-400 text-[15px] leading-normal mb-5 s-fade-up">
@@ -190,7 +207,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Fast, Reliable Execution Card */}
-        <div className="relative blurry-card blurry-card2 flex flex-col justify-between fade-up">
+        <div className="relative blurry-card blurry-card2 flex flex-col justify-between">
           <h3 className="text-xl mb-3 s-fade-up">Fast, Reliable Execution</h3>
           <p className="text-slate-400 text-[15px] leading-normal mb-6 max-w-2xl s-fade-up">
             Take advantage of ultra-fast execution and live market depth. Trade in real time with infrastructure that keeps you aligned with every move.

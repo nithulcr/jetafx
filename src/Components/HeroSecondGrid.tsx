@@ -8,9 +8,9 @@ type Props = {
 
 const HeroSecondGrid: React.FC<Props> = ({ setCountRef }) => {
   return (
-    <div className="max-w-[1460px] hero-second-grid mx-auto px-6 pt-6 lg:pt-12 flex gap-6 bg-transparent fade-up">
+    <div className="max-w-[1460px] hero-second-grid mx-auto px-6 pt-6 lg:pt-12 flex gap-6 bg-transparent ">
       {/* Why Choose Us Card */}
-      <div className="relative blurry-card blurry-card-left blurry-card3 grid fade-up  md:grid-cols-2">
+      <div className="relative blurry-card blurry-card-left blurry-card3 grid   md:grid-cols-2">
         <div>
           <h3 className="text-xl mb-3 s-fade-up">Trade Anywhere</h3>
           <p className="text-slate-400 text-[15px] leading-normal mb-5 s-fade-up">
@@ -100,7 +100,7 @@ const HeroSecondGrid: React.FC<Props> = ({ setCountRef }) => {
         </div>
       </div>
       {/* Fast, Reliable Execution Card */}
-      <div className="relative blurry-card blurry-card-left blurry-card4 fade-up flex flex-col">
+      <div className="relative blurry-card blurry-card-left blurry-card4 flex flex-col">
         <h3 className="text-xl mb-3 s-fade-up">Your Efforts Matters</h3>
         <p className="text-slate-400 text-[15px] leading-normal mb-4 max-w-2xl s-fade-up">
           Earn more Profit with targeted strategies and smarter tools.
