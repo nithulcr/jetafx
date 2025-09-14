@@ -1,3 +1,4 @@
+"use client";
 import Header from '@/Components/Header';
 import Hero from '@/Components/Hero';
 import Features from '@/Components/Features';
@@ -12,7 +13,7 @@ import FAQHome from '@/Components/FAQHome';
 import Payment from '@/Components/Payment';
 import Testimonials from '@/Components/Testimonials';
 import Footer from '@/Components/Footer';
-
+import { usePathname } from 'next/navigation';
 
 
 
@@ -22,10 +23,11 @@ import Footer from '@/Components/Footer';
 
 
 export default function Home() {
+  const pathname = usePathname();
   return (
     <div>
       <Header />
-      <Hero />
+      <Hero key={pathname} />
       <Features />
       <Plans />
       <FoundersNote />

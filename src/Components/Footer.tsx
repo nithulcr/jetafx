@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         {/* Main columns */}
-        <div className="grid md:grid-cols-5 max-w-[1100px] gap-8 py-10">
+        <div className="grid md:grid-cols-5 max-w-[1100px] lg:gap-24 gap-6 py-10">
           {/* Logo & stats */}
           <div className="col-span-2">
             <Image src="/logo.png" alt="Jetafx Logo" width={88} height={28} className="mb-4" />
@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
           {/* Company Information */}
-          <div className="col-span-2 max-w-[300px]">
+          <div className="col-span-2 max-w-[340px]">
             <div className="text-base mb-4">Company Information</div>
             <ul className="space-y-2 text-sm opacity-50">
               <li>Office No. 5, Ses Grape Avenue, Rodney Bay, Gros-Islet, Saint Lucia</li>

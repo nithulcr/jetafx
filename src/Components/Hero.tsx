@@ -85,6 +85,7 @@ const Hero = () => {
           { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
           "<"
         );
+        
         gsap.fromTo(
           ".blurry-card",
           { opacity: 0, x: 120, y: 20 },
@@ -123,7 +124,10 @@ const Hero = () => {
       }
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    }
   }, [pathname]);
 
   const heading = "World-Class Forex Trading Where Profits Meet Precision";
