@@ -16,32 +16,40 @@ const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const countRefs = useRef<HTMLSpanElement[]>([]);
-  countRefs.current = []; // Reset refs every render
 
   // Only add SPAN nodes to countRefs
-  const setCountRef = (el: HTMLSpanElement | null) => {
+  const setCountRef = React.useCallback((el: HTMLSpanElement | null) => {
     if (el) countRefs.current.push(el);
-  };
+  }, []);
+
 
   useLayoutEffect(() => {
+    if (!sectionRef.current) return;
+    countRefs.current = []
     const ctx = gsap.context(() => {
+      // Reset initial styles for animated elements
+      gsap.set(".blurry-card", { opacity: 0, x: 120, y: 20 });
+      gsap.set(".s-fade-up", { opacity: 0, y: 20 });
+      gsap.set(".fade-up", { opacity: 0, y: 40 });
+      gsap.set(".fade-left", { opacity: 0, x: -56 });
+      gsap.set(".fade-right", { opacity: 0, x: 56 });
+
       const tl = gsap.timeline();
 
       // Animate split heading
       if (headingRef.current) {
-        const words = headingRef.current.querySelectorAll('span');
+        const words = headingRef.current.querySelectorAll("span");
         tl.from(words, {
           opacity: 0,
           y: 60,
           stagger: 0.05,
           duration: 0.5,
-          ease: "power4.out"
+          ease: "power4.out",
         });
       }
 
-
-
-      countRefs.current.forEach(ref => {
+      // Animate counts
+      countRefs.current.forEach((ref) => {
         if (ref && ref.dataset && ref.dataset.target) {
           const target = parseFloat(ref.dataset.target);
           if (!isNaN(target)) {
@@ -49,86 +57,89 @@ const Hero = () => {
             gsap.to(obj, {
               value: target,
               duration: 1.5,
-              ease: 'power1.out',
+              ease: "power1.out",
               scrollTrigger: {
-                trigger: sectionRef.current?.querySelector('.hero-second-grid') as Element,
+                trigger:
+                  sectionRef.current?.querySelector(".hero-second-grid") as Element,
                 start: "top 75%",
                 once: true,
               },
               onUpdate: () => {
                 ref.innerText = obj.value.toLocaleString(undefined, {
                   minimumFractionDigits: 0,
-                  maximumFractionDigits: 2
+                  maximumFractionDigits: 2,
                 });
-              }
+              },
             });
           }
         }
       });
 
-      if (sectionRef.current) {
-        tl.fromTo(
-          sectionRef.current.querySelectorAll('.fade-up'),
-          { opacity: 0, y: 40 },
-          { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 },
-          "-=0.6"
-        );
-        tl.fromTo(
-          sectionRef.current.querySelectorAll('.fade-left'),
-          { opacity: 0, x: -56 },
-          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
-          "<"
-        );
-        tl.fromTo(
-          sectionRef.current.querySelectorAll('.fade-right'),
-          { opacity: 0, x: 56 },
-          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
-          "<"
-        );
-        
-        gsap.fromTo(
-          ".blurry-card",
-          { opacity: 0, x: 120, y: 20 },
-          {
-            opacity: 1,
-            x: 0,
-            y: 0,
-            duration: .6,
-            ease: "power3.out",
-            stagger: 0.20,
-            scrollTrigger: {
-              trigger: sectionRef.current?.querySelector('.hero-second-grid') as Element,
-              start: "top 75%",
-              end: "top 20%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-        gsap.fromTo(
-          ".s-fade-up",
-          { opacity: 0, y: 20 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: .6,
-            delay: 0.3,
-            ease: "power3.out",
-            stagger: 0.20,
-            scrollTrigger: {
-              trigger: sectionRef.current?.querySelector('.hero-second-grid') as Element,
-              start: "top 75%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
+      // Timeline animations
+      tl.fromTo(
+        sectionRef.current.querySelectorAll(".fade-up"),
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 },
+        "-=0.6"
+      );
+      tl.fromTo(
+        sectionRef.current.querySelectorAll(".fade-left"),
+        { opacity: 0, x: -56 },
+        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
+        "<"
+      );
+      tl.fromTo(
+        sectionRef.current.querySelectorAll(".fade-right"),
+        { opacity: 0, x: 56 },
+        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
+        "<"
+      );
+
+      gsap.to(".blurry-card", {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: sectionRef.current?.querySelector(".hero-second-grid") as Element,
+          start: "top 75%",
+          end: "top 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.to(".s-fade-up", {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        delay: 0.3,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: sectionRef.current?.querySelector(".hero-second-grid") as Element,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // Refresh ScrollTrigger on images load as well
+      const imgs = sectionRef.current.querySelectorAll("img");
+      imgs.forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener("load", () => {
+            ScrollTrigger.refresh();
+          });
+        }
+      });
+
+      ScrollTrigger.refresh(); // Ensure refresh after setup
     }, sectionRef);
 
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    }
+    return () => ctx.revert();
   }, [pathname]);
+
 
   const heading = "World-Class Forex Trading Where Profits Meet Precision";
   const splitHeading = heading.split(' ').map((word, i) => (
@@ -148,8 +159,8 @@ const Hero = () => {
           Experience professional-grade trading across forex, commodities, indices, and digital currencies. Advanced analytics, lightning-fast execution, and global market access in one powerful platform.
         </p>
         <div className="flex justify-center gap-4 mt-8">
-         <div className='shuffle'> <AnimatedButton  href="https://my.jetafx.com/en/auth/sign-in" label="Log in" className="fade-left w-fit" /></div>
-          <div className='shuffle'><AnimatedButton  href="https://my.jetafx.com/en/auth/sign-up" label="Sign up" className="fade-right w-fit transparent-btn" /></div>
+          <div className='shuffle'> <AnimatedButton href="https://my.jetafx.com/en/auth/sign-in" label="Log in" className="fade-left w-fit" /></div>
+          <div className='shuffle'><AnimatedButton href="https://my.jetafx.com/en/auth/sign-up" label="Sign up" className="fade-right w-fit transparent-btn" /></div>
         </div>
       </div>
       <div className="max-w-[1460px] hero-second-grid mx-auto px-6 py-6 flex gap-6 bg-transparent">
@@ -226,7 +237,7 @@ const Hero = () => {
           <Image src="/rate-graph.png" alt="rate graph" className="w-full md:hidden s-fade-up" width={300} height={300} />
         </div>
       </div>
-      
+
       <Marquee />
       <HeroSecondGrid setCountRef={setCountRef} />
     </section>
