@@ -37,7 +37,7 @@ export default function FoundersNote() {
                 scrollTrigger: {
                     trigger: foundersRef.current,
                     start: "top 90%",
-                    end: "bottom 70%",
+                    end: "bottom 90%",
                     scrub: 1,
                     toggleActions: 'play reverse play reverse'
                 }

@@ -15,6 +15,16 @@ const navItems = [
   { href: "/Platform", label: "Platform" },
   {
     href: "",
+    label: "Account",
+    children: [
+      { href: "/Account/Pro-Account", label: "Pro-Account" },
+      { href: "/Account/Premium-Account", label: "Premium-Account" },
+      { href: "/Account/Zero-Account", label: "Zero-Account" },
+      { href: "/Account/Scalping-Account", label: "Scalping-Account" },
+    ],
+  },
+  {
+    href: "",
     label: "Tools",
     children: [
       { href: "/Tools/profit-calculator", label: "Profit Calculator" },
@@ -34,7 +44,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [showToolsSubMenu, setShowToolsSubMenu] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
 
@@ -52,7 +62,7 @@ export default function Header() {
     setTimeout(() => {
       setOpen(false);
       setClosing(false);
-      setShowToolsSubMenu(false);
+      setShowSubMenu(null);
     }, 800);
   };
 
@@ -61,7 +71,7 @@ export default function Header() {
       document.body.classList.add("navbar-open");
     } else {
       document.body.classList.remove("navbar-open");
-      setShowToolsSubMenu(false);
+      setShowSubMenu(null);
     }
     return () => {
       document.body.classList.remove("navbar-open");
@@ -80,9 +90,9 @@ export default function Header() {
     "content-center w-full fixed top-0 left-0 z-50 transition-colors duration-300 bg-nav" +
     (scrolled ? " bg-nav-cover" : "");
 
-  const handleToolsClick = () => {
+  const handleSubMenuClick = (label: string) => {
     if (isMobile) {
-      setShowToolsSubMenu(true);
+      setShowSubMenu(label);
     }
   };
 
@@ -104,13 +114,13 @@ export default function Header() {
           <nav className="hidden lg:flex gap-3">
             {navItems.map((item) => (
               <MenuItem
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 label={item.label}
                 active={pathname === item.href}
                 // eslint-disable-next-line react/no-children-prop
                 children={item.children}
-                onClick={item.label === "Tools" ? handleToolsClick : undefined}
+                onClick={item.children ? () => handleSubMenuClick(item.label) : undefined}
               />
             ))}
           </nav>
@@ -134,15 +144,15 @@ export default function Header() {
         ${open ? "navbar-open-div" : ""}
         ${closing ? "navbar-closing" : ""}
       `}>
-        {!showToolsSubMenu ? (
+        {!showSubMenu ? (
           <>
             {navItems.map((item) => (
               <MenuItem
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 label={item.label}
                 active={pathname === item.href}
-                onClick={item.label === "Tools" ? handleToolsClick : undefined}
+                onClick={item.children ? () => handleSubMenuClick(item.label) : undefined}
               />
             ))}
             <div className="flex gap-4 mt-8">
@@ -157,12 +167,12 @@ export default function Header() {
         ) : (
           <>
             <button
-              onClick={() => setShowToolsSubMenu(false)}
+              onClick={() => setShowSubMenu(null)}
               className="block px-2 fw-200 py-2 text-lg text-white hover:bg-gray-700 mb-4"
             >
                Back
             </button>
-            {navItems.find(item => item.label === "Tools")?.children?.map((subItem) => (
+            {navItems.find(item => item.label === showSubMenu)?.children?.map((subItem) => (
               <MenuItem
                 key={subItem.href}
                 href={subItem.href}

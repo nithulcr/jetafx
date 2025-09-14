@@ -8,7 +8,45 @@ import AnimatedButton from "@/Components/AnimatedButton";
 import Link from 'next/link';
 import React, { useState, use } from 'react';
 
+const blogTable = [
+  {
+    feature: "Trade Duration",
+    scalping: "Seconds to minutes",
+    trading: "Days to weeks",
 
+  },
+  {
+    feature: "Number of Trades",
+    scalping: "High (dozens per day)",
+    trading: "Low (a few per week)",
+
+  },
+  {
+    feature: "Profit Target",
+    scalping: "Small (2–10 pips per trade)",
+    trading: "Larger (50–300 pips pertrade)",
+
+  },
+  {
+    feature: "Time Commitment",
+    scalping: "Requires full attention and quick action",
+    trading: "Can be managed part-time",
+
+  },
+  {
+    feature: "Stress Level",
+    scalping: "High – fast, continuous decisions",
+    trading: "Moderate – fewer, more thoughtful moves",
+
+  },
+  {
+    feature: "Best For",
+    scalping: "Active traders, fast learners",
+    trading: "Patient traders, those withless time",
+
+  },
+
+];
 export default function BlogPostPage({ params: initialParams }: { params: Promise<{ slug: string }> }) {
   const params = use(initialParams);
 
@@ -41,7 +79,7 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
 
       <section className="other-section pt-14 lg:pt-22 pb-5 lg:pb-10 overflow-hidden relative">
         <div className='max-w-[1100px] px-6 mx-auto'>
-          <AnimatedButton href='/blogs'  label="Back To All Posts" className="white-btn w-fit load-more-btn mt-6  lg:mt-10" />
+          <AnimatedButton href='/blogs' label="Back To All Posts" className="white-btn w-fit load-more-btn mt-6  lg:mt-10" />
 
         </div>
         <div className="max-w-[1100px] px-6 w-full mx-auto pt-14 lg:pt-20 relative">
@@ -107,6 +145,56 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
             <p className='text-[#E6ECFF] opacity-70 pt-2'>In 2025 and beyond, global events are expected to move markets faster than ever. From inflation cycles to geopolitical developments, traders who master news strategies will be better equipped to adapt. With the right tools, planning, and discipline, economic news can become a powerful ally in navigating the forex market.</p>
           </div>
 
+          <div>
+            <div className="w-full  rounded-2xl blog-site-card site-card md:p-5 md:sm:p-16  mt-10">
+              <div
+
+                className={`grid grid-cols-3 py-4 lg:px-9 px-4 gap-3 border-t border-t-[#fbd00b4d] border-b  border-b-[var(--yellow)] rounded-3xl`}
+              >
+                <span
+                  className={`text-md lg:text-lg text-[var(--yellow)] `}
+                >
+                  Feature
+                </span>
+                <span
+                  className={`text-sm lg:text-lg fw-200  text-[var(--yellow)] `}
+                >
+                  Scalping
+                </span>
+                <span
+                  className={`text-sm lg:text-lg fw-200   text-[var(--yellow)] `}
+                >
+                  Swing Trading
+                </span>
+              </div>
+              <div className="divide-y2 mt-4">
+
+                {blogTable.map((spec, idx) => (
+                  <div
+                    key={spec.feature}
+                    className={`grid grid-cols-3 py-4 border-b gap-3  border-b-[#404040] rounded-xl lg:px-9 px-4`}
+                  >
+                    <span
+                      className={`text-sm`}
+                    >
+                      {spec.feature}
+                    </span>
+                    <span
+                      className={`text-sm `}
+                    >
+                      {spec.scalping}
+                    </span>
+                    <span
+                      className={`text-sm `}
+                    >
+                      {spec.trading}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
         </div>
       </section >
       <section className="pt-7 lg:pt-12 pb-14 lg:pb-16 overflow-hidden relative">
