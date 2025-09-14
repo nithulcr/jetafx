@@ -69,17 +69,17 @@ const plans = [
             'Commission: No',
         ],
     },
-    
+
 ];
 
 export default function PricingSlider() {
     // Keep track of current slide's index
     const [activeIdx, setActiveIdx] = useState(0);
     const swiperRef = useRef<SwiperType | null>(null);
-     const PlansRef = useRef<HTMLDivElement>(null);
+    const PlansRef = useRef<HTMLDivElement>(null);
 
 
- useEffect(() => {
+    useEffect(() => {
         const ctx = gsap.context(() => {
 
             // Animation for features list staggered
@@ -106,15 +106,17 @@ export default function PricingSlider() {
 
 
     return (
-        <section  className="plans-section py-12 md:pt-24  md:pb-12 relative overflow-hidden">
+        <section className="plans-section py-12 md:pt-24  md:pb-12 relative overflow-hidden">
 
             <span className='border_shape3'></span>
-            <Heading
-                badgeText="Account Type"
-                title="Flexible Pricing Plans"
-                subtitle="We offer tailored account types to suit every trading style"
-            />
-            <div  ref={PlansRef} className='mt-12'>
+            <div className='px-6'>
+                <Heading
+                    badgeText="Account Type"
+                    title="Flexible Pricing Plans"
+                    subtitle="We offer tailored account types to suit every trading style"
+                />
+            </div>
+            <div ref={PlansRef} className='mt-12'>
                 <Swiper
                     modules={[Autoplay]}
                     loop={true}
