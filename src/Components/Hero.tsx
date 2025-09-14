@@ -25,6 +25,7 @@ const Hero = () => {
 
   useLayoutEffect(() => {
     if (!sectionRef.current) return;
+    const section = sectionRef.current;
     countRefs.current = []
     const ctx = gsap.context(() => {
       // Reset initial styles for animated elements
@@ -60,7 +61,7 @@ const Hero = () => {
               ease: "power1.out",
               scrollTrigger: {
                 trigger:
-                  sectionRef.current?.querySelector(".hero-second-grid") as Element,
+                  section.querySelector(".hero-second-grid") as Element,
                 start: "top 75%",
                 once: true,
               },
@@ -76,21 +77,21 @@ const Hero = () => {
       });
 
       // Timeline animations
-      if (sectionRef.current) {
+      if (section) {
         tl.fromTo(
-          sectionRef.current.querySelectorAll(".fade-up"),
+          section.querySelectorAll(".fade-up"),
           { opacity: 0, y: 40 },
           { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 },
           "-=0.6"
         );
         tl.fromTo(
-          sectionRef.current.querySelectorAll(".fade-left"),
+          section.querySelectorAll(".fade-left"),
           { opacity: 0, x: -56 },
           { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
           "<"
         );
         tl.fromTo(
-          sectionRef.current.querySelectorAll(".fade-right"),
+          section.querySelectorAll(".fade-right"),
           { opacity: 0, x: 56 },
           { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
           "<"
@@ -105,7 +106,7 @@ const Hero = () => {
         ease: "power3.out",
         stagger: 0.2,
         scrollTrigger: {
-          trigger: sectionRef.current?.querySelector(".hero-second-grid") as Element,
+          trigger: section.querySelector(".hero-second-grid") as Element,
           start: "top 75%",
           end: "top 20%",
           toggleActions: "play none none reverse",
@@ -120,14 +121,14 @@ const Hero = () => {
         ease: "power3.out",
         stagger: 0.2,
         scrollTrigger: {
-          trigger: sectionRef.current?.querySelector(".hero-second-grid") as Element,
+          trigger: section.querySelector(".hero-second-grid") as Element,
           start: "top 75%",
           toggleActions: "play none none reverse",
         },
       });
 
       // Refresh ScrollTrigger on images load as well
-      const imgs = sectionRef.current.querySelectorAll("img");
+      const imgs = section.querySelectorAll("img");
       imgs.forEach((img) => {
         if (!img.complete) {
           img.addEventListener("load", () => {
