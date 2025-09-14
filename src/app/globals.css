@@ -2103,4 +2103,7 @@ input {
   .OutlineCursor {
     display: none;
   }
+  .blurry-card1>span {
+    height: 20%;
+}
 }

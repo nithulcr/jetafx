@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import gsap from "gsap";
 import AnimatedButton from "./AnimatedButton";
@@ -17,19 +17,23 @@ const Hero = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const countRefs = useRef<HTMLSpanElement[]>([]);
 
-  // Only add SPAN nodes to countRefs
-  const setCountRef = React.useCallback((el: HTMLSpanElement | null) => {
-    if (el) countRefs.current.push(el);
+  // Memoized callback to collect count spans, avoid duplicates
+  const setCountRef = useCallback((el: HTMLSpanElement | null) => {
+    if (el && !countRefs.current.includes(el)) {
+      countRefs.current.push(el);
+    }
   }, []);
-
 
   useLayoutEffect(() => {
     if (!sectionRef.current) return;
     const section = sectionRef.current;
-    countRefs.current = []
+
+    // Reset countRefs early before animations
+    countRefs.current = [];
+
     const ctx = gsap.context(() => {
       // Reset initial styles for animated elements
-      gsap.set(".blurry-card", { opacity: 0, x: 120, y: 20 });
+      gsap.set(".blurry-card", { opacity: 0, x: 60, y: 20 });
       gsap.set(".s-fade-up", { opacity: 0, y: 20 });
       gsap.set(".fade-up", { opacity: 0, y: 40 });
       gsap.set(".fade-left", { opacity: 0, x: -56 });
@@ -51,7 +55,7 @@ const Hero = () => {
 
       // Animate counts
       countRefs.current.forEach((ref) => {
-        if (ref && ref.dataset && ref.dataset.target) {
+        if (ref.dataset?.target) {
           const target = parseFloat(ref.dataset.target);
           if (!isNaN(target)) {
             const obj = { value: 0 };
@@ -60,8 +64,7 @@ const Hero = () => {
               duration: 1.5,
               ease: "power1.out",
               scrollTrigger: {
-                trigger:
-                  section.querySelector(".hero-second-grid") as Element,
+                trigger: section.querySelector(".hero-second-grid"),
                 start: "top 75%",
                 once: true,
               },
@@ -76,27 +79,25 @@ const Hero = () => {
         }
       });
 
-      // Timeline animations
-      if (section) {
-        tl.fromTo(
-          section.querySelectorAll(".fade-up"),
-          { opacity: 0, y: 40 },
-          { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 },
-          "-=0.6"
-        );
-        tl.fromTo(
-          section.querySelectorAll(".fade-left"),
-          { opacity: 0, x: -56 },
-          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
-          "<"
-        );
-        tl.fromTo(
-          section.querySelectorAll(".fade-right"),
-          { opacity: 0, x: 56 },
-          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
-          "<"
-        );
-      }
+      // Timeline fade animations
+      tl.fromTo(
+        section.querySelectorAll(".fade-up"),
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 },
+        "-=0.6"
+      );
+      tl.fromTo(
+        section.querySelectorAll(".fade-left"),
+        { opacity: 0, x: -56 },
+        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
+        "<"
+      );
+      tl.fromTo(
+        section.querySelectorAll(".fade-right"),
+        { opacity: 0, x: 56 },
+        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
+        "<"
+      );
 
       gsap.to(".blurry-card", {
         opacity: 1,
@@ -106,7 +107,7 @@ const Hero = () => {
         ease: "power3.out",
         stagger: 0.2,
         scrollTrigger: {
-          trigger: section.querySelector(".hero-second-grid") as Element,
+          trigger: section.querySelector(".hero-second-grid"),
           start: "top 75%",
           end: "top 20%",
           toggleActions: "play none none reverse",
@@ -121,45 +122,47 @@ const Hero = () => {
         ease: "power3.out",
         stagger: 0.2,
         scrollTrigger: {
-          trigger: section.querySelector(".hero-second-grid") as Element,
+          trigger: section.querySelector(".hero-second-grid"),
           start: "top 75%",
           toggleActions: "play none none reverse",
         },
       });
 
-      // Refresh ScrollTrigger on images load as well
+      // Refresh ScrollTrigger after images load
       const imgs = section.querySelectorAll("img");
       imgs.forEach((img) => {
         if (!img.complete) {
           img.addEventListener("load", () => {
             ScrollTrigger.refresh();
-          });
+          }, { once: true });
         }
       });
-
-      ScrollTrigger.refresh(); // Ensure refresh after setup
     }, sectionRef);
-    const onLoad = () => {
-      ScrollTrigger.refresh(true);
-    };
-    window.addEventListener("load", onLoad);
 
-    // Also do an immediate refresh but delayed slightly to catch hydration
-    const rafId = requestAnimationFrame(() => ScrollTrigger.refresh(true));
+    // Refresh after setup with RAF and also nudge scroll to re-trigger ScrollTrigger (fixes SPA navigation bugs)
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh(true);
+      // Small scroll nudge:
+      window.scrollTo(window.pageXOffset, window.pageYOffset - 1);
+      window.scrollTo(window.pageXOffset, window.pageYOffset);
+    });
+
+    // Window load event to refresh ScrollTrigger if not already fired
+    const onLoad = () => ScrollTrigger.refresh(true);
+    window.addEventListener("load", onLoad);
 
     return () => {
       ctx.revert();
       window.removeEventListener("load", onLoad);
-      cancelAnimationFrame(rafId);
     };
   }, [pathname]);
 
-
   const heading = "World-Class Forex Trading Where Profits Meet Precision";
-  const splitHeading = heading.split(' ').map((word, i) => (
-    <span key={i} className="inline-block mr-2">{word}</span>
+  const splitHeading = heading.split(" ").map((word, i) => (
+    <span key={i} className="inline-block mr-2">
+      {word}
+    </span>
   ));
-
   return (
     <section ref={sectionRef} className="relative lg:pb-2 lg:pt-20 lg:pb-6 hero overflow-hidden">
       <div className="max-w-[1460px] mx-auto px-6 pt-24 pb-10 lg:pb-20 lg:pt-30 text-center hero-container relative z-10 ">
