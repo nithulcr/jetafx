@@ -76,24 +76,26 @@ const Hero = () => {
       });
 
       // Timeline animations
-      tl.fromTo(
-        sectionRef.current.querySelectorAll(".fade-up"),
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 },
-        "-=0.6"
-      );
-      tl.fromTo(
-        sectionRef.current.querySelectorAll(".fade-left"),
-        { opacity: 0, x: -56 },
-        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
-        "<"
-      );
-      tl.fromTo(
-        sectionRef.current.querySelectorAll(".fade-right"),
-        { opacity: 0, x: 56 },
-        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
-        "<"
-      );
+      if (sectionRef.current) {
+        tl.fromTo(
+          sectionRef.current.querySelectorAll(".fade-up"),
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 },
+          "-=0.6"
+        );
+        tl.fromTo(
+          sectionRef.current.querySelectorAll(".fade-left"),
+          { opacity: 0, x: -56 },
+          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
+          "<"
+        );
+        tl.fromTo(
+          sectionRef.current.querySelectorAll(".fade-right"),
+          { opacity: 0, x: 56 },
+          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.3 },
+          "<"
+        );
+      }
 
       gsap.to(".blurry-card", {
         opacity: 1,
