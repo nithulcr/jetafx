@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     image: '/blog4.png',
   },
     {
-    slug: 'Beginner’s-Guide-to-Forex',
+    slug: 'Beginners-Guide-to-Forex',
     title: 'Beginner’s Guide to Forex Trading-Everything You Need to Know to get Started',
     content: 'New to forex? This beginner-friendly guide covers the essentials — from how currency pairs work to basic strategies and risk management.',
     author: 'John Doe',

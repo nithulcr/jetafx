@@ -91,7 +91,7 @@ export default function TradingPlatformSection() {
                                     Optimized Performance
                                 </li>
                             </ul>
-                            <AnimatedButton href="" label="Start Trading on MT5 with Jeta FX" className="white-btn w-fit mt-5 lg:mt-10 fade-up" />
+                            <AnimatedButton href="https://my.jetafx.com/en/auth/sign-up" label="Start Trading on MT5 with Jeta FX" className="white-btn w-fit mt-5 lg:mt-10 fade-up" />
                         </div>
                     </div>
                 </div>

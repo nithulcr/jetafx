@@ -89,7 +89,7 @@ export default function EarnMoreSection() {
                                    Marketing & Support Tools – Gain access to ready-to-use promotional materials and personalized assistance to help you succeed.
                                 </li>
                             </ul>
-                            <AnimatedButton href="" label="Start Partnering with Jeta FX Today" className="white-btn w-fit mt-5 lg:mt-10 fade-up" />
+                            <AnimatedButton  href="https://my.jetafx.com/en/auth/sign-up" label="Start Partnering with Jeta FX Today" className="white-btn w-fit mt-5 lg:mt-10 fade-up" />
                         </div>
                     </div>
                 </div>

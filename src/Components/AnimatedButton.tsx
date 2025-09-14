@@ -9,6 +9,7 @@ type AnimatedButtonProps = {
   onClick?: () => void;
   href?: string;
   type?: "button" | "submit" | "reset";
+  openInNewTab?: boolean; // optional prop to force open in new tab
 };
 
 export default function AnimatedButton({
@@ -17,6 +18,7 @@ export default function AnimatedButton({
   onClick,
   href,
   type,
+  openInNewTab,
 }: AnimatedButtonProps) {
   const buttonRef = useRef<HTMLAnchorElement | HTMLButtonElement>(null);
   const outlineRef = useRef<HTMLDivElement>(null);
@@ -52,10 +54,10 @@ export default function AnimatedButton({
   }, []);
 
   // Determine if link is external
-  const isExternal =
-    href && /^https?:\/\//i.test(href);
+  const isExternal = href && /^https?:\/\//i.test(href);
+  const shouldOpenInNewTab = openInNewTab ?? isExternal;
 
-  // 👉 If "type" is provided, render a <button>
+  // If "type" is provided, render as <button>
   if (type) {
     return (
       <button
@@ -64,25 +66,29 @@ export default function AnimatedButton({
         type={type}
         className={clsx("button", className)}
       >
-        <div  className="button-outline"></div>
-        <div ref={outlineRef} className="button-text">{label}</div>
+        <div className="button-outline"></div>
+        <div ref={outlineRef} className="button-text">
+          {label}
+        </div>
       </button>
     );
   }
 
-  // 👉 Otherwise, render as <a>
+  // Otherwise, render as <a>
   return (
     <a
       ref={buttonRef as React.RefObject<HTMLAnchorElement>}
       onClick={onClick}
       href={href}
-      target={isExternal ? "_blank" : undefined}
-      rel={isExternal ? "noopener noreferrer" : undefined}
+      target={shouldOpenInNewTab ? "_blank" : undefined}
+      rel={shouldOpenInNewTab ? "noopener noreferrer" : undefined}
       className={clsx("button", className)}
       download={href?.endsWith(".pdf") ? true : undefined}
     >
-      <div  className="button-outline"></div>
-      <div ref={outlineRef} className="button-text">{label}</div>
+      <div className="button-outline"></div>
+      <div ref={outlineRef} className="button-text">
+        {label}
+      </div>
     </a>
   );
 }

@@ -161,7 +161,7 @@ export default function PricingSlider() {
 
                         return (
                             <SwiperSlide key={i}>
-                                <div className={`plans-fade-up plan-card w-full p-7 flex flex-col items-center mx-auto min-h-[440px] ${style}`}>
+                                <div className={`plans-fade-up cursor-grab plan-card w-full p-7 flex flex-col items-center mx-auto min-h-[440px] ${style}`}>
                                     {/* ...Content... */}
                                     <div className=''>
                                         <div className=" text-lg text-gray-200 mb-3 flex gap-2 items-center">

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#010101] relative lg:pt-26 pb-7 lg:pb-10">
+    <footer className="bg-[#010101] relative lg:pt-26 pt-14 pb-7 lg:pb-10">
        {/* <span className='border_shape3'></span> */}
       <div className="max-w-[1460px] mx-auto px-6">
         {/* Top section */}
@@ -16,21 +16,21 @@ export default function Footer() {
               Start trading smarter. Register with Jeta FX and access global markets with tight spreads, lightning-fast execution, and 24/7 support.
             </p>
           </div>
-          <AnimatedButton href="" label="Get Started Now" className="fade-left w-fit" />
+          <AnimatedButton  href="https://my.jetafx.com/en/auth/sign-up" label="Get Started Now" className="fade-left w-fit" />
         </div>
 
         {/* Main columns */}
-        <div className="grid md:grid-cols-3 gap-8 py-10">
+        <div className="grid md:grid-cols-5 max-w-[1100px] gap-8 py-10">
           {/* Logo & stats */}
-          <div>
+          <div className="col-span-2">
             <Image src="/logo.png" alt="Jetafx Logo" width={88} height={28} className="mb-4" />
-            <p className="text-sm opacity-70 mb-5">
+            <p className="text-sm opacity-70 mb-5 max-w-[500px]">
               We’ve proudly served over 15,000 satisfied clients across 80 countries.
               Connect now with our helpful team 24/7 to open your secure account in minutes.
             </p>
           </div>
           {/* Markets */}
-          <div>
+          <div className="col-span-1">
             <div className="text-base mb-4">Markets</div>
             <ul className="space-y-2 text-sm opacity-50">
               <li><Link href="/Markets?tab=forex">Forex</Link></li>
@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
           {/* Company Information */}
-          <div>
+          <div className="col-span-2 max-w-[300px]">
             <div className="text-base mb-4">Company Information</div>
             <ul className="space-y-2 text-sm opacity-50">
               <li>Office No. 5, Ses Grape Avenue, Rodney Bay, Gros-Islet, Saint Lucia</li>

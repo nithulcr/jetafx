@@ -33,8 +33,8 @@ const Hero = () => {
         tl.from(words, {
           opacity: 0,
           y: 60,
-          stagger: 0.08,
-          duration: 0.8,
+          stagger: 0.05,
+          duration: 0.5,
           ease: "power4.out"
         });
       }
@@ -144,8 +144,8 @@ const Hero = () => {
           Experience professional-grade trading across forex, commodities, indices, and digital currencies. Advanced analytics, lightning-fast execution, and global market access in one powerful platform.
         </p>
         <div className="flex justify-center gap-4 mt-8">
-         <div className='shuffle'> <AnimatedButton href="" label="Log in" className="fade-left w-fit" /></div>
-          <div className='shuffle'><AnimatedButton href="" label="Sign up" className="fade-right w-fit transparent-btn" /></div>
+         <div className='shuffle'> <AnimatedButton  href="https://my.jetafx.com/en/auth/sign-in" label="Log in" className="fade-left w-fit" /></div>
+          <div className='shuffle'><AnimatedButton  href="https://my.jetafx.com/en/auth/sign-up" label="Sign up" className="fade-right w-fit transparent-btn" /></div>
         </div>
       </div>
       <div className="max-w-[1460px] hero-second-grid mx-auto px-6 py-6 flex gap-6 bg-transparent">

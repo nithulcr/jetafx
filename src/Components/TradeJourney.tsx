@@ -80,10 +80,10 @@ export default function TradeJourney() {
           />
           <div className="flex justify-center gap-4 mt-8">
             <div className="shuffle">
-              <AnimatedButton href="" label="Get Started Now" className="fade-left2 w-fit" />
+              <AnimatedButton  href="https://my.jetafx.com/en/auth/sign-up" label="Get Started Now" className="fade-left2 w-fit" />
             </div>
             <div className="shuffle">
-              <AnimatedButton href="" label="Sign In" className="fade-right2 w-fit transparent-btn" />
+              <AnimatedButton  href="https://my.jetafx.com/en/auth/sign-in" label="Sign In" className="fade-right2 w-fit transparent-btn" />
             </div>
           </div>
         </div>

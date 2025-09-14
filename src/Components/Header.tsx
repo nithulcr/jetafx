@@ -126,11 +126,11 @@ export default function Header() {
           </nav>
           <div className="lg:flex gap-4 hidden ">
             <AnimatedButton
-              href=""
+              href="https://my.jetafx.com/en/auth/sign-in"
               label="Log in"
               className="w-fit white-btn"
             />
-            <AnimatedButton href="" label="Sign up" className="w-fit" />
+            <AnimatedButton href="https://my.jetafx.com/en/auth/sign-up" label="Sign up" className="w-fit" />
           </div>
         </div>
         <button onClick={open ? handleClose : () => setOpen(true)} className="lg:hidden">
@@ -157,11 +157,11 @@ export default function Header() {
             ))}
             <div className="flex gap-4 mt-8">
               <AnimatedButton
-                href=""
+                 href="https://my.jetafx.com/en/auth/sign-in"
                 label="Log in"
                 className="w-fit white-btn "
               />
-              <AnimatedButton href="" label="Sign up" className="w-fit " />
+              <AnimatedButton  href="https://my.jetafx.com/en/auth/sign-up" label="Sign up" className="w-fit " />
             </div>
           </>
         ) : (
@@ -170,7 +170,7 @@ export default function Header() {
               onClick={() => setShowSubMenu(null)}
               className="block px-2 fw-200 py-2 text-lg text-white hover:bg-gray-700 mb-4"
             >
-               Back
+              Back
             </button>
             {navItems.find(item => item.label === showSubMenu)?.children?.map((subItem) => (
               <MenuItem

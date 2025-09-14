@@ -356,7 +356,7 @@ export default function MarketsPageTabs() {
       gsap.fromTo(
         fadeUps,
         { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.08 }
+        { opacity: 1, y: 0,  ease: "power2.out", stagger: 0.05 }
       );
 
       // Refresh ScrollTrigger after images load
@@ -394,7 +394,7 @@ export default function MarketsPageTabs() {
               {TABS.map(tab => (
                 <button
                   key={tab.key}
-                  className={`px-5 py-3 rounded-full fade-up transition cursor-pointer min-w-[120px] md:min-w-[150px] market-tab ${activeTab === tab.key
+                  className={`px-5 py-3 rounded-full fade-up  cursor-pointer min-w-[120px] md:min-w-[150px] market-tab ${activeTab === tab.key
                     ? "active-market-tab"
                     : ""
                     }`}

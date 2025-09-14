@@ -39,10 +39,13 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
 
     useEffect(() => {
         if (!faqContainer.current) return;
+
         const qEls = faqContainer.current.querySelectorAll(".faq-fadeup");
-        qEls.forEach((el, n) => {
+        if (qEls.length === 0) return;
+
+        const ctx = gsap.context(() => {
             gsap.fromTo(
-                el,
+                qEls,
                 { opacity: 0, y: 40 },
                 {
                     opacity: 1,
@@ -50,24 +53,26 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                     duration: 0.6,
                     stagger: 0.2,
                     ease: "power2.out",
-                    delay: n * 0.05,
                     scrollTrigger: {
-                        trigger: el,
+                        trigger: faqContainer.current,
                         start: "top 95%",
                         end: "top 20%",
                         toggleActions: "play none none reverse",
                     },
                 }
             );
-        });
+        }, faqContainer);
+
         return () => {
+            ctx.revert();
             ScrollTrigger.getAll().forEach((st) => st.kill());
         };
-    }, []);
+    }, [faqs]); // <-- add `faqs` to dependency array
+
 
     return (
         <section className="faq-section relative overflow-hidden py-14 lg:py-22">
-             <span className='border_shape3'></span>
+            <span className='border_shape3'></span>
             <div className="max-w-[1460px] px-6 mx-auto">
                 <Heading
                     badgeText="FAQ'S SECTION"
@@ -114,7 +119,7 @@ export default function FAQ({ faqs = defaultFaqs }: { faqs?: { question: string;
                                     transition: "all 0.4s cubic-bezier(.25,.8,.25,1)",
                                     // Direct padding for non-Tailwind projects:
                                     paddingTop: openIndex === idx ? "20px" : "0px",
-                                    
+
                                 }}
                             >
                                 <div className="opacity-80 text-base mt-1">

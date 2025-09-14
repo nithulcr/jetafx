@@ -71,7 +71,7 @@ export default function Heading({
       <h2 className="text-2xl md:text-5xl text-white mb-2 md:mb-3 gma-heading">
         {title}
       </h2>
-      <p className="text-[15px] text-gray-300 gma-heading max-w-[740px] mx-auto">
+      <p className="text-[15px] text-gray-300 gma-heading max-w-[640px] mx-auto">
         {subtitle}
       </p>
     </div>

@@ -85,7 +85,7 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
         <div className="max-w-[1100px] px-6 w-full mx-auto pt-14 lg:pt-20 relative">
 
 
-          <div className='max-w-4xl mx-auto text-center'>
+          <div className=' mx-auto text-center'>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{post.title}</h1>
             <p className=" mb-6 text-[#E6ECFF] max-w-3xl mx-auto opacity-70">
               {post.content}
@@ -104,8 +104,8 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
                 Manage risk during high-volatility periods
               </li>
             </ul>
-            <div className='site-card2 my-8 p-0-card'>
-              <Image src={post.image} alt={post.title} width={800} height={400} className="mx-auto" />
+            <div className='site-card2 w-full my-8 p-0-card'>
+              <Image src={post.image} alt={post.title} width={1200} height={400} className="w-full mx-auto" />
             </div>
 
 
@@ -149,7 +149,7 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
             <div className="w-full  rounded-2xl blog-site-card site-card md:p-5 md:sm:p-16  mt-10">
               <div
 
-                className={`grid grid-cols-3 py-4 lg:px-9 px-4 gap-3 border-t border-t-[#fbd00b4d] border-b  border-b-[var(--yellow)] rounded-3xl`}
+                className={`grid grid-cols-3 py-4 lg:px-9 px-2 gap-3 md:border-t border-t-[#fbd00b4d] border-b  border-b-[var(--yellow)] rounded-3xl`}
               >
                 <span
                   className={`text-md lg:text-lg text-[var(--yellow)] `}
@@ -172,7 +172,7 @@ export default function BlogPostPage({ params: initialParams }: { params: Promis
                 {blogTable.map((spec, idx) => (
                   <div
                     key={spec.feature}
-                    className={`grid grid-cols-3 py-4 border-b gap-3  border-b-[#404040] rounded-xl lg:px-9 px-4`}
+                    className={`grid grid-cols-3 py-4 border-b gap-3  border-b-[#404040] rounded-xl lg:px-9 px-2`}
                   >
                     <span
                       className={`text-sm`}

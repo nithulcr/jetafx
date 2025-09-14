@@ -1530,7 +1530,7 @@ span.border_shape3 {
   background: linear-gradient(50deg, #121426, #000000);
   position: relative;
   overflow: hidden;
-  transition: .3s;
+  transition: margin-top 0.3s ease;
 }
 
 .market-tab:hover {
@@ -1687,9 +1687,7 @@ input {
   min-height: 46px;
 }
 
-.z-99-hard {
-  z-index: 99;
-}
+
 
 .other-section:before {
   content: '';

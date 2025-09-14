@@ -47,7 +47,7 @@ useEffect(() => {
   return (
     <section ref={Hero3Ref} className="relative  lg:pb-2 lg:pt-16 lg:pb-6 hero overflow-hidden ">
       <span className='hero-section-span'></span>
-      <div className="max-w-[1460px] mx-auto px-6 pt-30   text-center hero-container hero-container2 relative z-10 z-99-hard">
+      <div className="max-w-[1460px] mx-auto px-6 pt-30   text-center hero-container hero-container2 relative z-10">
         <h1
           className="fade-up hero-heading text-4xl md:text-5xl lg:text-7xl max-w-[1000px] mx-auto font-bold mb-4 leading-tight"
         >
@@ -57,10 +57,10 @@ useEffect(() => {
          At Jeta FX, we provide advanced trading platforms designed to keep you connected to global markets at all times. Whether you prefer trading on desktop or mobile,
         </p>
        
-
+    
       </div>
-      <div className="fade-up lg:mt-[-50px] opacity-60 py-10 ">
-          <Image src="/platform-bg.svg" alt="platform bg" className='w-full   mx-auto' width={1000} height={1000} />
+      <div className="fade-up  opacity-60 pb-10 ">
+          <Image src="/platform-bg.svg" alt="platform bg" className='w-full   mx-auto' width={300} height={300} />
       </div>
        
 
