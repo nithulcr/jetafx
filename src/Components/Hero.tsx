@@ -139,12 +139,19 @@ const Hero = () => {
 
       ScrollTrigger.refresh(); // Ensure refresh after setup
     }, sectionRef);
+    const onLoad = () => {
+      ScrollTrigger.refresh(true);
+    };
+    window.addEventListener("load", onLoad);
 
-    requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-    });
+    // Also do an immediate refresh but delayed slightly to catch hydration
+    const rafId = requestAnimationFrame(() => ScrollTrigger.refresh(true));
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      window.removeEventListener("load", onLoad);
+      cancelAnimationFrame(rafId);
+    };
   }, [pathname]);
 
 
