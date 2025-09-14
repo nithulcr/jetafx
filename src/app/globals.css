@@ -511,11 +511,7 @@ p,
 
 }
 
-.blurry-card1:hover {
 
-  background: linear-gradient(90deg, #000000, #20263a, #4c5c8e);
-
-}
 
 .blurry-card2 {
   width: calc(100% - 500px);

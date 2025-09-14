@@ -140,6 +140,10 @@ const Hero = () => {
       ScrollTrigger.refresh(); // Ensure refresh after setup
     }, sectionRef);
 
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+
     return () => ctx.revert();
   }, [pathname]);
 
@@ -168,7 +172,7 @@ const Hero = () => {
       </div>
       <div className="max-w-[1460px] hero-second-grid mx-auto px-6 py-6 flex gap-6 bg-transparent">
         {/* Why Choose Us Card */}
-        <div className="relative blurry-card blurry-card1">
+        <div className="relative blurry-card blurry-card1 ">
           <span></span>
           <h3 className="text-xl mb-3 s-fade-up">Why Choose Us</h3>
           <p className="text-slate-400 text-[15px] leading-normal mb-5 s-fade-up">
