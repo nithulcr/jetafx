@@ -18,9 +18,9 @@ const Preloader = ({
       // After slide-out duration (500ms), call onComplete
       const exitTimeout = setTimeout(() => {
         onComplete();
-      }, 500);
+      }, 800);
       return () => clearTimeout(exitTimeout);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(stayTimeout);
   }, [onComplete]);
