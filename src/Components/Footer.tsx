@@ -62,6 +62,15 @@ export default function Footer() {
           <p>
             <strong className="text-white">Restricted Regions:</strong>  Jeta FX LTD Does Not Provide Services For Citizens/Residents Of The United States, Cuba, Iraq, Myanmar, North Korea, Sudan, Russia and Iran. The Services Of Jeta FX LTDAre Not Intended For Distribution To, Or Use By, Any Person In Any Country Or Jurisdiction Where Such Distribution Or Use Would Be Contrary To Local Law Or Regulation.
           </p>
+          <div className="flex items-center gap-1 py-3 flex-wrap">
+            <Link href="/LegalDocuments" className="underline">Legal Documents & Restricted Regions</Link>
+            <span>|</span>
+            <Link href="/AML&KYC" className="underline">AML & KYC</Link>
+            <span>|</span>
+            <Link href="/ScalpingPolicy" className="underline">Scalping Policy</Link>
+            <span>|</span>
+            <Link href="/PrivacyPolicy" className="underline">Terms and Conditions</Link>
+          </div>
         </div>
 
         {/* Copyright */}
