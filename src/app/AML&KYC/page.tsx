@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from '@/Components/Header';
 import Footer from '@/Components/Footer';
-import Link from 'next/link';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,18 +69,18 @@ const Hero5 = () => {
             <h5 className='text-3xl'>AML / KYC rules</h5>
             <p className='mt-3'>As our client you irrevocably agree with the following rules and undertake to observe them:</p>
             <ul className='mt-3 opacity-50 list-disc pl-5'>
-              <li>You are obliged to follow AML and KYC requirements as a client. Upon the Company's request, additional documents and information must be provided. Filling out the respective KYC questionnaire may also be mandatory by the Company's sole decision. You agree and undertake to follow such requirements.</li>
+              <li>You are obliged to follow AML and KYC requirements as a client. Upon the Company&apos;s request, additional documents and information must be provided. Filling out the respective KYC questionnaire may also be mandatory by the Company&apos;s sole decision. You agree and undertake to follow such requirements.</li>
               <li>Withdrawals of assets are only allowed to accounts belonging to you. Withdrawals to third-party accounts or internal transfers between customers are prohibited.</li>
               <li>The Company has the right and obligation to share your information with financial institutions and law enforcement agencies as required by law, without prior consent. Records of your transactions are held for at least five years.</li>
-              <li>You must comply with laws aimed at combating illicit trafficking, financial fraud, money laundering, and legalization of illegal funds. You should avoid participation in illegal financial activities using the Company's services.</li>
+              <li>You must comply with laws aimed at combating illicit trafficking, financial fraud, money laundering, and legalization of illegal funds. You should avoid participation in illegal financial activities using the Company&aposs services.</li>
               <li>You guarantee legal origin, ownership, and rights to assets transferred to your account. In cases of suspicious transactions, untrusted cash replenishments, or fraudulent actions (including refunds or payment cancellations), the Company may investigate, block or close accounts or trading rooms, suspend operations, and cancel orders guided by applicable law and FATF recommendations.</li>
               <li>The Company may request additional information if withdrawal methods differ from deposit methods. Failure to provide requested information may result in blocking of your trading rooms or accounts during investigations.</li>
               <li>During investigations, the Company can request further identity verification documents, proof of residence, lawful possession, or legal origin of funds. Originals may be requested for review if doubts arise.</li>
               <li>The Company does not provide services to persons or entities located in FATF-blacklisted jurisdictions or citizens/residents of the USA.</li>
               <li>The Company can refuse operations it considers suspicious and use preventive measures (like blocking or closing accounts) without civil liability.</li>
               <li>The Company is not obliged to inform you or others about measures taken to comply with AML/CFT laws, suspicions, refusals of execution, or requests for documentation.</li>
-              <li>This document summarizes rights and intentions regarding AML policies but may be supplemented by local AML rules. It is part of any agreement between you and the Company. Non-compliance may lead to agreement termination at the Company’s discretion.</li>
-              <li>This anti-money laundering and know your customer policy is an integral part of the agreement. Non-compliance may be grounds for termination at the Company’s sole discretion.</li>
+              <li>This document summarizes rights and intentions regarding AML policies but may be supplemented by local AML rules. It is part of any agreement between you and the Company. Non-compliance may lead to agreement termination at the Company&apos;s discretion.</li>
+              <li>This anti-money laundering and know your customer policy is an integral part of the agreement. Non-compliance may be grounds for termination at the Company&apos;s sole discretion.</li>
             </ul>
 
           </div>
