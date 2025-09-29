@@ -71,7 +71,7 @@ export default function Footer() {
             <span>|</span>
             <Link href="https://drive.google.com/file/d/1HnHuQzHShNNpwx8TG5457d1Ot2Jk4e5g/view" target="__blank" className="underline">Terms and Conditions</Link>
             <span>|</span>
-            <Link href="/PrivacyPolicy" className="underline">Privacy & Security Policy</Link>
+            <Link href="/PrivacyPolicy" className="underline">Privacy Policy</Link>
           </div>
         </div>
 
